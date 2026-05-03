@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Section 2 — What competitors did last 18 months</title>
+<title>Section 2 — Competitor moves over the last 18 months</title>
 <style>
 :root {
   color-scheme: light;
@@ -63,16 +63,18 @@ body {
 
 .page { padding: 0 22px 60px; }
 
-/* === SLIDE 1 === */
-#sec-1 .s1-hero { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 24px; }
+/* === SLIDE 1 — Capital deployment landscape === */
+#sec-1 .s1-hero { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
 @media (max-width: 800px) { #sec-1 .s1-hero { grid-template-columns: 1fr; } }
 #sec-1 .s1-hcard { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 14px; padding: 22px 24px; border-top: 3px solid; }
 #sec-1 .s1-hcard.banks { border-top-color: var(--bank); }
 #sec-1 .s1-hcard.nbfi { border-top-color: var(--pocket); }
+#sec-1 .s1-hcard.lendmn { border-top-color: var(--accent); background: var(--accent-soft); }
 #sec-1 .s1-h-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 8px; color: var(--text-tertiary); }
 #sec-1 .s1-h-amount { font-size: 36px; font-weight: 700; line-height: 1; letter-spacing: -1px; margin-bottom: 6px; }
 #sec-1 .banks .s1-h-amount { color: var(--bank); }
 #sec-1 .nbfi .s1-h-amount { color: var(--pocket); }
+#sec-1 .lendmn .s1-h-amount { color: var(--accent); }
 #sec-1 .s1-h-cap { font-size: 12px; color: var(--text-secondary); margin-bottom: 12px; }
 #sec-1 .s1-h-detail { font-size: 11.5px; color: var(--text-primary); line-height: 1.55; padding-top: 10px; border-top: 1px solid var(--border); }
 #sec-1 .s1-h-detail strong { font-weight: 600; }
@@ -91,77 +93,109 @@ body {
 #sec-1 .s1-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: #fff; white-space: nowrap; }
 #sec-1 .s1-seg.sme { background: var(--good); }
 #sec-1 .s1-seg.green { background: #4a8c73; }
+#sec-1 .s1-seg.other { background: #B4B2A9; color: #444441; }
 #sec-1 .s1-stack-meta { font-size: 11px; color: var(--text-secondary); display: flex; gap: 14px; flex-wrap: wrap; }
 #sec-1 .s1-stack-meta strong { color: var(--text-primary); font-weight: 600; }
 
-/* === SLIDE 2 === */
-#sec-2 .s2-grid-wrap { background: var(--bg-elevated); border-radius: 12px; padding: 10px 0; margin-bottom: 18px; }
-#sec-2 .funding-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-#sec-2 .funding-table th { text-align: left; padding: 12px 16px; border-bottom: 2px solid var(--border-strong); color: var(--text-tertiary); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
-#sec-2 .funding-table td { padding: 16px; border-bottom: 1px solid var(--border); vertical-align: top; }
-#sec-2 .funding-table tr:last-child td { border-bottom: none; }
-#sec-2 .f-name { font-weight: 700; font-size: 15px; color: var(--text-primary); }
-#sec-2 .f-name.lendmn { color: var(--accent); }
-#sec-2 .f-total { font-weight: 700; font-size: 18px; }
-#sec-2 .f-deals { display: flex; flex-direction: column; gap: 8px; }
-#sec-2 .f-deal-item { background: var(--bg-muted); padding: 8px 12px; border-radius: 6px; border-left: 3px solid var(--text-tertiary); display: flex; flex-direction: column; }
-#sec-2 .f-deal-item.debt { border-left-color: var(--pocket); }
-#sec-2 .f-deal-item.equity { border-left-color: #d4a04a; background: #fcf6ec; }
-#sec-2 .f-deal-title { font-weight: 600; color: var(--text-primary); }
-#sec-2 .f-deal-meta { font-size: 11px; color: var(--text-secondary); margin-top: 2px; }
+/* === SLIDE 2 — NBFI fundraising heatmap (HERO) === */
+#sec-2 .s2-callout { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
+@media (max-width: 800px) { #sec-2 .s2-callout { grid-template-columns: 1fr 1fr; } }
+#sec-2 .s2-cal-card { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; border-left: 3px solid; }
+#sec-2 .s2-cal-1 { border-left-color: var(--pocket); }
+#sec-2 .s2-cal-2 { border-left-color: var(--accent); background: var(--accent-soft); }
+#sec-2 .s2-cal-3 { border-left-color: var(--ashid); }
+#sec-2 .s2-cal-4 { border-left-color: var(--bad); }
+#sec-2 .s2-cal-num { font-size: 22px; font-weight: 700; line-height: 1; letter-spacing: -0.4px; margin-bottom: 4px; }
+#sec-2 .s2-cal-1 .s2-cal-num { color: var(--pocket); }
+#sec-2 .s2-cal-2 .s2-cal-num { color: var(--accent); }
+#sec-2 .s2-cal-3 .s2-cal-num { color: var(--ashid); }
+#sec-2 .s2-cal-4 .s2-cal-num { color: var(--bad); }
+#sec-2 .s2-cal-lbl { font-size: 11px; color: var(--text-secondary); line-height: 1.4; }
+#sec-2 .s2-cal-lbl strong { color: var(--text-primary); font-weight: 600; }
 
-/* Takeaway boxes */
-.impact-box { background: var(--bg-secondary); border-radius: 10px; padding: 16px 20px; font-size: 13px; line-height: 1.65; margin-bottom: 20px; }
-.impact-box.accented { background: var(--accent-soft); border-left: 3px solid var(--accent); }
-.impact-box strong { color: var(--text-primary); font-weight: 600; }
-.impact-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent); margin-bottom: 8px; }
+#sec-2 .s2-grid-wrap { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 12px; padding: 18px 16px; overflow-x: auto; margin-bottom: 18px; }
+#sec-2 .s2-grid-title { font-size: 12px; font-weight: 600; margin-bottom: 12px; color: var(--text-primary); padding-left: 4px; }
+#sec-2 .s2-grid { display: grid; grid-template-columns: 130px repeat(18, minmax(36px, 1fr)) 70px; gap: 2px; min-width: 900px; align-items: center; }
+#sec-2 .s2-month { font-size: 9px; color: var(--text-tertiary); text-align: center; padding: 4px 0; font-weight: 600; }
+#sec-2 .s2-month.qtr-end { color: var(--text-primary); }
+#sec-2 .s2-co-name { font-size: 11.5px; font-weight: 600; padding: 6px 8px; }
+#sec-2 .s2-co-name.lendmn-row { color: var(--accent); }
+#sec-2 .s2-co-name.no-fund { color: var(--text-tertiary); font-weight: 400; }
+#sec-2 .s2-cell { height: 24px; border-radius: 3px; background: var(--bg-secondary); position: relative; }
+#sec-2 .s2-cell.deal { cursor: help; }
+#sec-2 .s2-cell.deal-pocket { background: var(--pocket); }
+#sec-2 .s2-cell.deal-simple { background: #5DA68C; }
+#sec-2 .s2-cell.deal-sono { background: #88b3a3; }
+#sec-2 .s2-cell.deal-lendmn { background: var(--accent); }
+#sec-2 .s2-cell.deal-equity { background: #d4a04a; }
+#sec-2 .s2-row-total { font-size: 11px; font-weight: 700; text-align: right; padding-right: 8px; font-variant-numeric: tabular-nums; }
+#sec-2 .s2-row-total.has-fund { color: var(--text-primary); }
+#sec-2 .s2-row-total.no-fund { color: var(--text-tertiary); font-style: italic; font-size: 10.5px; }
 
-/* === SLIDE 3 === */
+#sec-2 .s2-legend { display: flex; gap: 18px; font-size: 11px; color: var(--text-secondary); flex-wrap: wrap; padding: 0 4px; margin-top: 10px; }
+#sec-2 .s2-legend span { display: flex; align-items: center; gap: 6px; }
+#sec-2 .s2-lg-sw { width: 11px; height: 11px; border-radius: 2px; }
+
+#sec-2 .s2-conclusion { background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 10px; padding: 16px 20px; font-size: 13px; line-height: 1.65; color: var(--text-primary); }
+#sec-2 .s2-conclusion strong { font-weight: 600; }
+
+/* === SLIDE 3 — Banks SME push === */
 #sec-3 .s3-banks { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 18px; }
 @media (max-width: 1100px) { #sec-3 .s3-banks { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 700px) { #sec-3 .s3-banks { grid-template-columns: 1fr; } }
 #sec-3 .s3-bank-card { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; border-top: 3px solid var(--bank); display: flex; flex-direction: column; }
 #sec-3 .s3-bank-card.threat { border-top-color: var(--bad); background: var(--bad-soft); }
 #sec-3 .s3-bank-card.high-threat { border-top-color: var(--bad); background: var(--bad-soft); position: relative; }
-#sec-3 .s3-bank-card.high-threat::after { content: '⚠ Ноцтой'; position: absolute; top: 12px; right: 12px; font-size: 9.5px; font-weight: 700; padding: 3px 8px; border-radius: 999px; background: var(--bad); color: #fff; letter-spacing: 0.4px; }
+#sec-3 .s3-bank-card.high-threat::after { content: '⚠ Critical threat'; position: absolute; top: 12px; right: 12px; font-size: 9.5px; font-weight: 700; padding: 3px 8px; border-radius: 999px; background: var(--bad); color: #fff; letter-spacing: 0.4px; }
 #sec-3 .s3-bank-name { font-size: 14px; font-weight: 700; margin-bottom: 2px; color: var(--bank); }
 #sec-3 .s3-bank-card.threat .s3-bank-name, #sec-3 .s3-bank-card.high-threat .s3-bank-name { color: var(--bad); }
 #sec-3 .s3-bank-tag { font-size: 11px; color: var(--text-secondary); font-weight: 500; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
 #sec-3 .s3-bank-moves { display: flex; flex-direction: column; gap: 8px; flex: 1; }
-#sec-3 .s3-move { display: grid; grid-template-columns: 48px 1fr; gap: 10px; font-size: 11.5px; line-height: 1.5; }
+#sec-3 .s3-move { display: grid; grid-template-columns: 56px 1fr; gap: 10px; font-size: 11.5px; line-height: 1.5; }
 #sec-3 .s3-move-date { font-size: 10px; font-weight: 700; color: var(--text-tertiary); padding-top: 1px; text-transform: uppercase; letter-spacing: 0.4px; }
 #sec-3 .s3-move-text { color: var(--text-primary); }
 #sec-3 .s3-move-text strong { font-weight: 600; }
+#sec-3 .s3-bank-funding { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 11px; color: var(--text-secondary); }
+#sec-3 .s3-bank-funding strong { color: var(--text-primary); font-weight: 600; }
 
-/* === SLIDE 4 === */
-#sec-4 .s4-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 18px; }
-@media (max-width: 1300px) { #sec-4 .s4-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 900px) { #sec-4 .s4-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px) { #sec-4 .s4-grid { grid-template-columns: 1fr; } }
-#sec-4 .s4-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 12px; padding: 0; border-top: 4px solid var(--text-tertiary); display: flex; flex-direction: column; overflow: hidden; }
-#sec-4 .s4-card.s4-c-lendmn { border-top-color: var(--accent); border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+#sec-3 .s3-impact { background: var(--bg-secondary); border-radius: 10px; padding: 16px 20px; font-size: 13px; line-height: 1.65; }
+#sec-3 .s3-impact strong { color: var(--text-primary); font-weight: 600; }
+#sec-3 .s3-impact-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent); margin-bottom: 8px; }
+
+
+#sec-4 .s4-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 18px; }
+@media (max-width: 1100px) { #sec-4 .s4-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 700px) { #sec-4 .s4-grid { grid-template-columns: 1fr; } }
+#sec-4 .s4-card { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; border-top: 3px solid; display: flex; flex-direction: column; }
+#sec-4 .s4-card.s4-c-lendmn { border-top-color: var(--accent); }
 #sec-4 .s4-card.s4-c-pocket { border-top-color: var(--pocket); }
+#sec-4 .s4-card.s4-c-simple { border-top-color: #5DA68C; }
 #sec-4 .s4-card.s4-c-sono { border-top-color: #88b3a3; }
 #sec-4 .s4-card.s4-c-numur { border-top-color: #b97a0e; }
-#sec-4 .s4-card.s4-c-bank { border-top-color: var(--bank); }
-#sec-4 .s4-c-header { padding: 14px 16px 12px; background: var(--bg-muted); }
-#sec-4 .s4-c-name { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+#sec-4 .s4-card.s4-c-hipay { border-top-color: #6b4a8e; }
+#sec-4 .s4-c-name { font-size: 14px; font-weight: 700; }
 #sec-4 .s4-c-lendmn .s4-c-name { color: var(--accent); }
 #sec-4 .s4-c-pocket .s4-c-name { color: var(--pocket); }
+#sec-4 .s4-c-simple .s4-c-name { color: #5DA68C; }
 #sec-4 .s4-c-sono .s4-c-name { color: #88b3a3; }
 #sec-4 .s4-c-numur .s4-c-name { color: #b97a0e; }
-#sec-4 .s4-c-bank .s4-c-name { color: var(--bank); }
-#sec-4 .s4-c-stats { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
-#sec-4 .s4-stat { background: var(--bg-elevated); border-radius: 6px; padding: 6px 10px; border: 1px solid var(--border); flex: 1; }
-#sec-4 .s4-stat-v { font-size: 12px; font-weight: 700; line-height: 1.2; color: var(--text-primary); }
-#sec-4 .s4-stat-l { font-size: 9px; color: var(--text-tertiary); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.4px; font-weight: 600; }
-#sec-4 .s4-c-body { padding: 14px 16px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
-#sec-4 .s4-prod-group { display: flex; flex-direction: column; gap: 4px; }
-#sec-4 .s4-pg-title { font-size: 9.5px; font-weight: 700; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.5px; }
-#sec-4 .s4-pg-text { font-size: 12px; color: var(--text-primary); line-height: 1.4; }
-#sec-4 .s4-pg-text strong { color: var(--accent); font-weight: 600; }
+#sec-4 .s4-c-hipay .s4-c-name { color: #6b4a8e; }
+#sec-4 .s4-c-headline { font-size: 11.5px; color: var(--text-secondary); font-weight: 500; margin-top: 2px; padding-bottom: 12px; margin-bottom: 12px; border-bottom: 1px solid var(--border); }
+#sec-4 .s4-c-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+#sec-4 .s4-stat { background: var(--bg-elevated); border-radius: 6px; padding: 8px 10px; }
+#sec-4 .s4-stat-v { font-size: 13px; font-weight: 700; line-height: 1.2; }
+#sec-4 .s4-stat-l { font-size: 9.5px; color: var(--text-tertiary); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.4px; font-weight: 600; }
+#sec-4 .s4-c-moves { display: flex; flex-direction: column; gap: 7px; flex: 1; }
+#sec-4 .s4-move { display: grid; grid-template-columns: 56px 1fr; gap: 10px; font-size: 11px; line-height: 1.5; }
+#sec-4 .s4-move-d { font-size: 9.5px; font-weight: 700; color: var(--text-tertiary); padding-top: 1px; text-transform: uppercase; letter-spacing: 0.4px; }
+#sec-4 .s4-move-t { color: var(--text-primary); }
+#sec-4 .s4-move-t strong { font-weight: 600; }
 
-/* === SLIDE 5 === */
+#sec-4 .s4-impact { background: var(--bg-secondary); border-radius: 10px; padding: 16px 20px; font-size: 13px; line-height: 1.65; }
+#sec-4 .s4-impact strong { color: var(--text-primary); font-weight: 600; }
+#sec-4 .s4-impact-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent); margin-bottom: 8px; }
+
+
 #sec-5 .s5-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 18px; }
 @media (max-width: 900px) { #sec-5 .s5-grid { grid-template-columns: 1fr; } }
 #sec-5 .s5-card { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; border-left: 3px solid var(--text-tertiary); }
@@ -177,11 +211,18 @@ body {
 #sec-5 .s5-high-threat .s5-card-flag { background: var(--bad); }
 #sec-5 .s5-medium-threat .s5-card-flag { background: var(--warn); }
 #sec-5 .s5-flag-self { background: var(--accent) !important; }
+#sec-5 .s5-card-tag { font-size: 11px; color: var(--text-secondary); font-weight: 500; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
 #sec-5 .s5-stack { display: flex; flex-direction: column; gap: 8px; }
 #sec-5 .s5-layer { display: grid; grid-template-columns: 80px 1fr; gap: 10px; font-size: 11.5px; line-height: 1.5; align-items: baseline; }
 #sec-5 .s5-l-label { font-size: 10px; font-weight: 700; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.4px; padding-top: 1px; }
+#sec-5 .s5-l-tech { color: var(--text-primary); }
+#sec-5 .s5-l-tech strong { font-weight: 600; }
 
-/* === SLIDE 6 === */
+#sec-5 .s5-impact { background: var(--bg-secondary); border-radius: 10px; padding: 16px 20px; font-size: 13px; line-height: 1.65; }
+#sec-5 .s5-impact strong { color: var(--text-primary); font-weight: 600; }
+#sec-5 .s5-impact-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent); margin-bottom: 8px; }
+
+
 #sec-6 .s6-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 24px; }
 @media (max-width: 760px) { #sec-6 .s6-grid { grid-template-columns: 1fr; } }
 #sec-6 .s6-box { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; }
@@ -190,18 +231,35 @@ body {
 #sec-6 .s6-num { font-size: 11px; font-weight: 700; color: var(--text-tertiary); letter-spacing: 0.5px; margin-bottom: 6px; }
 #sec-6 .s6-title { font-size: 14px; font-weight: 700; margin-bottom: 8px; line-height: 1.35; }
 #sec-6 .s6-text { font-size: 12px; color: var(--text-secondary); line-height: 1.65; }
+#sec-6 .s6-text strong { color: var(--text-primary); font-weight: 600; }
 
-/* === SLIDE 7 === */
-#sec-7 .chart-container { display: flex; flex-direction: column; gap: 16px; margin-top: 10px; }
-#sec-7 .chart-row { display: flex; align-items: center; gap: 16px; }
-#sec-7 .chart-label { width: 140px; font-size: 13px; font-weight: 600; text-align: right; }
-#sec-7 .chart-bar-wrap { flex: 1; height: 36px; background: var(--bg-muted); border-radius: 6px; display: flex; overflow: hidden; border: 1px solid var(--border); }
-#sec-7 .chart-seg { display: flex; align-items: center; justify-content: center; font-size: 11.5px; font-weight: 600; color: #fff; transition: width 0.3s ease; }
-#sec-7 .seg-retail { background: var(--accent); }
-#sec-7 .seg-corp { background: var(--ashid); }
-#sec-7 .chart-legend { display: flex; gap: 20px; justify-content: center; margin-top: 20px; font-size: 12px; font-weight: 500; }
-#sec-7 .chart-legend span { display: flex; align-items: center; gap: 8px; }
-#sec-7 .lg-box { width: 14px; height: 14px; border-radius: 3px; }
+#sec-6 .s6-bridge { background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 10px; padding: 16px 20px; }
+#sec-6 .s6-bridge-label { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent); margin-bottom: 6px; }
+#sec-6 .s6-bridge-text { font-size: 13px; line-height: 1.65; color: var(--text-primary); }
+#sec-6 .s6-bridge-text strong { font-weight: 600; }
+
+
+/* === SLIDE 6 — Customer segmentation === */
+#sec-6a .s6a-chart-wrap { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 14px; padding: 20px 18px 16px; overflow-x: auto; }
+#sec-6a .s6a-chart { min-width: 860px; display: flex; flex-direction: column; gap: 13px; }
+#sec-6a .s6a-row { display: grid; grid-template-columns: 170px 1fr; gap: 14px; align-items: center; }
+#sec-6a .s6a-name { font-size: 12px; font-weight: 600; color: var(--text-primary); text-align: right; line-height: 1.2; }
+#sec-6a .s6a-track { height: 30px; display: flex; overflow: hidden; border-radius: 3px; background: var(--bg-secondary); box-shadow: inset 0 0 0 1px rgba(32,32,30,0.04); }
+#sec-6a .s6a-retail, #sec-6a .s6a-corp { height: 100%; display: flex; align-items: center; justify-content: center; min-width: 0; }
+#sec-6a .s6a-retail { background: #2f70b0; color: #fff; font-size: 11px; font-weight: 700; }
+#sec-6a .s6a-corp { background: #bd7f1d; color: #fff; font-size: 11px; font-weight: 700; }
+#sec-6a .s6a-retail span, #sec-6a .s6a-corp span { white-space: nowrap; padding: 0 6px; }
+#sec-6a .s6a-legend { display: flex; justify-content: center; gap: 26px; margin-top: 18px; font-size: 11px; color: var(--text-primary); flex-wrap: wrap; }
+#sec-6a .s6a-legend span { display: inline-flex; align-items: center; gap: 7px; }
+#sec-6a .s6a-legend i { width: 13px; height: 13px; border-radius: 3px; display: inline-block; }
+#sec-6a .s6a-lg-retail { background: #2f70b0; }
+#sec-6a .s6a-lg-corp { background: #bd7f1d; }
+#sec-6a .s6a-note { margin-top: 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 10px; padding: 14px 18px; font-size: 13px; color: var(--text-primary); line-height: 1.65; }
+#sec-6a .s6a-note strong { font-weight: 600; }
+@media (max-width: 760px) {
+  #sec-6a .s6a-row { grid-template-columns: 125px 1fr; }
+  #sec-6a .s6a-name { font-size: 11px; }
+}
 
 </style>
 </head>
@@ -209,514 +267,799 @@ body {
 
 <nav class="topnav">
   <div class="topnav-inner">
-    <div class="topnav-brand">Section 2 — Өрсөлдөгчдийн сүүлийн 18 сарын хөдөлгөөн</div>
+    <div class="topnav-brand">Section 2 — Competitor moves over the last 18 months</div>
     <div class="topnav-links">
-      <a href="#sec-1" class="topnav-link active" data-target="sec-1">1. Capital орчин</a>
-      <a href="#sec-2" class="topnav-link" data-target="sec-2">2. NBFI Funding</a>
-      <a href="#sec-3" class="topnav-link" data-target="sec-3">3. Банкуудын SME</a>
-      <a href="#sec-4" class="topnav-link" data-target="sec-4">4. Products & Portfolio</a>
-      <a href="#sec-5" class="topnav-link" data-target="sec-5">5. Technology</a>
-      <a href="#sec-6" class="topnav-link" data-target="sec-6">6. Takeaways</a>
-      <a href="#sec-7" class="topnav-link" data-target="sec-7">7. Segmentation</a>
+      <a href="#sec-1" class="topnav-link active" data-target="sec-1">1. Capital landscape</a>
+      <a href="#sec-2" class="topnav-link" data-target="sec-2">2. NBFI funding</a>
+      <a href="#sec-3" class="topnav-link" data-target="sec-3">3. Banks SME push</a>
+      <a href="#sec-4" class="topnav-link" data-target="sec-4">4. NBFI products</a>
+      <a href="#sec-5" class="topnav-link" data-target="sec-5">5. Tech stack</a>
+      <a href="#sec-6a" class="topnav-link" data-target="sec-6a">6. Segmentation</a>
+      <a href="#sec-6" class="topnav-link" data-target="sec-6">7. Implications</a>
     </div>
   </div>
 </nav>
 
 <div class="page">
 
+<!-- ============ SLIDE 1 — Capital landscape ============ -->
 <section id="sec-1" class="section">
   <div class="section-pad">
     <div class="section-num">Slide 1</div>
-    <div class="s-title">Санхүүжилт татсан байдал — Банкууд vs NBFI</div>
-    <div class="s-sub">2024.Q4 – 2026.Q1 (18 сар) хооронд босгосон capital.</div>
+    <div class="s-title">Capital deployment landscape — banks vs NBFIs vs LendMN</div>
+    <div class="s-sub">2024 Q4 – 2026 Q1 хооронд босгосон капитал. Зах зээлийн хүчний харьцааг ха рүүлах зураглал.</div>
 
     <div class="s1-hero">
       <div class="s1-hcard banks">
-        <div class="s1-h-label">5 Банк</div>
+        <div class="s1-h-label">5 банк</div>
         <div class="s1-h-amount">$2,541M</div>
-        <div class="s1-h-cap">Хаан, Голомт, ХХБ, ХасБанк, M Bank</div>
-        <div class="s1-h-detail">Голцуу <strong>SME болон green finance</strong>. Хаан $200M бонд, M Bank $30M IFC, Голомт $13M WaterEquity зэрэг.</div>
+        <div class="s1-h-cap">SME + green debt deals (Khan Bank, Golomt, TDB, XacBank, M Bank багтсан)</div>
+        <div class="s1-h-detail">Хан Банк <strong>$200M</strong> бонд (2025), TDB Bpifrance trade finance, Golomt WaterEquity <strong>$13M</strong>, M Bank IFC <strong>$30M</strong> SME/women</div>
       </div>
       <div class="s1-hcard nbfi">
-        <div class="s1-h-label">6 NBFI / Fintech (Лэндмн орсон)</div>
-        <div class="s1-h-amount">$125M</div>
-        <div class="s1-h-cap">Покет, Лэндмн, Simple, Sono, ТОКИ зэрэг</div>
-        <div class="s1-h-detail">Покет <strong>$71.5M</strong>, Лэндмн <strong>$27M</strong> ($20M Lendable + $7M IFC equity), Simple <strong>$16.5M</strong>, Sono <strong>$10M</strong>.</div>
+        <div class="s1-h-label">5 NBFI / fintech (LendMN-ээс бусад)</div>
+        <div class="s1-h-amount">$98M</div>
+        <div class="s1-h-cap">Pocket, Simple, Sono, HiPay болон бусад</div>
+        <div class="s1-h-detail">Pocket дангаараа <strong>$71.5M</strong> (Helicap, FMO, Triple Jump, EMF), Simple <strong>$16.5M</strong>, Sono <strong>$10M</strong>. 7 NBFI сүүлийн 18 сард capital round хаагаагүй.</div>
+      </div>
+      <div class="s1-hcard lendmn">
+        <div class="s1-h-label">LendMN</div>
+        <div class="s1-h-amount">$27M</div>
+        <div class="s1-h-cap">Direct debt + parent equity — бүтэц нь ялгаатай</div>
+        <div class="s1-h-detail"><strong>$20M</strong> debt facility Lendable-аас (Apr 2025, first offshore close) + <strong>$7M</strong> equity IFC-ээс AND Global parent company  рүү (Aug 2025, IFC-ийн Монголд 10 жилийн дараах анхны equity investment investment)</div>
       </div>
     </div>
 
     <div class="s1-gap">
-      <div class="s1-gap-num">20×</div>
-      <div class="s1-gap-text">Банкууд NBFI-уудаас <strong>20 дахин</strong> их capital татсан нь market-ийн хүч тэнцвэргүй байгааг харуулна. Банкууд уламжлалт NBFI-ийн зорилтот "SME" segment рүү хүчтэй нэвтэрч байгаа тул Лэндмн цаашид <strong>тодорхой нарийвчилсан segment-д (specific positioning)</strong> төвлөрөх strategy баримтлах шаардлагатай.</div>
+      <div class="s1-gap-num">26×</div>
+      <div class="s1-gap-text">Банкууд NBFI-уудаас <strong>26 дахин</strong> их капитал татсан нь зах зээлийн санхүүжилтийн тэнцвэр алдагдсаныг ха рүүлж байна. $2.5B-ийн дийлэнх нь SME + green finance ангилалтай — өөрөөр хэлбэл <strong>банкууд уламжлалт NBFI-ийн “SME finance gap” сегмент рүү аль хэдийн орсон.</strong> Ийм нөхцөлд LendMN нийт зах зээл дээр бус, <strong>нарийн тодорхойлсон стратегийн байршуулалт</strong>-аар ялгарах шаардлагатай.</div>
     </div>
 
     <div class="s1-split-grid">
       <div class="s1-split-card">
-        <div class="s1-split-title">Банкуудын $2,541M-ийн бүтэц</div>
-        <div class="s1-split-sub">SME / Green төслүүд</div>
+        <div class="s1-split-title">Банкны $2,541M-ийн ангиллын задаргаа</div>
+        <div class="s1-split-sub">SME / Environmental / Other — санхүүжилтийн чиглэлүүд</div>
         <div class="s1-stack">
           <div class="s1-seg sme" style="width:67%">$1,699M · SME</div>
           <div class="s1-seg green" style="width:33%">$842M · Green</div>
         </div>
         <div class="s1-stack-meta">
-          <span><strong>67%</strong> SME зээл</span>
-          <span><strong>33%</strong> Байгаль орчин/green төсөл</span>
+          <span><strong>67%</strong> SME зориулалттай</span>
+          <span><strong>33%</strong> environmental / blue / water finance</span>
         </div>
       </div>
 
       <div class="s1-split-card">
-        <div class="s1-split-title">NBFI-уудын $125M-ийн бүтэц</div>
-        <div class="s1-split-sub">Үндсэндээ SME болон бизнесийн тэлэлтэд</div>
+        <div class="s1-split-title">NBFI-ийн $98M санхүүжилтийн шинж</div>
+        <div class="s1-split-sub">Үндсэндээ business expansion зориулалттай</div>
         <div class="s1-stack">
-          <div class="s1-seg sme" style="width:98%">$123M · SME</div>
+          <div class="s1-seg sme" style="width:98%">$96M · SME</div>
           <div class="s1-seg green" style="width:2%"></div>
         </div>
         <div class="s1-stack-meta">
-          <span><strong>98%</strong> SME/Ерөнхий зориулалт</span>
-          <span><strong>2%</strong> Green (Покет $2M)</span>
+          <span><strong>98%</strong> SME зориулалттай</span>
+          <span><strong>2%</strong> environmental (Pocket $2M EBRD)</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ============ SLIDE 2 — NBFI fundraising heatmap (HERO) ============ -->
 <section id="sec-2" class="section">
   <div class="section-pad">
     <div class="section-num">Slide 2 · HERO</div>
-    <div class="s-title">NBFI funding — Хөрөнгө таталтын дэлгэрэнгүй</div>
-    <div class="s-sub">Сүүлийн 18 сард capital татаж чадсан Топ 4 тоглогч болон тэдний хэлцлийн мэдээлэл.</div>
+    <div class="s-title">NBFI funding — хэн татаж чадсан, хэн татаж чадаагүй вэ?</div>
+    <div class="s-sub">Топ 12 NBFI / fintech-ийн сүүлийн 18 сарын fundraising activity-г сараар ха рүүлсан. Зөвхөн 4 тоглогч шинэ капитал татаж чадсан.</div>
 
-    <div class="s2-grid-wrap">
-      <table class="funding-table">
-        <thead>
-          <tr>
-            <th style="width:15%">Байгууллага</th>
-            <th style="width:20%">Нийт дүн</th>
-            <th style="width:65%">Татан төвлөрүүлсэн хэлцлүүд (Эх үүсвэр ба Дүн)</th>
-          </tr>
-        </thead>
-        <tbody id="s2-funding-list">
-          </tbody>
-      </table>
+    <div class="s2-callout">
+      <div class="s2-cal-card s2-cal-1">
+        <div class="s2-cal-num">$71.5M</div>
+        <div class="s2-cal-lbl"><strong>Pocket</strong> — sector leader, multiple deals (Triple Jump, EMF, FMO, Helicap)</div>
+      </div>
+      <div class="s2-cal-card s2-cal-2">
+        <div class="s2-cal-num">$27M</div>
+        <div class="s2-cal-lbl"><strong>LendMN</strong> — debt $20M + equity $7M, sector цорын ганц hybrid stack</div>
+      </div>
+      <div class="s2-cal-card s2-cal-3">
+        <div class="s2-cal-num">$26.5M</div>
+        <div class="s2-cal-lbl"><strong>Simple + Sono</strong> хосолж — $16.5M + $10M, mid-tier deals</div>
+      </div>
+      <div class="s2-cal-card s2-cal-4">
+        <div class="s2-cal-num">8 / 12</div>
+        <div class="s2-cal-lbl"><strong>NBFI capital татаагүй</strong> — Toki, Numur, HiPay болон бусад</div>
+      </div>
     </div>
 
-    <div class="impact-box accented">
-      <div class="impact-title">Strategy дүгнэлт</div>
-      Хөрөнгө татаагүй бусад NBFI-ууд (Ашид, Транскапитал г.м) зах зээлээс шахагдаж байхад, Топ 4 тоглогчид 100% capital төвлөрүүлж чадсан. Лэндмн-ийн хувьд IFC-ийн $7M equity нь бүтцийн хувьд бат бөх суурь болсон ч, хэлцлийн тоо болон дүнгээр Покетоос бага байна. Покетийн олон эх үүсвэрт funding нь эрсдэл багатай тул, Лэндмн дараагийн шатанд <strong>санхүүжилтийн эх үүсвэрээ төрөлжүүлэх (diversification)</strong>-д анхаарах шаардлагатай.
+    <div class="s2-grid-wrap">
+      <div class="s2-grid-title">12 NBFI × 18 months — fundraising deals heatmap</div>
+      <div class="s2-grid" id="s2-grid"></div>
+      <div class="s2-legend">
+        <span><span class="s2-lg-sw" style="background:var(--pocket)"></span>Pocket deal (debt)</span>
+        <span><span class="s2-lg-sw" style="background:var(--accent)"></span>LendMN deal</span>
+        <span><span class="s2-lg-sw" style="background:#d4a04a"></span>Equity round</span>
+        <span><span class="s2-lg-sw" style="background:#5DA68C"></span>Simple deal</span>
+        <span><span class="s2-lg-sw" style="background:#88b3a3"></span>Sono deal</span>
+        <span><span class="s2-lg-sw" style="background:var(--bg-secondary)"></span>No activity</span>
+      </div>
+    </div>
+
+    <div class="s2-conclusion">
+      <strong>Стратегийн утга:</strong> NBFI sector-ийн fundraising маш төвлөрсөн байна — Top 4 issuer нийт татсан капиталыг бүрдүүлсэн. LendMN-ийн байр суурь нэг талаас <strong>defensive</strong> (single deal, Pocket-оос бага), нөгөө талаас <strong>structurally valuable</strong> — IFC-ийн Монголд 10 жилийн дараах анхны equity investment ($7M Series B, parent company  рүү) нь Pocket-ийн debt-only stack-аас илүү гүн стратегийн anchor. Гэхдээ Pocket-ийн multi-source debt diversification нь LendMN-ийн single-rail funding-аас илүү resilient. <strong>Funding diversification дараагийн раундны гол priority байх ёстой.</strong>
     </div>
   </div>
 </section>
 
+<!-- ============ SLIDE 3 — Banks SME push ============ -->
 <section id="sec-3" class="section">
   <div class="section-pad">
     <div class="section-num">Slide 3</div>
-    <div class="s-title">Банкуудын SME digital шилжилт</div>
-    <div class="s-sub">Банкууд technology-оор дамжин бичил segment рүү хэрхэн нэвтэрч байна вэ.</div>
+    <div class="s-title">Банкуудын SME / digital push — сүүлийн алхамууд</div>
+    <div class="s-sub">6 банкны сүүлийн 18 сарын гол хөдөлгөөнүүд. Хэн ямар сегмент рүү орж, хэн hardware-enabled distribution model ашиглаж байгааг ха рүүлна. M Bank нь LendMN-д хамгийн өндөр strategic threat үүсгэж байна.</div>
 
     <div class="s3-banks">
+
       <div class="s3-bank-card high-threat">
         <div class="s3-bank-name">M Bank</div>
-        <div class="s3-bank-tag">MCS Group · KakaoBank scoring</div>
+        <div class="s3-bank-tag">MCS Group · neobank · KakaoBank scoring partnership</div>
         <div class="s3-bank-moves">
-          <div class="s3-move"><span class="s3-move-date">May'24</span><span class="s3-move-text"><strong>$30M IFC</strong> SME/Эмэгтэйчүүд</span></div>
-          <div class="s3-move"><span class="s3-move-date">Apr'26</span><span class="s3-move-text"><strong>KakaoBank Score</strong> өөр хувилбарт data scoring түншлэл</span></div>
-          <div class="s3-move"><span class="s3-move-date">2026</span><span class="s3-move-text"><strong>SoftPOS</strong> ecosystem төлөвлөгөө</span></div>
+          <div class="s3-move"><span class="s3-move-date">May'24</span><span class="s3-move-text"><strong>IFC $30M facility</strong> SME/women borrowers, supply chain finance (25% women-owned SME-д тусгайлан)</span></div>
+          <div class="s3-move"><span class="s3-move-date">Apr'26</span><span class="s3-move-text"><strong>KakaoBank Score</strong> alternative scoring model partnership — non-financial data based ($11B proven model in Korea). Equity investment + Central Asia JV plan.</span></div>
+          <div class="s3-move"><span class="s3-move-date">2026</span><span class="s3-move-text"><strong>SoftPOS rollout (planned)</strong> — tablet hardware + commercial center placement + employee activation campaign дээр суурилсан merchant ecosystem play</span></div>
+          <div class="s3-move"><span class="s3-move-date">2024</span><span class="s3-move-text">Apple Pay, Visa/Mastercard digital wallet integration</span></div>
         </div>
+        <div class="s3-bank-funding">Funding stack: <strong>$30M IFC</strong> + KakaoBank equity (size TBD)</div>
       </div>
 
       <div class="s3-bank-card high-threat">
-        <div class="s3-bank-name">ХасБанк</div>
-        <div class="s3-bank-tag">Digital & SME focus</div>
+        <div class="s3-bank-name">XacBank</div>
+        <div class="s3-bank-tag">Tier-1 commercial bank · digital + SME focus</div>
         <div class="s3-bank-moves">
-          <div class="s3-move"><span class="s3-move-date">Sep'25</span><span class="s3-move-text"><strong>1.8% хүүтэй залуу бизнес эрхлэгчийн зээл</strong> (шууд харилцагч татаж байна)</span></div>
-          <div class="s3-move"><span class="s3-move-date">Jul'25</span><span class="s3-move-text">Тэнгэр Финаншл Групп байгуулах эрх</span></div>
-          <div class="s3-move"><span class="s3-move-date">Mar'26</span><span class="s3-move-text">Ахмад бизнес эрхлэгчдийн зээл</span></div>
+          <div class="s3-move"><span class="s3-move-date">Sep'25</span><span class="s3-move-text"><strong>Youth Entrepreneur Loan</strong> tiered rates from <strong>1.8%</strong> — LendMN-ийн customer attrition risk-ийг шууд нэмэгдүүлж байна (дотоод survey-д XacBank  рүү шилжсэн pattern ажиглагдсан)</span></div>
+          <div class="s3-move"><span class="s3-move-date">Jul'25</span><span class="s3-move-text">FRC permission to form <strong>Tenger Financial Group</strong> — banking + non-bank cross-product capability</span></div>
+          <div class="s3-move"><span class="s3-move-date">Jan'26</span><span class="s3-move-text">XacM centralization — housing + leasing operations-ыг нэгтгэсэн</span></div>
+          <div class="s3-move"><span class="s3-move-date">Mar'26</span><span class="s3-move-text">Senior Entrepreneur Loan — шинэ sub-segment рүү орж эхэлсэн</span></div>
+          <div class="s3-move"><span class="s3-move-date">Apr'26</span><span class="s3-move-text">Google Pay launch</span></div>
         </div>
+        <div class="s3-bank-funding">Pricing edge: <strong>1.8% rate</strong>, ₮500M–₮1B size — collateral-free option available</div>
       </div>
 
       <div class="s3-bank-card threat">
-        <div class="s3-bank-name">Хаан Банк</div>
-        <div class="s3-bank-tag">TCS BaNCS шинэчлэл</div>
+        <div class="s3-bank-name">Khan Bank</div>
+        <div class="s3-bank-tag">Largest bank · TCS BaNCS overhaul</div>
         <div class="s3-bank-moves">
-          <div class="s3-move"><span class="s3-move-date">May'25</span><span class="s3-move-text">TCS BaNCS core system-ийн шинэчлэл</span></div>
-          <div class="s3-move"><span class="s3-move-date">Jun'25</span><span class="s3-move-text">Зээлийн багцын <strong>53% бизнес</strong> рүү шилжсэн</span></div>
-          <div class="s3-move"><span class="s3-move-date">Mar'26</span><span class="s3-move-text">IFC гадаад валютын ханшийн эрсдэлийн багц</span></div>
+          <div class="s3-move"><span class="s3-move-date">Apr'25</span><span class="s3-move-text">AI chatbot <strong>"Digi"</strong> scaled across customer base</span></div>
+          <div class="s3-move"><span class="s3-move-date">May'25</span><span class="s3-move-text">Strategic alliance with <strong>Tata Consultancy Services</strong> — TCS BaNCS core banking transformation</span></div>
+          <div class="s3-move"><span class="s3-move-date">Jun'25</span><span class="s3-move-text">Loan portfolio shifted — <strong>53% business loans</strong> (consumer/retail focus-оос business lending рүү шилжсэн)</span></div>
+          <div class="s3-move"><span class="s3-move-date">Mar'26</span><span class="s3-move-text">IFC FX hedge derivatives package — currency risk management capability upgraded</span></div>
+          <div class="s3-move"><span class="s3-move-date">Apr'26</span><span class="s3-move-text">UNICEF green schools partnership</span></div>
         </div>
+        <div class="s3-bank-funding">Funding stack: <strong>$200M+</strong> recent debt + IFC FX derivatives</div>
       </div>
 
       <div class="s3-bank-card">
-        <div class="s3-bank-name">ХХБ</div>
-        <div class="s3-bank-tag">Premium digital & AI</div>
+        <div class="s3-bank-name">TDB</div>
+        <div class="s3-bank-tag">Premium digital + AI focus</div>
         <div class="s3-bank-moves">
-          <div class="s3-move"><span class="s3-move-date">Nov'25</span><span class="s3-move-text"><strong>6 минутын digital авто зээл</strong></span></div>
-          <div class="s3-move"><span class="s3-move-date">Jul'25</span><span class="s3-move-text">Bpifrance худалдааны санхүүжилт</span></div>
-          <div class="s3-move"><span class="s3-move-date">2024</span><span class="s3-move-text">Анхны Apple Pay & Google Pay</span></div>
+          <div class="s3-move"><span class="s3-move-date">Nov'25</span><span class="s3-move-text"><strong>"6-Minute Digital Car Loan"</strong> — Pocket-ийн car loan-той зэрэгцэн speed advantage  рүү шахаж байна</span></div>
+          <div class="s3-move"><span class="s3-move-date">2024</span><span class="s3-move-text">First-mover position in <strong>Apple Pay</strong> + <strong>Google Pay</strong> launches in Mongolia (Dec 2024 + Nov 2025)</span></div>
+          <div class="s3-move"><span class="s3-move-date">Jul'25</span><span class="s3-move-text"><strong>Bpifrance trade finance</strong> agreement, followed by a specific financing mandate in Feb'26</span></div>
+          <div class="s3-move"><span class="s3-move-date">Dec'25</span><span class="s3-move-text"><strong>"TDB Skill Lab"</strong> — proprietary AI internal training — talent moat building</span></div>
+          <div class="s3-move"><span class="s3-move-date">2024+</span><span class="s3-move-text">Temenos T24 core banking</span></div>
         </div>
+        <div class="s3-bank-funding">Funding stack: Bpifrance trade + bond market access</div>
       </div>
 
       <div class="s3-bank-card">
-        <div class="s3-bank-name">Голомт</div>
-        <div class="s3-bank-tag">Хэтэвч & Green санхүүжилт</div>
+        <div class="s3-bank-name">Golomt</div>
+        <div class="s3-bank-tag">Wallet + green finance leader</div>
         <div class="s3-bank-moves">
-          <div class="s3-move"><span class="s3-move-date">Apr'25</span><span class="s3-move-text">SME авлагын санхүүжилт (factoring)</span></div>
-          <div class="s3-move"><span class="s3-move-date">Sep'25</span><span class="s3-move-text"><strong>WeChat Pay</strong> түншлэл</span></div>
-          <div class="s3-move"><span class="s3-move-date">Mar'26</span><span class="s3-move-text">Усны төслүүдийн $13M WaterEquity</span></div>
+          <div class="s3-move"><span class="s3-move-date">Apr'25</span><span class="s3-move-text">First-ever <strong>SME bill discounting</strong> service launched — factoring-type SME finance segment рүү орсон</span></div>
+          <div class="s3-move"><span class="s3-move-date">Sep'25</span><span class="s3-move-text"><strong>$13M WaterEquity</strong> water finance facility</span></div>
+          <div class="s3-move"><span class="s3-move-date">Sep'25</span><span class="s3-move-text"><strong>WeChat Pay partnership</strong> — Mongolia's first cross-border wallet</span></div>
+          <div class="s3-move"><span class="s3-move-date">Jan'26</span><span class="s3-move-text"><strong>Google Pay</strong> launch in Mongolia + AliPay+ partnership</span></div>
+          <div class="s3-move"><span class="s3-move-date">Mar'26</span><span class="s3-move-text">3 new <strong>blue finance</strong> products — water-related lending segment</span></div>
         </div>
+        <div class="s3-bank-funding">Funding stack: WaterEquity $13M + green pipeline</div>
       </div>
 
       <div class="s3-bank-card">
         <div class="s3-bank-name">Төрийн Банк</div>
-        <div class="s3-bank-tag">Төр, орон нутгийн segment</div>
+        <div class="s3-bank-tag">Public sector · rural & senior segments</div>
         <div class="s3-bank-moves">
-          <div class="s3-move"><span class="s3-move-date">Feb'25</span><span class="s3-move-text"><strong>Малчдын digital зээл</strong></span></div>
-          <div class="s3-move"><span class="s3-move-date">Mar'26</span><span class="s3-move-text">Ахмад бизнес эрхлэгчийн зээл</span></div>
+          <div class="s3-move"><span class="s3-move-date">Feb'25</span><span class="s3-move-text"><strong>"Digital Loan for Herders"</strong> — official livestock certificate ашиглан loan eligibility check хийдэг model</span></div>
+          <div class="s3-move"><span class="s3-move-date">Jun'25</span><span class="s3-move-text">Corporate Credit Cards + Platinum Credit Cards</span></div>
+          <div class="s3-move"><span class="s3-move-date">Mar'26</span><span class="s3-move-text"><strong>"Senior Entrepreneur Loan"</strong> — XacBank-той зэрэгцэн шинэ sub-segment</span></div>
         </div>
+        <div class="s3-bank-funding">Funding stack: government/sovereign access</div>
       </div>
+
     </div>
 
-    <div class="impact-box">
-      <div class="impact-title">Лэндмн-д үзүүлэх нөлөөлөл</div>
-      M Bank-ийн "KakaoBank Score + $30M IFC" хослол нь манайхтай яг ижил segment-д чиглэж буй хамгийн том бүтцийн эрсдэл юм. Түүнчлэн, ХасБанкны 1.8% хүүтэй зээл манай харилцагчдыг шууд татаж (churn) байна. Банкууд уламжлалт SME рүү хүчтэй орж байгаа тул Лэндмн цаашид data, platform-д суурилсан (embedded) шийдэл рүү хурдтай шилжих хэрэгтэй.
+    <div class="s3-impact">
+      <div class="s3-impact-title">LendMN-д хамаатай impact</div>
+      <strong>Direct threat shortlist (top 2):</strong> M Bank-ийн KakaoBank Score partnership + IFC $30M facility нь structural threat — neobank model, alternative scoring, SME finance гурвуулаа LendMN-ийн positioning-той давхцаж байна. XacBank-ийн 1.8% rate бүхий Youth Business Loan нь LendMN-ийн existing SME customers-д шууд attrition pressure үүсгэнэ. <strong>Indirect:</strong> Khan Bank-ийн loan portfolio business lending рүү shift хийсэн нь, Golomt-ийн bill discounting, State Bank-ийн Senior/Herder segment expansion бүгд SME finance space-ийг улам шахаж байна. Гол message: <strong>“уламжлалт SME finance” сегментээс зай барьж, embedded finance / data productization  рүү шилжих стратегийн логик улам тодорхой боллоо.</strong>
     </div>
   </div>
 </section>
+
 
 <section id="sec-4" class="section">
   <div class="section-pad">
     <div class="section-num">Slide 4</div>
-    <div class="s-title">NBFI-уудын Loan Portfolio & Products</div>
-    <div class="s-sub">Зах зээлийн Топ 12 тоглогчийн зээлийн багцын хэмжээ (Тэрбум төгрөгөөр) болон онцлох (Unique) нөхцлүүд.</div>
+    <div class="s-title">NBFI бүтээгдэхүүний хувьсал — хэн ямар шинэ product гаргасан бэ</div>
+    <div class="s-sub">5 идэвхтэй NBFI / fintech-ийн сүүлийн 18 сарын product launches. Зорилго: ямар сегментүүд эзлэгдэж байгаа, LendMN аль категорид competitive threat-тэй тулж байгааг ха рүүлах.</div>
 
     <div class="s4-grid" id="s4-grid"></div>
 
-    <div class="impact-box">
-      <div class="impact-title">Гол хандлага</div>
-      Лэндмн (₮351.6B) нь зах зээлд 4-р байранд тогтвортой бичигдэж байна. Гэсэн хэдий ч Покет (₮361.5B) биднийг гүйцэж түрүүлсэн нь сүүлийн 18 сарын түрэмгий өсөлтийг харуулж байна. Таван Богд Финанс болон Инвескор нар ₮600B-аас дээш багцтайгаар уламжлалт NBFI-ийн салбарт тэргүүлсэн хэвээр байна. Digital бүтээгдэхүүнүүдийн хөгжүүлэлт хурдасч байгаа нь бодит эрсдэл үүсгэж байна.
+    <div class="s4-impact">
+      <div class="s4-impact-title">Key pattern</div>
+      <strong>Гурван тодорхой category ажиглагдаж байна:</strong> (1) <strong>Trust products</strong> — Pocket, Simple бараг ижил timeline-аар (May–Dec 2025) launch — bank-like deposit / trust product  рүү шилжих pattern. (2) <strong>Digital car loan</strong> — Pocket (Feb 2026) + TDB (Nov 2025, 6 минут) хоёулаа — vehicle collateral хамгийн scalable collateral segment. (3) <strong>Specialty / niche segment</strong> — Numur (tuition), Simple (debt consolidation), Sono (Mastercard credit card via Bonum). <strong>LendMN-ийн Flexi Business Loan</strong> ($70M+ disbursed, 3,800 SME, 630 daily applications) нь “100% digital + collateral-free” positioning-аар цорын ганц тоглогч хэвээр байна — гэхдээ Pocket car-collateralized digital + M Bank SME finance рүү шилжсэн нь threat pathway.
     </div>
   </div>
 </section>
-
-<section id="sec-5" class="section">
-  <div class="section-pad">
-    <div class="section-num">Slide 5</div>
-    <div class="s-title">Technology stack & Түншлэл</div>
-    <div class="s-sub">Арын system-д хэн юу хөгжүүлж байна вэ. NBFI болон Fintech-үүдийн онцлох integration.</div>
-
-    <div class="s5-grid">
-      <div class="s5-card s5-high-threat">
-        <div class="s5-card-head">
-          <div class="s5-card-name">M Bank</div>
-          <div class="s5-card-flag">⚠ Ноцтой эрсдэл</div>
-        </div>
-        <div class="s5-stack" style="margin-top:10px;">
-          <div class="s5-layer"><div class="s5-l-label">Scoring</div><div class="s5-l-tech"><strong>KakaoBank Score</strong> — Солонгост $11B-оор батлагдсан data model</div></div>
-          <div class="s5-layer"><div class="s5-l-label">Acquiring</div><div class="s5-l-tech"><strong>SoftPOS</strong> — таблет төхөөрөмжийн merchant rollout</div></div>
-        </div>
-      </div>
-
-      <div class="s5-card s5-lendmn">
-        <div class="s5-card-head">
-          <div class="s5-card-name">Лэндмн</div>
-          <div class="s5-card-flag s5-flag-self">Бид</div>
-        </div>
-        <div class="s5-stack" style="margin-top:10px;">
-          <div class="s5-layer"><div class="s5-l-label">Scoring</div><div class="s5-l-tech"><strong>AI scoring</strong> + LLM эрсдэлийн загвар</div></div>
-          <div class="s5-layer"><div class="s5-l-label">Technology</div><div class="s5-l-tech"><strong>AND Solutions</strong> — 11 улсад ашиглагддаг system</div></div>
-          <div class="s5-layer"><div class="s5-l-label">Хэтэвч</div><div class="s5-l-tech">Payment rail (төлбөрийн гарц) байхгүй (Сул тал)</div></div>
-        </div>
-      </div>
-
-      <div class="s5-card s5-medium-threat">
-        <div class="s5-card-head">
-          <div class="s5-card-name">Покет</div>
-          <div class="s5-card-flag">Өндөр эрсдэл</div>
-        </div>
-        <div class="s5-stack" style="margin-top:10px;">
-          <div class="s5-layer"><div class="s5-l-label">Scoring</div><div class="s5-l-tech"><strong>AILab</strong> — дотооддоо хөгжүүлсэн proprietary загвар</div></div>
-          <div class="s5-layer"><div class="s5-l-label">Data</div><div class="s5-l-tech"><strong>АТҮТ + G-Sign</strong> — төрийн дататай шууд API-аар integration хийсэн</div></div>
-        </div>
-      </div>
-
-      <div class="s5-card">
-        <div class="s5-card-head">
-          <div class="s5-card-name">Toki</div>
-          <div class="s5-card-flag">Superapp</div>
-        </div>
-        <div class="s5-stack" style="margin-top:10px;">
-          <div class="s5-layer"><div class="s5-l-label">Ecosystem</div><div class="s5-l-tech">Unitel Group-ийн superapp. Энэтхэгийн <strong>Appinventiv</strong> компаниар outsourced хөгжүүлэлт.</div></div>
-          <div class="s5-layer"><div class="s5-l-label">Integration</div><div class="s5-l-tech">Гадаад руу залгах болон cross-border payment platform integration-тай.</div></div>
-        </div>
-      </div>
-
-      <div class="s5-card">
-        <div class="s5-card-head">
-          <div class="s5-card-name">Netcapital</div>
-          <div class="s5-card-flag">Уламжлалт NBFI</div>
-        </div>
-        <div class="s5-stack" style="margin-top:10px;">
-          <div class="s5-layer"><div class="s5-l-label">Core System</div><div class="s5-l-tech"><strong>NetCore</strong> болон Grapecity-ийн <strong>Achidbanker</strong> system рүү шилжсэн.</div></div>
-          <div class="s5-layer"><div class="s5-l-label">Data</div><div class="s5-l-tech">COSO ERM framework болон дотоодын AI model нэвтрүүлсэн.</div></div>
-        </div>
-      </div>
-
-      <div class="s5-card">
-        <div class="s5-card-head">
-          <div class="s5-card-name">Numur & Ashid</div>
-          <div class="s5-card-flag">Niche player</div>
-        </div>
-        <div class="s5-stack" style="margin-top:10px;">
-          <div class="s5-layer"><div class="s5-l-label">Ashid</div><div class="s5-l-tech">Автомашины зах зээл дээр дагнасан үнэлгээ болон зээлийн process-тай.</div></div>
-          <div class="s5-layer"><div class="s5-l-label">Numur</div><div class="s5-l-tech">Их дээд сургуулиудын system-тэй B2B API integration хийж төлбөр олгодог.</div></div>
-        </div>
-      </div>
-
-      <div class="s5-card">
-        <div class="s5-card-head">
-          <div class="s5-card-name">Sono & Simple</div>
-          <div class="s5-card-flag">Гадаад vendor</div>
-        </div>
-        <div class="s5-stack" style="margin-top:10px;">
-          <div class="s5-layer"><div class="s5-l-label">Sono</div><div class="s5-l-tech">Bonum-аар дамжуулан Mastercard гаргах card architecture-тай.</div></div>
-          <div class="s5-layer"><div class="s5-l-label">Simple</div><div class="s5-l-tech">Энэтхэгийн <strong>Simform</strong> vendor-ийг technology хөгжүүлэлтдээ ашиглаж байна.</div></div>
-        </div>
-      </div>
-
-      <div class="s5-card">
-        <div class="s5-card-head">
-          <div class="s5-card-name">Уламжлалт Банкууд</div>
-          <div class="s5-card-flag">International System</div>
-        </div>
-        <div class="s5-stack" style="margin-top:10px;">
-          <div class="s5-layer"><div class="s5-l-label">System</div><div class="s5-l-tech">Хаан Банк <strong>TCS BaNCS</strong>, ХХБ <strong>Temenos T24</strong> зэрэг олон улсын core system-тэй.</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="impact-box">
-      <div class="impact-title">Strategy дүгнэлт</div>
-      AND Solutions-ийн AI scoring нь салбартаа хамгийн шилдэг нь хэдий ч 2 том эрсдэл/дутагдал байна. 1) <strong>Payment rail байхгүй:</strong> Бусад тоглогчид card, POS, цахим хэтэвчээр худалдаачдын ecosystem рүү нэвтэрч байна. 2) <strong>M Bank-ийн KakaoBank Score:</strong> Энэхүү батлагдсан scoring загвар нь манай өрсөлдөх давуу талд шууд заналхийлж байна.
-    </div>
-  </div>
-</section>
-
-<section id="sec-6" class="section">
-  <div class="section-pad">
-    <div class="section-num">Slide 6</div>
-    <div class="s-title">Strategy-ийн 5 гол дүгнэлт</div>
-    <div class="s-sub">Сүүлийн 18 сарын хөдөлгөөнөөс бидний анхаарах зүйлс.</div>
-
-    <div class="s6-grid">
-      <div class="s6-box s6-accent">
-        <div class="s6-num">01</div>
-        <div class="s6-title">Capital-ыг төрөлжүүлэх шаардлага</div>
-        <div class="s6-text">Бид өр болон equity хосолсон сайн бүтэцтэй ч, дүнгээрээ Покетоос (2.6x) бага байна. Дараагийн шатанд эх үүсвэрийг төрөлжүүлэх (diversification) нь нэн тэргүүний зорилт.</div>
-      </div>
-      <div class="s6-box s6-warn">
-        <div class="s6-num">02</div>
-        <div class="s6-title">M Bank-ийн ноцтой эрсдэл</div>
-        <div class="s6-text">M Bank-ийн "IFC $30M + KakaoBank Score + SoftPOS" хослол нь манай market рүү чиглэсэн хамгийн том бүтцийн эрсдэл юм. Бидэнд илүү тодорхой бүтцийн ялгарал хэрэгтэй.</div>
-      </div>
-      <div class="s6-box s6-warn">
-        <div class="s6-num">03</div>
-        <div class="s6-title">Хүүгийн өрсөлдөөн ба шилжилт (Churn)</div>
-        <div class="s6-text">ХасБанкны 1.8% хүүтэй зээл манай харилцагчдыг татаж байна. Хүүгээр шууд өрсөлдөх боломжгүй тул бид хурд, автоматжуулалт, түгээлтээрээ илүү ялгарах ёстой.</div>
-      </div>
-      <div class="s6-box s6-warn">
-        <div class="s6-num">04</div>
-        <div class="s6-title">Payment rail хоосон орон зай</div>
-        <div class="s6-text">Бусад тоглогчид card, payment rail-уудыг эзэлж байхад манайд payment rail байхгүй байгаа нь цаашдын ecosystem-ийн тэлэлтэд саад болж байна.</div>
-      </div>
-      <div class="s6-box s6-accent">
-        <div class="s6-num">05</div>
-        <div class="s6-title">Technology-оо product болгох</div>
-        <div class="s6-text">Манай AI scoring technology илүү хэдий ч, M Bank-ийн шинэ system гүйцэхээс өмнө бид өөрсдийн давуу талыг SaaS / data product болгон зах зээлд гаргах хэрэгтэй.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="sec-7" class="section">
-  <div class="section-pad">
-    <div class="section-num">Slide 7</div>
-    <div class="s-title">Customer Segmentation: Хүүгийн орлогын бүтэц</div>
-    <div class="s-sub">Орлогын хэдэн хувь нь Хувь хүн (Retail) болон Байгууллага (Corporate/SME)-аас бүрдэж байна вэ.</div>
-
-    <div class="chart-container" id="s7-charts">
-      </div>
-    
-    <div class="chart-legend">
-      <span><div class="lg-box seg-retail"></div>Хувь хүний (Retail) хүүгийн орлого</span>
-      <span><div class="lg-box seg-corp"></div>Байгууллагын (Corporate) хүүгийн орлого</span>
-    </div>
-
-    <div class="impact-box" style="margin-top:24px;">
-      <div class="impact-title">Segment-ийн дүгнэлт</div>
-      Дэлгэрэнгүй графикт харуулснаар байгууллага руу чиглэсэн орлого хэн дээр илүү төвлөрч байгааг харж болно. Лэндмн (99.8%) болон Покет (100%) нь бүхэлдээ <strong>Retail (Иргэд)</strong> төвлөрсөн загвартай байгаа бол Инвескор (16.1%) болон Таван Богд Финанс (2.8%) зэрэг тоглогчид ААН-ийн зээлийн багцаа нэмэгдүүлж байна. Энэ нь Лэндмн-ийн хувьд SME (Flexi Business) segment-д өсөх асар их орон зай байгааг баталж байна.
-    </div>
-  </div>
-</section>
-
-</div>
-
 <script>
-// ============ Slide 2 Data & Render ============
-(function(){
-  const fundingData = [
-    { name:'Покет', cls:'pocket', total:'$71.5M', deals: [
-      { t:'$25M Helicap (Debt, mid-term)', c:'debt' },
-      { t:'$20M FMO Netherlands MSME (Debt)', c:'debt' },
-      { t:'MNT 50B / ~$14M ХБҮЦ (Бонд)', c:'debt' },
-      { t:'$5M Triple Jump + $4.5M GGSF + $3M EMF', c:'debt' }
-    ]},
-    { name:'Лэндмн', cls:'lendmn', total:'$27.0M', deals: [
-      { t:'$20M Lendable senior debt facility', c:'debt' },
-      { t:'$7M IFC Equity (Series B, AND Global-д)', c:'equity' }
-    ]},
-    { name:'Simple', cls:'', total:'$16.5M', deals: [
-      { t:'MNT 35B бонд + MNT 40B ХБҮЦ', c:'debt' },
-      { t:'$3M Enabling Qapital MSME', c:'debt' }
-    ]},
-    { name:'Sono', cls:'', total:'~$10.0M', deals: [
-      { t:'Олон улсын IFI болон дотоодын шугамууд (Debt)', c:'debt' }
-    ]}
-  ];
-
-  const tbody = document.getElementById('s2-funding-list');
-  tbody.innerHTML = fundingData.map(co => `
-    <tr>
-      <td><div class="f-name ${co.cls}">${co.name}</div></td>
-      <td><div class="f-total">${co.total}</div></td>
-      <td>
-        <div class="f-deals">
-          ${co.deals.map(d => `
-            <div class="f-deal-item ${d.c}">
-              <div class="f-deal-title">${d.t}</div>
-              <div class="f-deal-meta">${d.c === 'equity' ? 'Өмчийн (Equity) санхүүжилт' : 'Өрийн (Debt) санхүүжилт'}</div>
-            </div>
-          `).join('')}
-        </div>
-      </td>
-    </tr>
-  `).join('');
-})();
-
-// ============ Slide 4 Data & Render ============
 (function(){
   const cards = [
-    {n:'Таван богд финанс', cls:'bank', 
-     stats:[{l:'Portfolio', v:'₮695.1B'}, {l:'Зах зээлд', v:'#1'}],
-     gen:'Корпораци болон бизнесийн зээл',
-     uni:'Уламжлалт NBFI зах зээлийн тэргүүлэгч, <strong>ААН-ийн зээлийн багц</strong> давамгайлсан.'
+    {n:'LendMN', cls:'lendmn', headline:'Flexi Business Loan', sub:'Mongolia\'s first 100% digital, collateral-free business loan',
+     stats:[
+       {l:'Total disbursed', v:'$70M+'},
+       {l:'Active SME borrowers', v:'3,800+'},
+       {l:'Daily applications', v:'630'},
+       {l:'Rural reach', v:'35%'}
+     ],
+     moves:[
+       {d:'2024', t:'Flexi Business Loan launch — мини бизнесийн эзэдэд хувь хүний нэрээр өгдөг (RegTech artifact)'},
+       {d:'2025', t:'Жинхэнэ 90% non-salaried + 56% women borrowers segment'},
+       {d:'Apr\'25', t:'<strong>$20M Lendable</strong> debt facility-аар scale-up funding'},
+       {d:'Aug\'25', t:'<strong>$7M IFC equity</strong> AND Global parent company  рүү — productization arm enabled'}
+     ]
     },
-    {n:'Инвескор', cls:'bank', 
-     stats:[{l:'Portfolio', v:'₮619.4B'}, {l:'Зах зээлд', v:'#2'}],
-     gen:'Бизнес болон хэрэглээний зээл',
-     uni:'Олон улсын funding татах чадвар өндөр, Покет аппликэйшний толгой компани.'
+    {n:'Pocket', cls:'pocket', headline:'Premium digital + trust products',
+     stats:[
+       {l:'Total raised', v:'$71.5M'},
+       {l:'NIM', v:'10.3% · sector best'},
+       {l:'ROE', v:'14.3% · sector best'},
+       {l:'Distinct moves', v:'7+ products'}
+     ],
+     moves:[
+       {d:'Apr\'25', t:'<strong>"My Ponji" gamification</strong> — mascot-based engagement layer'},
+       {d:'May\'25', t:'<strong>Trust-backed loan</strong> + trust certificate product'},
+       {d:'Aug\'25', t:'Long-term trust product launch'},
+       {d:'Oct\'25', t:'Behavior-based interest rate reduction (good payer pricing)'},
+       {d:'Nov\'25', t:'BNPL postponement product'},
+       {d:'Jan\'26', t:'Auto-link bank card to trust account'},
+       {d:'Feb\'26', t:'<strong>Car-collateralized 100% digital loan</strong> — АТҮТ + G-Sign integration, 8 hours (vs 2-3 days previously)'}
+     ]
     },
-    {n:'Покет', cls:'pocket',
-     stats:[{l:'Portfolio', v:'₮361.5B'}, {l:'ROE', v:'14.3%'}],
-     gen:'Хэрэглээний зээл, Авто зээл, BNPL',
-     uni:'<strong>Итгэлцэлд суурилсан</strong> зээлийн model, АТҮТ+G-Sign 100% digital авто зээл.'
+    {n:'Simple', cls:'simple', headline:'Trust + consolidation focus',
+     stats:[
+       {l:'Total raised', v:'$16.5M'},
+       {l:'Bond issuance', v:'MNT 75B+'},
+       {l:'Tech vendor', v:'Simform (India)'},
+       {l:'Sub-segments', v:'5 product lines'}
+     ],
+     moves:[
+       {d:'Aug\'25', t:'<strong>Trust product</strong> + bank statement-based business loan eligibility'},
+       {d:'Sep\'25', t:'<strong>12-month herder loan</strong> — official livestock certificate-аар (Төр банкны pattern-той ижил)'},
+       {d:'Dec\'25', t:'Trust-backed loan layer extension'},
+       {d:'Feb\'26', t:'Micro loan eligibility through bank statement analysis (LendMN-тэй ижил underwriting model)'},
+       {d:'Apr\'26', t:'<strong>"Төлөлт буу рүүлах зээл"</strong> — debt consolidation product (Mongolia first)'}
+     ]
     },
-    {n:'Лэндмн', cls:'lendmn', 
-     stats:[{l:'Portfolio', v:'₮351.6B'}, {l:'Бүртгэлтэй SME', v:'12,000+'}],
-     gen:'Хэрэглээний digital зээл, Бичил бизнесийн зээл',
-     uni:'<strong>100% digital, барьцаагүй</strong> бизнесийн зээл (SME segment-д зориулсан), AI scoring шуурхай шийдвэр.'
+    {n:'Sono финтек', cls:'sono', headline:'Premium card + payment rail',
+     stats:[
+       {l:'Total raised', v:'$10M'},
+       {l:'Net spread', v:'4.4% (cof 3.5%)'},
+       {l:'NPL', v:'3.5% · #2 cleanest'},
+       {l:'Strategy', v:'Card-led ecosystem'}
+     ],
+     moves:[
+       {d:'2025', t:'<strong>Mastercard credit card issuance</strong> via Bonum partnership — payment rail vertical entry'},
+       {d:'2025', t:'<strong>Apple Pay</strong> integration — fintech-ийн fastest cross-border payment'},
+       {d:'Ongoing', t:'10% travel cashback program — premium positioning'},
+       {d:'2026', t:'Cross-border payment infrastructure deepening'}
+     ]
     },
-    {n:'Ашид капитал', cls:'bank', 
-     stats:[{l:'Portfolio', v:'₮340.2B'}, {l:'Segment', v:'Автомашин'}],
-     gen:'Автомашины барьцаат зээл',
-     uni:'Автомашины зах зээл дээр дагнасан хамгийн том уламжлалт тоглогч.'
+    {n:'Numur', cls:'numur', headline:'Education / tuition specialty',
+     stats:[
+       {l:'Total raised', v:'No funds'},
+       {l:'Segment', v:'Student loans'},
+       {l:'Differentiation', v:'B2B education FI'},
+       {l:'Market position', v:'Specialty player'}
+     ],
+     moves:[
+       {d:'Feb\'26', t:'<strong>Annual student/parent event</strong> — tuition product introduction'},
+       {d:'Ongoing', t:'Position as specialized tuition-focused lender'},
+       {d:'Ongoing', t:'Differentiated from mass-market — partner with universities'},
+       {d:'2025+', t:'Niche but undercapitalized — funding-аас гадуур'}
+     ]
     },
-    {n:'Нөмөр кредит', cls:'numur',
-     stats:[{l:'Portfolio', v:'₮326.7B'}, {l:'Segment', v:'Оюутны зээл'}],
-     gen:'Бичил хэрэглээний зээл',
-     uni:'<strong>Зөвхөн сургалтын төлбөр</strong> рүү чиглэсэн niche market, Сургуулиудын system-тэй B2B холболт.'
-    },
-    {n:'Нэт капитал', cls:'bank', 
-     stats:[{l:'Portfolio', v:'₮285.9B'}, {l:'Төрөл', v:'Уламжлалт'}],
-     gen:'Бизнес болон хэрэглээний зээл',
-     uni:'NetCore болон Achidbanker system рүү шилжсэн, уламжлалт салбарын тоглогч.'
-    },
-    {n:'Жи Эс Би Капитал', cls:'bank', 
-     stats:[{l:'Portfolio', v:'₮271.9B'}, {l:'Төрөл', v:'Уламжлалт'}],
-     gen:'Хэрэглээний болон жижиг бизнесийн зээл',
-     uni:'Олон жилийн туршлагатай уламжлалт зээлийн үйлчилгээ үзүүлэгч.'
-    },
-    {n:'Соно финтек', cls:'sono',
-     stats:[{l:'Portfolio', v:'₮265.1B'}, {l:'NPL', v:'3.5%'}],
-     gen:'Хэрэглээний зээл, BNPL',
-     uni:'Bonum-тай хамтарсан <strong>Mastercard гаргалт</strong>, Apple Pay интеграци, 10% аяллын буцаан олголт.'
-    },
-    {n:'Транскапитал', cls:'bank', 
-     stats:[{l:'Portfolio', v:'₮194.8B'}, {l:'Төрөл', v:'Уламжлалт'}],
-     gen:'Бичил бизнесийн зээл',
-     uni:'Бичил санхүүгийн үйлчилгээгээр дагнасан уламжлалт тоглогч.'
-    },
-    {n:'Мобифинанс', cls:'bank', 
-     stats:[{l:'Portfolio', v:'₮157.0B'}, {l:'Ecosystem', v:'Мобиком'}],
-     gen:'Monpay цахим хэтэвч, digital зээл',
-     uni:'Харилцаа холбооны <strong>том датанд суурилсан</strong> ecosystem-ийн зээлийн үйлчилгээ.'
-    },
-    {n:'ТОКИ', cls:'bank', 
-     stats:[{l:'Portfolio', v:'₮147.2B'}, {l:'Ecosystem', v:'Юнител'}],
-     gen:'Superapp, хэрэглээний digital зээл',
-     uni:'Юнител группийн олон үйлчилгээг нэгтгэсэн <strong>superapp platform</strong> дахь санхүүгийн үйлчилгээ.'
+    {n:'HiPay', cls:'hipay', headline:'Cross-border payment rail',
+     stats:[
+       {l:'Total raised', v:'No funds'},
+       {l:'WeChat Pay', v:'Live'},
+       {l:'AliPay+ reach', v:'14 countries'},
+       {l:'Position', v:'Inbound tourism payment'}
+     ],
+     moves:[
+       {d:'Sep\'25', t:'<strong>WeChat Pay partnership</strong> — Mongolia first (Golomt-той зэрэгцэн)'},
+       {d:'Nov\'25', t:'<strong>AliPay+ integration</strong> — 14 country reach (16 e-wallets)'},
+       {d:'Ongoing', t:'Inbound tourism payment dominance positioning'}
+     ]
     }
   ];
 
   document.getElementById('s4-grid').innerHTML = cards.map(c => `
     <div class="s4-card s4-c-${c.cls}">
-      <div class="s4-c-header">
+      <div class="s4-c-head">
         <div class="s4-c-name">${c.n}</div>
-        <div class="s4-c-stats">
-          ${c.stats.map(s => `<div class="s4-stat"><div class="s4-stat-v">${s.v}</div><div class="s4-stat-l">${s.l}</div></div>`).join('')}
-        </div>
+        <div class="s4-c-headline">${c.headline}</div>
       </div>
-      <div class="s4-c-body">
-        <div class="s4-prod-group">
-          <div class="s4-pg-title">Ерөнхий бүтээгдэхүүнүүд</div>
-          <div class="s4-pg-text">${c.gen}</div>
-        </div>
-        <div class="s4-prod-group">
-          <div class="s4-pg-title">Unique / Онцлог нөхцөлүүд</div>
-          <div class="s4-pg-text">${c.uni}</div>
-        </div>
+      <div class="s4-c-stats">
+        ${c.stats.map(s => `<div class="s4-stat"><div class="s4-stat-v">${s.v}</div><div class="s4-stat-l">${s.l}</div></div>`).join('')}
+      </div>
+      <div class="s4-c-moves">
+        ${c.moves.map(m => `<div class="s4-move"><span class="s4-move-d">${m.d}</span><span class="s4-move-t">${m.t}</span></div>`).join('')}
       </div>
     </div>
   `).join('');
 })();
+</script>
 
-// ============ Slide 7 Data & Render ============
+
+<section id="sec-5" class="section">
+  <div class="section-pad">
+    <div class="section-num">Slide 5</div>
+    <div class="s-title">Технологийн стек & түнш — арын engine-үүд</div>
+    <div class="s-sub">Хэн ямар capability барьж, хэн global vendor-той ажиллаж байгааг ха рүүлна. M Bank-ийн KakaoBank Score нь хамгийн том structural challenge.</div>
+
+    <div class="s5-grid">
+
+      <div class="s5-card s5-high-threat">
+        <div class="s5-card-head">
+          <div class="s5-card-name">M Bank</div>
+          <div class="s5-card-flag">⚠ Critical</div>
+        </div>
+        <div class="s5-card-tag">MCS Group · neobank-аас merchant digital infrastructure рүү</div>
+        <div class="s5-stack">
+          <div class="s5-layer">
+            <div class="s5-l-label">Scoring</div>
+            <div class="s5-l-tech"><strong>KakaoBank Score</strong> — non-financial data, $11B proven model in Korea, thin-file segment</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">Acquiring</div>
+            <div class="s5-l-tech"><strong>SoftPOS rollout</strong> — tablet hardware + commercial center placement + employee activation campaign</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">Wallets</div>
+            <div class="s5-l-tech">Apple Pay, Visa/Mastercard digital wallet integration</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">Funding</div>
+            <div class="s5-l-tech">$30M IFC SME/women + KakaoBank equity (TBD)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="s5-card s5-lendmn">
+        <div class="s5-card-head">
+          <div class="s5-card-name">LendMN</div>
+          <div class="s5-card-flag s5-flag-self">Бид</div>
+        </div>
+        <div class="s5-card-tag">AND Global parent · 11-country tech reach</div>
+        <div class="s5-stack">
+          <div class="s5-layer">
+            <div class="s5-l-label">Scoring</div>
+            <div class="s5-l-tech"><strong>AI-driven credit scoring</strong> + bank statement analysis + LLM-based risk model</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">Tech arm</div>
+            <div class="s5-l-tech"><strong>AND Solutions</strong> — document processing + credit scoring + lending systems · active in <strong>11 countries</strong></div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">Wallets</div>
+            <div class="s5-l-tech">Payment rail — currently absent (gap)</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">Funding</div>
+            <div class="s5-l-tech">$20M Lendable (debt) + $7M IFC equity · IFC-ийн Монголд 10 жилийн дараах анхны equity investment</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="s5-card s5-medium-threat">
+        <div class="s5-card-head">
+          <div class="s5-card-name">Pocket</div>
+          <div class="s5-card-flag">High</div>
+        </div>
+        <div class="s5-card-tag">Invescore parent · in-house AILab</div>
+        <div class="s5-stack">
+          <div class="s5-layer">
+            <div class="s5-l-label">Scoring</div>
+            <div class="s5-l-tech"><strong>AILab in-house dev team</strong> — proprietary scoring</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">Verification</div>
+            <div class="s5-l-tech"><strong>АТҮТ + G-Sign integration</strong> — government identity / vehicle data direct API</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">Trust products</div>
+            <div class="s5-l-tech">Bank card auto-link to trust account, gamification engine ("My Ponji")</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">Funding</div>
+            <div class="s5-l-tech">$71.5M multi-source (Helicap, FMO, Triple Jump, EMF, Enabling Qapital)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="s5-card">
+        <div class="s5-card-head">
+          <div class="s5-card-name">Khan Bank</div>
+          <div class="s5-card-flag">Mid</div>
+        </div>
+        <div class="s5-card-tag">Tier-1 commercial · TCS BaNCS overhaul</div>
+        <div class="s5-stack">
+          <div class="s5-layer">
+            <div class="s5-l-label">Core</div>
+            <div class="s5-l-tech"><strong>TCS BaNCS</strong> — Tata Consultancy Services strategic alliance (May 2025)</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">AI</div>
+            <div class="s5-l-tech"><strong>"Digi" chatbot</strong> scaled across customer base</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">Risk</div>
+            <div class="s5-l-tech">IFC FX hedge derivatives package — upgraded currency risk management capability</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">Funding</div>
+            <div class="s5-l-tech">$200M+ recent debt + IFC FX</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="s5-card">
+        <div class="s5-card-head">
+          <div class="s5-card-name">TDB</div>
+          <div class="s5-card-flag">Mid</div>
+        </div>
+        <div class="s5-card-tag">Premium digital · Temenos T24</div>
+        <div class="s5-stack">
+          <div class="s5-layer">
+            <div class="s5-l-label">Core</div>
+            <div class="s5-l-tech"><strong>Temenos T24</strong> — international standard core banking</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">Wallets</div>
+            <div class="s5-l-tech">First Apple Pay (Dec 2024) + first Google Pay (Nov 2025) launches</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">Trade</div>
+            <div class="s5-l-tech"><strong>Bpifrance trade finance</strong> agreement — France SME export support</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">AI</div>
+            <div class="s5-l-tech">"TDB Skill Lab" — proprietary AI internal training program</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="s5-card">
+        <div class="s5-card-head">
+          <div class="s5-card-name">Golomt</div>
+          <div class="s5-card-flag">Mid</div>
+        </div>
+        <div class="s5-card-tag">Wallet aggregator · cross-border first</div>
+        <div class="s5-stack">
+          <div class="s5-layer">
+            <div class="s5-l-label">Wallets</div>
+            <div class="s5-l-tech">Apple Pay (Dec 2024) · <strong>WeChat Pay</strong> (Sep 2025, Mongolia first) · AliPay+ partnership</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">SME</div>
+            <div class="s5-l-tech">First-ever bill discounting service (Apr 2025)</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">Green</div>
+            <div class="s5-l-tech">3 blue finance products + $13M WaterEquity facility (Sep 2025)</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">Funding</div>
+            <div class="s5-l-tech">WaterEquity $13M + green pipeline expanding</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="s5-card">
+        <div class="s5-card-head">
+          <div class="s5-card-name">Sono финтек</div>
+          <div class="s5-card-flag">Mid</div>
+        </div>
+        <div class="s5-card-tag">Card-led · payment rail vertical entry</div>
+        <div class="s5-stack">
+          <div class="s5-layer">
+            <div class="s5-l-label">Card</div>
+            <div class="s5-l-tech"><strong>Mastercard issuance</strong> via Bonum partnership — Mongolia's first NBFI Mastercard</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">Wallet</div>
+            <div class="s5-l-tech">Apple Pay live · 10% travel cashback engine</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">Funding</div>
+            <div class="s5-l-tech">$10M aggregate (multiple smaller IFI/local lines)</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">Position</div>
+            <div class="s5-l-tech">Pure equity model · NPL 3.5% sector's 2nd cleanest</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="s5-card">
+        <div class="s5-card-head">
+          <div class="s5-card-name">Simple</div>
+          <div class="s5-card-flag">Low</div>
+        </div>
+        <div class="s5-card-tag">Indian vendor-led · debt consolidation specialty</div>
+        <div class="s5-stack">
+          <div class="s5-layer">
+            <div class="s5-l-label">Tech vendor</div>
+            <div class="s5-l-tech"><strong>Simform partnership</strong> — Indian outsource development</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">Underwriting</div>
+            <div class="s5-l-tech">Bank statement analysis (LendMN-тэй ижил)</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">Specialty</div>
+            <div class="s5-l-tech">Mongolia’s first debt consolidation product (Apr 2026)</div>
+          </div>
+          <div class="s5-layer">
+            <div class="s5-l-label">Funding</div>
+            <div class="s5-l-tech">$16.5M (EBRD $2.3M + Enabling Qapital $3M + bond issuances)</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="s5-impact">
+      <div class="s5-impact-title">LendMN-ийн strategic standing</div>
+      <strong>Tech moat assessment:</strong> AND Solutions-ийн 11-country reach + AI scoring stack нь sector дотор advanced capability. Энэ нь Pocket-ийн in-house AILab болон Simple-ийн outsourced vendor model-оос илүү scalable бүтэцтэй. Гэхдээ 2 critical gap бий: (1) <strong>Payment rail байхгүй</strong> — Sono Mastercard, Pocket АТҮТ + G-Sign, M Bank SoftPOS бүгд distribution rail-ыг эзэлж байна. LendMN-ийн merchant ecosystem reach одоогоор сул. (2) <strong>M Bank-ийн KakaoBank Score threat</strong> — credit scoring бол LendMN-ийн core moat. Korea-д proven KakaoBank model нь parity / superiority threat үүсгэж болно. <strong>Аль аль нь дараагийн раундны priority байх ёстой.</strong>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="sec-6a" class="section">
+  <div class="section-pad">
+    <div class="section-num">Slide 6</div>
+    <div class="s-title">Customer segmentation: Interest income structure</div>
+    <div class="s-sub">NBFI-үүдийн хүүгийн орлогын хэдэн хувийг Retail буюу иргэд, хэдэн хувийг Corporate буюу ААН сегмент бүрдүүлж байна вэ?</div>
+
+    <div class="s6a-chart-wrap">
+      <div class="s6a-chart">
+        <div class="s6a-row">
+          <div class="s6a-name">Tavan Bogd Finance</div>
+          <div class="s6a-track">
+            <div class="s6a-retail" style="width:97.2%"><span>97.2%</span></div>
+            <div class="s6a-corp" style="width:2.8%"></div>
+          </div>
+        </div>
+
+        <div class="s6a-row">
+          <div class="s6a-name">Invescore</div>
+          <div class="s6a-track">
+            <div class="s6a-retail" style="width:83.9%"><span>83.9%</span></div>
+            <div class="s6a-corp" style="width:16.1%"><span>16.1%</span></div>
+          </div>
+        </div>
+
+        <div class="s6a-row">
+          <div class="s6a-name">Pocket</div>
+          <div class="s6a-track">
+            <div class="s6a-retail" style="width:100%"><span>100%</span></div>
+          </div>
+        </div>
+
+        <div class="s6a-row">
+          <div class="s6a-name">LendMN</div>
+          <div class="s6a-track">
+            <div class="s6a-retail" style="width:99.8%"><span>99.8%</span></div>
+            <div class="s6a-corp" style="width:0.2%"></div>
+          </div>
+        </div>
+
+        <div class="s6a-row">
+          <div class="s6a-name">Ashid Capital</div>
+          <div class="s6a-track">
+            <div class="s6a-retail" style="width:97.4%"><span>97.4%</span></div>
+            <div class="s6a-corp" style="width:2.6%"></div>
+          </div>
+        </div>
+
+        <div class="s6a-row">
+          <div class="s6a-name">Numur Credit</div>
+          <div class="s6a-track">
+            <div class="s6a-retail" style="width:96.6%"><span>96.6%</span></div>
+            <div class="s6a-corp" style="width:3.4%"></div>
+          </div>
+        </div>
+
+        <div class="s6a-row">
+          <div class="s6a-name">Net Capital</div>
+          <div class="s6a-track">
+            <div class="s6a-retail" style="width:89%"><span>89%</span></div>
+            <div class="s6a-corp" style="width:11%"><span>11%</span></div>
+          </div>
+        </div>
+
+        <div class="s6a-row">
+          <div class="s6a-name">GSB Capital</div>
+          <div class="s6a-track">
+            <div class="s6a-retail" style="width:85.4%"><span>85.4%</span></div>
+            <div class="s6a-corp" style="width:14.6%"><span>14.6%</span></div>
+          </div>
+        </div>
+
+        <div class="s6a-row">
+          <div class="s6a-name">Sono Fintech</div>
+          <div class="s6a-track">
+            <div class="s6a-retail" style="width:100%"><span>100%</span></div>
+          </div>
+        </div>
+
+        <div class="s6a-row">
+          <div class="s6a-name">Transcapital</div>
+          <div class="s6a-track">
+            <div class="s6a-retail" style="width:99.8%"><span>99.8%</span></div>
+            <div class="s6a-corp" style="width:0.2%"></div>
+          </div>
+        </div>
+
+        <div class="s6a-row">
+          <div class="s6a-name">Mobifinance</div>
+          <div class="s6a-track">
+            <div class="s6a-retail" style="width:100%"><span>100%</span></div>
+          </div>
+        </div>
+
+        <div class="s6a-row">
+          <div class="s6a-name">Toki</div>
+          <div class="s6a-track">
+            <div class="s6a-retail" style="width:100%"><span>100%</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="s6a-legend">
+        <span><i class="s6a-lg-retail"></i>Retail (% interest income)</span>
+        <span><i class="s6a-lg-corp"></i>Corporate (%)</span>
+      </div>
+    </div>
+
+    <div class="s6a-note">
+      <strong>Key read:</strong> Most NBFIs remain retail-heavy. Only Invescore, GSB Capital and Net Capital show meaningful corporate contribution, while Pocket, Sono Fintech, Mobifinance and Toki are effectively 100% retail. LendMN is also still retail-dominant at <strong>99.8%</strong>, which means the business-lending opportunity is not yet reflected in interest income structure.
+    </div>
+  </div>
+</section>
+
+
+<section id="sec-6" class="section">
+  <div class="section-pad">
+    <div class="section-num">Slide 7</div>
+    <div class="s-title">LendMN-д хамаатай 5 strategic implications</div>
+    <div class="s-sub">Section 2-ийн analysis-аас гарсан 5 гол conclusion. LendMN-д хамаарах хамгийн чухал стратегийн үр дагавруудыг нэгтгэн харуулав.</div>
+
+    <div class="s6-grid">
+
+      <div class="s6-box s6-accent">
+        <div class="s6-num">01</div>
+        <div class="s6-title">Capital structure is our edge — but not yet scale</div>
+        <div class="s6-text">LendMN нь NBFI sector дотор debt + equity хосолсон funding stack-той цорын ганц fintech ($20M Lendable + $7M IFC equity, IFC-ийн Монголд 10 жилийн дараах анхны equity investment). Бүтцийн чанарын хувьд Pocket-ийн debt-only $71.5M-аас илүү гүн anchor-той. Гэхдээ <strong>scale-ээр Pocket 2.6x их</strong> — бид funding diversification + multi-source funding-аар scale gap-ийг хаах ёстой.</div>
+      </div>
+
+      <div class="s6-box s6-warn">
+        <div class="s6-num">02</div>
+        <div class="s6-title">M Bank — sector-ийн хамгийн critical structural threat</div>
+        <div class="s6-text">M Bank нь IFC $30M facility (May 2024, 25% women-owned SME focus), KakaoBank Score partnership (Apr 2026, Korea-д proven $11B model), SoftPOS rollout plan гурвыг нэгтгэж байна. Энэ нь SME finance, alternative scoring, payment rail гэсэн 3 vector-аар LendMN-ийн positioning рүү зэрэг шахалт үүсгэнэ. Бидэнд <strong>“бид илүү digital”</strong> гэх ерөнхий message-ээс давсан structural differentiator хэрэгтэй.</div>
+      </div>
+
+      <div class="s6-box s6-warn">
+        <div class="s6-num">03</div>
+        <div class="s6-title">XacBank-ийн 1.8% rate — direct customer attrition risk</div>
+        <div class="s6-text">XacBank-ийн Sep 2025-нээс эхэлсэн Youth Entrepreneur Loan нь 1.8% rate, ₮500M–₮1B size, collateral-free option-той тул LendMN-ийн existing SME customers-ийг шууд target хийж байна. Дотоод survey-д “LendMN-аас XacBank  рүү шилжсэн” pattern ажиглагдсан. Pricing-аар шууд compete хийх боломж хязгаарлагдмал (1.8% rate нь subsidized шинжтэй) — тиймээс <strong>speed, automation, embedded distribution-аар differentiate хийх</strong> ёстой.</div>
+      </div>
+
+      <div class="s6-box s6-warn">
+        <div class="s6-num">04</div>
+        <div class="s6-title">Payment rail gap нь structural opportunity бөгөөд risk</div>
+        <div class="s6-text">Sono Mastercard via Bonum, Pocket АТҮТ + G-Sign, Golomt WeChat Pay, M Bank SoftPOS rollout — бүгд distribution / payment rail эзэлж байна. LendMN-д payment rail байхгүй байгаа нь <strong>scale болон embedded SME finance хийхэд critical pre-condition</strong>. Bonum partnership эсвэл wallet rail strategy нь дараагийн 6 сарын priority decision байх ёстой.</div>
+      </div>
+
+      <div class="s6-box s6-accent">
+        <div class="s6-num">05</div>
+        <div class="s6-title">Tech moat бий — гэхдээ productize хийх шаардлагатай</div>
+        <div class="s6-text">AND Solutions-ийн 11-country reach + AI scoring stack нь sector дотор өндөр түвшний capability. Pocket AILab болон Simple-ийн outsourced vendor model-оос илүү scalable бүтэцтэй. Энэ tech-ийг зөвхөн LendMN дотор ашиглах бус, <strong>SaaS / data productization</strong>-аар monetization хийх нь Section 3-ын Project Aegis story-ын суурь. M Bank-ийн KakaoBank Score-той parity level дээр үлдэхгүй, бид SaaS layer  рүү шилжих ёстой.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+</div>
+
+<script>
+// ============ Slide 2 grid build ============
 (function(){
-  const segData = [
-    { name: 'Таван богд финанс', retail: 97.2, corp: 2.8 },
-    { name: 'Инвескор', retail: 83.9, corp: 16.1 },
-    { name: 'Покет', retail: 100.0, corp: 0.0 },
-    { name: 'Лэндмн', retail: 99.8, corp: 0.2 },
-    { name: 'Ашид капитал', retail: 97.4, corp: 2.6 },
-    { name: 'Нөмөр кредит', retail: 96.6, corp: 3.4 },
-    { name: 'Нэт капитал', retail: 89.0, corp: 11.0 },
-    { name: 'Жи Эс Би Капитал', retail: 85.4, corp: 14.6 },
-    { name: 'Соно финтек', retail: 100.0, corp: 0.0 },
-    { name: 'Транскапитал', retail: 99.8, corp: 0.2 },
-    { name: 'Мобифинанс', retail: 100.0, corp: 0.0 },
-    { name: 'ТОКИ', retail: 100.0, corp: 0.0 }
+  const months = ['Oct\'24','Nov\'24','Dec\'24','Jan\'25','Feb\'25','Mar\'25','Apr\'25','May\'25','Jun\'25','Jul\'25','Aug\'25','Sep\'25','Oct\'25','Nov\'25','Dec\'25','Jan\'26','Feb\'26','Mar\'26'];
+  // Each company: deals = list of {month_idx, type, label}
+  const companies = [
+    {name:'Pocket', cls:'', deals:[
+      {m:2, t:'pocket', label:'$4.5M Global Gender Smart Fund (Invescore)'},
+      {m:8, t:'pocket', label:'$5M Triple Jump (Invescore parent)'},
+      {m:9, t:'pocket', label:'$3M EMF Microfinance + $2.3M EBRD SME'},
+      {m:10, t:'pocket', label:'$20M FMO Netherlands MSME (Invescore)'},
+      {m:11, t:'pocket', label:'$3M Enabling Qapital MSME'},
+      {m:12, t:'pocket', label:'$25M Helicap mid-term (Pocket direct)'},
+      {m:15, t:'pocket', label:'MNT 50B / $14M ХБҮЦ bond (Invescore)'}
+    ], total:'$71.5M'},
+    {name:'LendMN', cls:'lendmn-row', deals:[
+      {m:6, t:'lendmn', label:'$20M senior debt facility — Lendable (3-yr tenor, first offshore close)'},
+      {m:10, t:'equity', label:'$7M IFC equity Series B (AND Global parent) — IFC\'s first MN equity in 10+ yrs'}
+    ], total:'$27M'},
+    {name:'Simple', cls:'', deals:[
+      {m:5, t:'simple', label:'MNT 35B bond issuance'},
+      {m:9, t:'simple', label:'MNT 40B ХБҮЦ (20-month duration)'},
+      {m:11, t:'simple', label:'$3M Enabling Qapital MSME'}
+    ], total:'$16.5M'},
+    {name:'Sono финтек', cls:'', deals:[
+      {m:12, t:'sono', label:'~$10M aggregate (multiple smaller IFI/local lines)'}
+    ], total:'$10M'},
+    {name:'HiPay', cls:'no-fund', deals:[], total:'No funds'},
+    {name:'Toki', cls:'no-fund', deals:[], total:'No funds'},
+    {name:'Numur', cls:'no-fund', deals:[], total:'No funds'},
+    {name:'Mobifinance', cls:'no-fund', deals:[], total:'No funds'},
+    {name:'Таван богд', cls:'no-fund', deals:[], total:'No funds'},
+    {name:'Жи Эс Би', cls:'no-fund', deals:[], total:'No funds'},
+    {name:'Транскапитал', cls:'no-fund', deals:[], total:'No funds'},
+    {name:'Нэт капитал', cls:'no-fund', deals:[], total:'No funds'}
   ];
 
-  const container = document.getElementById('s7-charts');
-  container.innerHTML = segData.map(d => `
-    <div class="chart-row">
-      <div class="chart-label">${d.name}</div>
-      <div class="chart-bar-wrap">
-        <div class="chart-seg seg-retail" style="width: ${d.retail}%">${d.retail > 10 ? d.retail + '%' : ''}</div>
-        <div class="chart-seg seg-corp" style="width: ${d.corp}%">${d.corp > 2 ? d.corp + '%' : ''}</div>
-      </div>
-    </div>
-  `).join('');
+  const grid = document.getElementById('s2-grid');
+  let html = '<div></div>'; // top-left blank cell
+  // Month headers
+  months.forEach((m, i) => {
+    const isQtrEnd = (i === 2 || i === 5 || i === 8 || i === 11 || i === 14 || i === 17);
+    html += `<div class="s2-month ${isQtrEnd ? 'qtr-end' : ''}">${m}</div>`;
+  });
+  html += '<div class="s2-month qtr-end" style="text-align:right;padding-right:8px;">Total</div>';
+
+  // Rows
+  companies.forEach(co => {
+    html += `<div class="s2-co-name ${co.cls}">${co.name}</div>`;
+    for (let i = 0; i < 18; i++) {
+      const deal = co.deals.find(d => d.m === i);
+      if (deal) {
+        html += `<div class="s2-cell deal deal-${deal.t}" title="${months[i]}: ${deal.label}"></div>`;
+      } else {
+        html += `<div class="s2-cell"></div>`;
+      }
+    }
+    const totalCls = co.cls === 'no-fund' ? 'no-fund' : 'has-fund';
+    html += `<div class="s2-row-total ${totalCls}">${co.total}</div>`;
+  });
+
+  grid.innerHTML = html;
 })();
 
-// Topnav intersection observer
+// Top nav active state
 const navLinks = document.querySelectorAll('.topnav-link');
 const sections = document.querySelectorAll('.section');
 const obs = new IntersectionObserver(entries => {
