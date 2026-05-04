@@ -223,6 +223,65 @@ body {
 #sec-5 .s5-impact-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent); margin-bottom: 8px; }
 
 
+/* === SLIDE 5 (NEW) — Significant tactical moves === */
+#sec-4b .s4b-major { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 14px; }
+#sec-4b .s4b-minor { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 18px; }
+@media (max-width: 1100px) { #sec-4b .s4b-major, #sec-4b .s4b-minor { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 700px) { #sec-4b .s4b-major, #sec-4b .s4b-minor { grid-template-columns: 1fr; } }
+
+/* Major (top row) cards — bigger */
+#sec-4b .s4b-card-major { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; border-top: 3px solid; display: flex; flex-direction: column; }
+#sec-4b .s4b-mbank { border-top-color: var(--bad); background: var(--bad-soft); position: relative; }
+#sec-4b .s4b-mbank::after { content: '⚠ Critical'; position: absolute; top: 14px; right: 14px; font-size: 9.5px; font-weight: 700; padding: 3px 8px; border-radius: 999px; background: var(--bad); color: #fff; letter-spacing: 0.4px; }
+#sec-4b .s4b-simple { border-top-color: #5DA68C; }
+#sec-4b .s4b-pocket { border-top-color: var(--pocket); }
+#sec-4b .s4b-major-name { font-size: 15px; font-weight: 700; }
+#sec-4b .s4b-mbank .s4b-major-name { color: var(--bad); }
+#sec-4b .s4b-simple .s4b-major-name { color: #5DA68C; }
+#sec-4b .s4b-pocket .s4b-major-name { color: var(--pocket); }
+#sec-4b .s4b-major-tag { font-size: 11.5px; color: var(--text-secondary); font-weight: 500; margin-top: 3px; padding-bottom: 12px; margin-bottom: 12px; border-bottom: 1px solid var(--border); }
+#sec-4b .s4b-layers { display: flex; flex-direction: column; gap: 8px; flex: 1; }
+#sec-4b .s4b-layer { display: grid; grid-template-columns: 70px 1fr; gap: 10px; font-size: 11.5px; line-height: 1.5; }
+#sec-4b .s4b-l-label { font-size: 9.5px; font-weight: 700; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.4px; padding-top: 2px; }
+#sec-4b .s4b-l-text { color: var(--text-primary); }
+#sec-4b .s4b-l-text strong { font-weight: 600; }
+#sec-4b .s4b-implication { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 11px; color: var(--text-secondary); line-height: 1.55; }
+#sec-4b .s4b-implication strong { color: var(--text-primary); font-weight: 600; }
+
+/* Minor (bottom row) cards — smaller */
+#sec-4b .s4b-card-minor { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; border-left: 3px solid var(--text-tertiary); display: flex; flex-direction: column; }
+#sec-4b .s4b-bonum { border-left-color: var(--ashid); background: var(--ashid-soft); }
+#sec-4b .s4b-khan { border-left-color: var(--bank); }
+#sec-4b .s4b-numur { border-left-color: #b97a0e; }
+#sec-4b .s4b-minor-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 2px; }
+#sec-4b .s4b-minor-name { font-size: 13px; font-weight: 700; }
+#sec-4b .s4b-bonum .s4b-minor-name { color: var(--ashid); }
+#sec-4b .s4b-khan .s4b-minor-name { color: var(--bank); }
+#sec-4b .s4b-numur .s4b-minor-name { color: #b97a0e; }
+#sec-4b .s4b-minor-name .unofficial { font-size: 10px; font-weight: 500; color: var(--text-tertiary); font-style: italic; }
+#sec-4b .s4b-minor-flag { font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 999px; background: var(--text-tertiary); color: #fff; letter-spacing: 0.4px; flex-shrink: 0; }
+#sec-4b .s4b-bonum .s4b-minor-flag { background: var(--ashid); }
+#sec-4b .s4b-khan .s4b-minor-flag { background: var(--bank); }
+#sec-4b .s4b-numur .s4b-minor-flag { background: #b97a0e; }
+#sec-4b .s4b-minor-tag { font-size: 11px; color: var(--text-secondary); margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+#sec-4b .s4b-minor-body { font-size: 11px; line-height: 1.55; color: var(--text-primary); }
+#sec-4b .s4b-minor-body p { margin-bottom: 6px; }
+#sec-4b .s4b-minor-body strong { font-weight: 600; }
+#sec-4b .s4b-minor-body ul { margin: 4px 0 8px 16px; padding: 0; }
+#sec-4b .s4b-minor-body li { margin-bottom: 3px; }
+#sec-4b .s4b-minor-impl { margin-top: auto; padding-top: 8px; border-top: 1px dashed var(--border); font-size: 10.5px; color: var(--text-secondary); line-height: 1.55; }
+#sec-4b .s4b-minor-impl strong { color: var(--text-primary); font-weight: 600; }
+
+/* Pattern read strip */
+#sec-4b .s4b-pattern { background: var(--bg-secondary); border-radius: 10px; padding: 16px 20px; font-size: 13px; line-height: 1.7; }
+#sec-4b .s4b-pattern strong { color: var(--text-primary); font-weight: 600; }
+#sec-4b .s4b-pattern-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent); margin-bottom: 10px; }
+#sec-4b .s4b-pattern-list { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+#sec-4b .s4b-pattern-item { display: grid; grid-template-columns: 28px 1fr; gap: 8px; align-items: baseline; }
+#sec-4b .s4b-pattern-num { font-size: 11px; font-weight: 700; color: var(--accent); }
+#sec-4b .s4b-pattern-takeaway { padding-top: 10px; border-top: 1px solid var(--border-strong); font-size: 12.5px; }
+
+
 #sec-6 .s6-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 24px; }
 @media (max-width: 760px) { #sec-6 .s6-grid { grid-template-columns: 1fr; } }
 #sec-6 .s6-box { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; }
@@ -273,9 +332,10 @@ body {
       <a href="#sec-2" class="topnav-link" data-target="sec-2">2. NBFI funding</a>
       <a href="#sec-3" class="topnav-link" data-target="sec-3">3. Banks SME push</a>
       <a href="#sec-4" class="topnav-link" data-target="sec-4">4. NBFI products</a>
-      <a href="#sec-5" class="topnav-link" data-target="sec-5">5. Tech stack</a>
-      <a href="#sec-6a" class="topnav-link" data-target="sec-6a">6. Segmentation</a>
-      <a href="#sec-6" class="topnav-link" data-target="sec-6">7. Implications</a>
+      <a href="#sec-4b" class="topnav-link" data-target="sec-4b">5. Tactical moves</a>
+      <a href="#sec-5" class="topnav-link" data-target="sec-5">6. Tech stack</a>
+      <a href="#sec-6a" class="topnav-link" data-target="sec-6a">7. Segmentation</a>
+      <a href="#sec-6" class="topnav-link" data-target="sec-6">8. Implications</a>
     </div>
   </div>
 </nav>
@@ -608,11 +668,183 @@ body {
 </script>
 
 
-<section id="sec-5" class="section">
+<!-- ============ SLIDE 5 (NEW) — Significant tactical moves ============ -->
+<section id="sec-4b" class="section">
   <div class="section-pad">
     <div class="section-num">Slide 5</div>
-    <div class="s-title">Технологийн стек & түнш — арын engine-үүд</div>
-    <div class="s-sub">Хэн ямар capability барьж, хэн global vendor-той ажиллаж байгааг ха рүүлна. M Bank-ийн KakaoBank Score нь хамгийн том structural challenge.</div>
+    <div class="s-title">Significant tactical moves — bank + NBFI-уудын real-time plays</div>
+    </div>
+
+    <!-- Top row: 3 BIG cards (highest-weight moves) -->
+    <div class="s4b-major">
+
+      <div class="s4b-card-major s4b-mbank">
+        <div class="s4b-major-name">M Bank</div>
+        <div class="s4b-major-tag">Hardware + Software = Real-time payment visibility · merchant infrastructure play</div>
+        <div class="s4b-layers">
+          <div class="s4b-layer">
+            <div class="s4b-l-label">Hardware</div>
+            <div class="s4b-l-text"><strong>Pad device</strong> — томоохон хэмжээний захиалга өгсөн, хүрч ирэхтэй зэрэгцэн campaign эхлэнэ</div>
+          </div>
+          <div class="s4b-layer">
+            <div class="s4b-l-label">Software</div>
+            <div class="s4b-l-text"><strong>Ontime Cashier system</strong>-ыг whitelabel хийж merchant-уудад өгөх</div>
+          </div>
+          <div class="s4b-layer">
+            <div class="s4b-l-label">Acquiring</div>
+            <div class="s4b-l-text"><strong>SoftPOS</strong> — Bonum-той partnering хийж rollout</div>
+          </div>
+          <div class="s4b-layer">
+            <div class="s4b-l-label">GTM</div>
+            <div class="s4b-l-text">"Худалдааны төв"-тэй хамтран бүх merchant-д нэгдсэн distribution</div>
+          </div>
+          <div class="s4b-layer">
+            <div class="s4b-l-label">Internal</div>
+            <div class="s4b-l-text">Ажилтнууд дотроо борлуулалтын campaign — push идэвхжил</div>
+          </div>
+        </div>
+        <div class="s4b-implication"><strong>Strategic read:</strong> Merchant-ийн real-time payment flow дээр data layer бариад, KakaoBank Score-той хослуулан <strong>SME credit scoring data moat</strong> үүсгэх замтай. LendMN-ийн "100% digital + collateral-free" positioning-той хамгийн direct давхцал.</div>
+      </div>
+
+      <div class="s4b-card-major s4b-simple">
+        <div class="s4b-major-name">Simple</div>
+        <div class="s4b-major-tag">Customer acquisition flow · Mongolia-first product</div>
+        <div class="s4b-layers">
+          <div class="s4b-layer">
+            <div class="s4b-l-label">Product</div>
+            <div class="s4b-l-text"><strong>Debt consolidation loan</strong> — Mongolia-ын анхдагч "төлөлт буу рүүлах зээл" бүтээгдэхүүн</div>
+          </div>
+          <div class="s4b-layer">
+            <div class="s4b-l-label">Step 1</div>
+            <div class="s4b-l-text">Хэрэглэгчийг салбар руу татах (acquisition trigger)</div>
+          </div>
+          <div class="s4b-layer">
+            <div class="s4b-l-label">Step 2</div>
+            <div class="s4b-l-text">Тооцоолол хийж шинэ нөхцөлөөр гэрээ байгуулна</div>
+          </div>
+          <div class="s4b-layer">
+            <div class="s4b-l-label">Step 3</div>
+            <div class="s4b-l-text">Дансанд мөнгө хийж <strong>бусад FI-уудын зээлүүдийг хаана</strong></div>
+          </div>
+          <div class="s4b-layer">
+            <div class="s4b-l-label">Step 4</div>
+            <div class="s4b-l-text">Шинэ тохирсон нөхцөлөөр consolidated зээлийг олгоно</div>
+          </div>
+        </div>
+        <div class="s4b-implication"><strong>Strategic read:</strong> Competitor-ийн existing customer-уудад шууд target — <strong>бусад NBFI / банкуудаас зээлтнийг шилжүүлэн авах</strong> customer acquisition channel. Switching cost-ыг бүтээгдэхүүн дотроо шингээсэн, LendMN-ийн customer base-д шууд аюул.</div>
+      </div>
+
+      <div class="s4b-card-major s4b-pocket">
+        <div class="s4b-major-name">Pocket</div>
+        <div class="s4b-major-tag">АТҮТ system integration · vehicle vertical lock-in</div>
+        <div class="s4b-layers">
+          <div class="s4b-layer">
+            <div class="s4b-l-label">Integration</div>
+            <div class="s4b-l-text">Авто тээврийн үндэсний төв (АТҮТ)-тэй <strong>system integration</strong> хийсэн</div>
+          </div>
+          <div class="s4b-layer">
+            <div class="s4b-l-label">Use case 1</div>
+            <div class="s4b-l-text">Автомашин <strong>худалдан авах</strong> — олон процесс алгасч instant decision</div>
+          </div>
+          <div class="s4b-layer">
+            <div class="s4b-l-label">Use case 2</div>
+            <div class="s4b-l-text">Автомашин <strong>барьцаалан зээл</strong> — vehicle data API-аар шуурхай verification</div>
+          </div>
+          <div class="s4b-layer">
+            <div class="s4b-l-label">UX</div>
+            <div class="s4b-l-text">Олон гар ажиллагаатай процессийг алгасаж <strong>маш хурдан үйлчилгээ</strong> авах боломжтой болсон</div>
+          </div>
+        </div>
+        <div class="s4b-implication"><strong>Strategic read:</strong> Vehicle-collateralized segment-д Pocket дангаараа speed + UX давуу талтай болж буй. LendMN-ийн "digital flexible business loan"-ийг vehicle collateral сегмент рүү тэлэх замыг хааж байна.</div>
+      </div>
+
+    </div>
+
+    <!-- Bottom row: 3 SMALLER cards (additional plays) -->
+    <div class="s4b-minor">
+
+      <div class="s4b-card-minor s4b-bonum">
+        <div class="s4b-minor-head">
+          <div class="s4b-minor-name">Bonum × NBFI cluster</div>
+          <div class="s4b-minor-flag">Ecosystem</div>
+        </div>
+        <div class="s4b-minor-tag">Payment rail orchestration · multi-issuer card model</div>
+        <div class="s4b-minor-body">
+          <p><strong>Bonum (PSP)</strong> нь NBFI-уудтай хамтарч <strong>Mastercard credit card</strong> гаргаж байна. Issuer-ууд:</p>
+          <ul>
+            <li><strong>Sono Финтек</strong> — flagship issuer, Apple Pay live</li>
+            <li><strong>M-Credit</strong> — шинэ issuer</li>
+            <li><strong>Finco Capital</strong> — шинэ issuer</li>
+            <li><strong>Tus Solutions</strong> — шинэ issuer</li>
+          </ul>
+        </div>
+        <div class="s4b-minor-impl"><strong>Implication:</strong> Bonum нь "card issuing rail"-ийн de facto orchestrator болж буй. LendMN-д payment rail байхгүй gap-ийг улам тодруулж байна — <strong>Bonum partnership decision</strong> яаралтай шийдэх ёстой strategic question.</div>
+      </div>
+
+      <div class="s4b-card-minor s4b-khan">
+        <div class="s4b-minor-head">
+          <div class="s4b-minor-name">Khan Bank <span class="unofficial">· албан бус</span></div>
+          <div class="s4b-minor-flag">Mid</div>
+        </div>
+        <div class="s4b-minor-tag">AI chatbot loan disbursement · existing book activation</div>
+        <div class="s4b-minor-body">
+          <p>AI chatbot-аар <strong>зээл олгох үйл ажиллагааг эхлүүлэх гэж буй</strong> гэх мэдээлэл бий.</p>
+          <ul>
+            <li>Customer base дээрээ scoring аль хэдийн хийсэн, зээлийн эрхийг тодорхойлсон</li>
+            <li>Хэрэглэгч chat-аар хүсэлт өгөхөд AI chatbot scoring үр дүнд тулгуурлан <strong>зээлийг цахимаар шууд олгоно</strong></li>
+          </ul>
+        </div>
+        <div class="s4b-minor-impl"><strong>Implication:</strong> Mongolia-ын хамгийн том customer base + pre-computed scoring + AI chatbot = шинэ "instant lending at scale" rail. TDB-ийн "6-Minute Digital Car Loan"-той хослон <strong>speed-аар шахаж буй</strong>.</div>
+      </div>
+
+      <div class="s4b-card-minor s4b-numur">
+        <div class="s4b-minor-head">
+          <div class="s4b-minor-name">Numur</div>
+          <div class="s4b-minor-flag">Niche</div>
+        </div>
+        <div class="s4b-minor-tag">Vertical embedded finance · school system integration</div>
+        <div class="s4b-minor-body">
+          <ul>
+            <li>Сургуулиудтай <strong>system integration</strong> хийсэн — оюутны төлбөрийн тэтгэлгийг санхүүжүүлдэг vertical</li>
+            <li>Малчдын зээлийг бас олгодог (Simple-ийн herder loan, Төр банкны pattern-той ижил)</li>
+          </ul>
+        </div>
+        <div class="s4b-minor-impl"><strong>Implication:</strong> Embedded vertical finance pattern — <strong>үндсэн зах зээл дээр compete хийхгүй, segment-аа сонгоод эзэнтэй болж буй</strong>. LendMN-ийн "open ecosystem orchestration" model-той ижил логик дээр явж байна, гэвч жижиг хэмжээгээр.</div>
+      </div>
+
+    </div>
+
+    <!-- Pattern read strip -->
+    <div class="s4b-pattern">
+      <div class="s4b-pattern-title">Pattern read · 3 vector ажиглагдаж байна</div>
+      <div class="s4b-pattern-list">
+        <div class="s4b-pattern-item">
+          <div class="s4b-pattern-num">01</div>
+          <div><strong>Merchant infrastructure layer</strong> — M Bank-ын hardware + software stack, Bonum cluster-ын payment rail нь real-time payment + merchant data моат барьж байна.</div>
+        </div>
+        <div class="s4b-pattern-item">
+          <div class="s4b-pattern-num">02</div>
+          <div><strong>Customer acquisition flow innovation</strong> — Simple-ын debt consolidation, Khan Bank-ын AI chatbot хоёулаа existing customer-уудыг шууд activate хийх замтай. Бусдын зээлдэгчдийг шилжүүлэн авах vector.</div>
+        </div>
+        <div class="s4b-pattern-item">
+          <div class="s4b-pattern-num">03</div>
+          <div><strong>Vertical lock-in</strong> — Pocket-ын АТҮТ integration, Numur-ын школ integration нь segment-specific data + process integration-аар lock-in үүсгэж байна.</div>
+        </div>
+      </div>
+      <div class="s4b-pattern-takeaway">
+        <strong>LendMN-д хамаатай:</strong> Эдгээр 3 vector тус бүр дээр хариу алхам шаардлагатай — <strong>payment rail (Bonum decision)</strong>, <strong>embedded distribution (худалдааны түнш)</strong>, <strong>vertical data (АТҮТ-тэй ижил төрлийн integration)</strong>. Энэ slide-ын 6 хөдөлгөөн нь дараагийн раундны priority decision-уудыг тодорхойлж байна.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="sec-5" class="section">
+  <div class="section-pad">
+    <div class="section-num">Slide 6</div>
+    <div class="s-title">Tech stack & partnerships (engines)</div>
+    <div class="s-sub">Хэн ямар capability барьж, хэн global vendor-той ажиллаж байгааг харуулна. M Bank-ийн KakaoBank Scoring нь хамгийн том structural challenge.</div>
 
     <div class="s5-grid">
 
@@ -621,7 +853,7 @@ body {
           <div class="s5-card-name">M Bank</div>
           <div class="s5-card-flag">⚠ Critical</div>
         </div>
-        <div class="s5-card-tag">MCS Group · neobank-аас merchant digital infrastructure рүү</div>
+        <div class="s5-card-tag">MCS Group · neobank-аас merchant digital infrastructure руу шилжиж байна</div>
         <div class="s5-stack">
           <div class="s5-layer">
             <div class="s5-l-label">Scoring</div>
@@ -838,7 +1070,7 @@ body {
 
 <section id="sec-6a" class="section">
   <div class="section-pad">
-    <div class="section-num">Slide 6</div>
+    <div class="section-num">Slide 7</div>
     <div class="s-title">Customer segmentation: Interest income structure</div>
     <div class="s-sub">NBFI-үүдийн хүүгийн орлогын хэдэн хувийг Retail буюу иргэд, хэдэн хувийг Corporate буюу ААН сегмент бүрдүүлж байна вэ?</div>
 
@@ -952,7 +1184,7 @@ body {
 
 <section id="sec-6" class="section">
   <div class="section-pad">
-    <div class="section-num">Slide 7</div>
+    <div class="section-num">Slide 8</div>
     <div class="s-title">LendMN-д хамаатай 5 strategic implications</div>
     <div class="s-sub">Section 2-ийн analysis-аас гарсан 5 гол conclusion. LendMN-д хамаарах хамгийн чухал стратегийн үр дагавруудыг нэгтгэн харуулав.</div>
 
