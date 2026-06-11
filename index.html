@@ -1,1309 +1,615 @@
 <!DOCTYPE html>
-<html lang="mn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Section 2 — Competitor moves over the last 18 months</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LendMN — All-Hands 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
 :root {
-  color-scheme: light;
-  --bg-primary: #faf8f2;
-  --bg-elevated: #ffffff;
-  --bg-secondary: #f0ede3;
-  --bg-muted: #f5f2ea;
-  --text-primary: #1f1f1d;
-  --text-secondary: #5e5b54;
-  --text-tertiary: #8a867b;
-  --border: rgba(32,32,30,0.07);
-  --border-strong: rgba(32,32,30,0.14);
-  --accent: #1f6fb3;
-  --accent-soft: rgba(31,111,179,0.09);
-  --accent-strong: rgba(31,111,179,0.18);
-  --pocket: #13745d;
-  --pocket-soft: rgba(19,116,93,0.11);
-  --ashid: #b97a0e;
-  --ashid-soft: rgba(185,122,14,0.13);
-  --good: #13745d;
-  --good-soft: rgba(19,116,93,0.11);
-  --warn: #a96b0b;
-  --warn-soft: rgba(169,107,11,0.13);
-  --bad: #a63737;
-  --bad-soft: rgba(166,55,55,0.11);
-  --bank: #6b4a8e;
-  --bank-soft: rgba(107,74,142,0.10);
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
-  --shadow-md: 0 6px 22px rgba(0,0,0,0.07);
-  --shadow-lg: 0 16px 50px rgba(0,0,0,0.14);
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  line-height: 1.5;
-  padding: 0;
-  min-height: 100vh;
+  --orange: #FF7300;
+  --orange-dim: rgba(255,115,0,0.12);
+  --orange-mid: rgba(255,115,0,0.35);
+  --bg: #080808;
+  --surface: #111111;
+  --surface2: #181818;
+  --surface3: #222222;
+  --text: #F0F0F0;
+  --muted: #727272;
+  --dimmer: #383838;
+  --line: #1e1e1e;
 }
 
-/* Top nav */
-.topnav { position: sticky; top: 0; z-index: 100; background: rgba(250,248,242,0.92); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border-strong); margin-bottom: 28px; }
-.topnav-inner { max-width: 1480px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 12px 26px; gap: 24px; flex-wrap: wrap; }
-.topnav-brand { font-size: 13px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.1px; }
-.topnav-links { display: flex; gap: 4px; flex-wrap: wrap; }
-.topnav-link { font-size: 12px; padding: 6px 12px; border-radius: 999px; color: var(--text-secondary); text-decoration: none; font-weight: 500; transition: background 0.15s, color 0.15s; }
-.topnav-link:hover { background: var(--accent-soft); color: var(--accent); }
-.topnav-link.active { background: var(--text-primary); color: var(--bg-elevated); }
-
-/* Section shell */
-.section { max-width: 1480px; margin: 0 auto 36px; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow-md); overflow: hidden; scroll-margin-top: 70px; }
-.section-pad { padding: 28px 32px; }
-.section-num { display: inline-block; font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.7px; padding: 4px 11px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); margin-bottom: 10px; }
-.s-title { font-size: 18px; font-weight: 600; margin-bottom: 4px; letter-spacing: -0.3px; }
-.s-sub { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
-
-.page { padding: 0 22px 60px; }
-
-/* === SLIDE 1 — Capital deployment landscape === */
-#sec-1 .s1-hero { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
-@media (max-width: 800px) { #sec-1 .s1-hero { grid-template-columns: 1fr; } }
-#sec-1 .s1-hcard { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 14px; padding: 22px 24px; border-top: 3px solid; }
-#sec-1 .s1-hcard.banks { border-top-color: var(--bank); }
-#sec-1 .s1-hcard.nbfi { border-top-color: var(--pocket); }
-#sec-1 .s1-hcard.lendmn { border-top-color: var(--accent); background: var(--accent-soft); }
-#sec-1 .s1-h-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 8px; color: var(--text-tertiary); }
-#sec-1 .s1-h-amount { font-size: 36px; font-weight: 700; line-height: 1; letter-spacing: -1px; margin-bottom: 6px; }
-#sec-1 .banks .s1-h-amount { color: var(--bank); }
-#sec-1 .nbfi .s1-h-amount { color: var(--pocket); }
-#sec-1 .lendmn .s1-h-amount { color: var(--accent); }
-#sec-1 .s1-h-cap { font-size: 12px; color: var(--text-secondary); margin-bottom: 12px; }
-#sec-1 .s1-h-detail { font-size: 11.5px; color: var(--text-primary); line-height: 1.55; padding-top: 10px; border-top: 1px solid var(--border); }
-#sec-1 .s1-h-detail strong { font-weight: 600; }
-
-#sec-1 .s1-gap { background: var(--bg-secondary); border-radius: 12px; padding: 18px 22px; margin-bottom: 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-#sec-1 .s1-gap-num { font-size: 38px; font-weight: 700; color: var(--bad); letter-spacing: -1.5px; line-height: 1; }
-#sec-1 .s1-gap-text { font-size: 13px; color: var(--text-primary); line-height: 1.55; flex: 1; }
-#sec-1 .s1-gap-text strong { font-weight: 600; }
-
-#sec-1 .s1-split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-@media (max-width: 760px) { #sec-1 .s1-split-grid { grid-template-columns: 1fr; } }
-#sec-1 .s1-split-card { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
-#sec-1 .s1-split-title { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
-#sec-1 .s1-split-sub { font-size: 11px; color: var(--text-tertiary); margin-bottom: 12px; }
-#sec-1 .s1-stack { display: flex; height: 32px; border-radius: 4px; overflow: hidden; margin-bottom: 8px; }
-#sec-1 .s1-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: #fff; white-space: nowrap; }
-#sec-1 .s1-seg.sme { background: var(--good); }
-#sec-1 .s1-seg.green { background: #4a8c73; }
-#sec-1 .s1-seg.other { background: #B4B2A9; color: #444441; }
-#sec-1 .s1-stack-meta { font-size: 11px; color: var(--text-secondary); display: flex; gap: 14px; flex-wrap: wrap; }
-#sec-1 .s1-stack-meta strong { color: var(--text-primary); font-weight: 600; }
-
-/* === SLIDE 2 — NBFI fundraising heatmap (HERO) === */
-#sec-2 .s2-callout { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
-@media (max-width: 800px) { #sec-2 .s2-callout { grid-template-columns: 1fr 1fr; } }
-#sec-2 .s2-cal-card { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; border-left: 3px solid; }
-#sec-2 .s2-cal-1 { border-left-color: var(--pocket); }
-#sec-2 .s2-cal-2 { border-left-color: var(--accent); background: var(--accent-soft); }
-#sec-2 .s2-cal-3 { border-left-color: var(--ashid); }
-#sec-2 .s2-cal-4 { border-left-color: var(--bad); }
-#sec-2 .s2-cal-num { font-size: 22px; font-weight: 700; line-height: 1; letter-spacing: -0.4px; margin-bottom: 4px; }
-#sec-2 .s2-cal-1 .s2-cal-num { color: var(--pocket); }
-#sec-2 .s2-cal-2 .s2-cal-num { color: var(--accent); }
-#sec-2 .s2-cal-3 .s2-cal-num { color: var(--ashid); }
-#sec-2 .s2-cal-4 .s2-cal-num { color: var(--bad); }
-#sec-2 .s2-cal-lbl { font-size: 11px; color: var(--text-secondary); line-height: 1.4; }
-#sec-2 .s2-cal-lbl strong { color: var(--text-primary); font-weight: 600; }
-
-#sec-2 .s2-grid-wrap { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 12px; padding: 18px 16px; overflow-x: auto; margin-bottom: 18px; }
-#sec-2 .s2-grid-title { font-size: 12px; font-weight: 600; margin-bottom: 12px; color: var(--text-primary); padding-left: 4px; }
-#sec-2 .s2-grid { display: grid; grid-template-columns: 130px repeat(18, minmax(36px, 1fr)) 70px; gap: 2px; min-width: 900px; align-items: center; }
-#sec-2 .s2-month { font-size: 9px; color: var(--text-tertiary); text-align: center; padding: 4px 0; font-weight: 600; }
-#sec-2 .s2-month.qtr-end { color: var(--text-primary); }
-#sec-2 .s2-co-name { font-size: 11.5px; font-weight: 600; padding: 6px 8px; }
-#sec-2 .s2-co-name.lendmn-row { color: var(--accent); }
-#sec-2 .s2-co-name.no-fund { color: var(--text-tertiary); font-weight: 400; }
-#sec-2 .s2-cell { height: 24px; border-radius: 3px; background: var(--bg-secondary); position: relative; }
-#sec-2 .s2-cell.deal { cursor: help; }
-#sec-2 .s2-cell.deal-pocket { background: var(--pocket); }
-#sec-2 .s2-cell.deal-simple { background: #5DA68C; }
-#sec-2 .s2-cell.deal-sono { background: #88b3a3; }
-#sec-2 .s2-cell.deal-lendmn { background: var(--accent); }
-#sec-2 .s2-cell.deal-equity { background: #d4a04a; }
-#sec-2 .s2-row-total { font-size: 11px; font-weight: 700; text-align: right; padding-right: 8px; font-variant-numeric: tabular-nums; }
-#sec-2 .s2-row-total.has-fund { color: var(--text-primary); }
-#sec-2 .s2-row-total.no-fund { color: var(--text-tertiary); font-style: italic; font-size: 10.5px; }
-
-#sec-2 .s2-legend { display: flex; gap: 18px; font-size: 11px; color: var(--text-secondary); flex-wrap: wrap; padding: 0 4px; margin-top: 10px; }
-#sec-2 .s2-legend span { display: flex; align-items: center; gap: 6px; }
-#sec-2 .s2-lg-sw { width: 11px; height: 11px; border-radius: 2px; }
-
-#sec-2 .s2-conclusion { background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 10px; padding: 16px 20px; font-size: 13px; line-height: 1.65; color: var(--text-primary); }
-#sec-2 .s2-conclusion strong { font-weight: 600; }
-
-/* === SLIDE 3 — Banks SME push === */
-#sec-3 .s3-banks { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 18px; }
-@media (max-width: 1100px) { #sec-3 .s3-banks { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 700px) { #sec-3 .s3-banks { grid-template-columns: 1fr; } }
-#sec-3 .s3-bank-card { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; border-top: 3px solid var(--bank); display: flex; flex-direction: column; }
-#sec-3 .s3-bank-card.threat { border-top-color: var(--bad); background: var(--bad-soft); }
-#sec-3 .s3-bank-card.high-threat { border-top-color: var(--bad); background: var(--bad-soft); position: relative; }
-#sec-3 .s3-bank-card.high-threat::after { content: '⚠ Critical threat'; position: absolute; top: 12px; right: 12px; font-size: 9.5px; font-weight: 700; padding: 3px 8px; border-radius: 999px; background: var(--bad); color: #fff; letter-spacing: 0.4px; }
-#sec-3 .s3-bank-name { font-size: 14px; font-weight: 700; margin-bottom: 2px; color: var(--bank); }
-#sec-3 .s3-bank-card.threat .s3-bank-name, #sec-3 .s3-bank-card.high-threat .s3-bank-name { color: var(--bad); }
-#sec-3 .s3-bank-tag { font-size: 11px; color: var(--text-secondary); font-weight: 500; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
-#sec-3 .s3-bank-moves { display: flex; flex-direction: column; gap: 8px; flex: 1; }
-#sec-3 .s3-move { display: grid; grid-template-columns: 56px 1fr; gap: 10px; font-size: 11.5px; line-height: 1.5; }
-#sec-3 .s3-move-date { font-size: 10px; font-weight: 700; color: var(--text-tertiary); padding-top: 1px; text-transform: uppercase; letter-spacing: 0.4px; }
-#sec-3 .s3-move-text { color: var(--text-primary); }
-#sec-3 .s3-move-text strong { font-weight: 600; }
-#sec-3 .s3-bank-funding { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 11px; color: var(--text-secondary); }
-#sec-3 .s3-bank-funding strong { color: var(--text-primary); font-weight: 600; }
-
-#sec-3 .s3-impact { background: var(--bg-secondary); border-radius: 10px; padding: 16px 20px; font-size: 13px; line-height: 1.65; }
-#sec-3 .s3-impact strong { color: var(--text-primary); font-weight: 600; }
-#sec-3 .s3-impact-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent); margin-bottom: 8px; }
-
-
-#sec-4 .s4-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 18px; }
-@media (max-width: 1100px) { #sec-4 .s4-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 700px) { #sec-4 .s4-grid { grid-template-columns: 1fr; } }
-#sec-4 .s4-card { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; border-top: 3px solid; display: flex; flex-direction: column; }
-#sec-4 .s4-card.s4-c-lendmn { border-top-color: var(--accent); }
-#sec-4 .s4-card.s4-c-pocket { border-top-color: var(--pocket); }
-#sec-4 .s4-card.s4-c-simple { border-top-color: #5DA68C; }
-#sec-4 .s4-card.s4-c-sono { border-top-color: #88b3a3; }
-#sec-4 .s4-card.s4-c-numur { border-top-color: #b97a0e; }
-#sec-4 .s4-card.s4-c-hipay { border-top-color: #6b4a8e; }
-#sec-4 .s4-c-name { font-size: 14px; font-weight: 700; }
-#sec-4 .s4-c-lendmn .s4-c-name { color: var(--accent); }
-#sec-4 .s4-c-pocket .s4-c-name { color: var(--pocket); }
-#sec-4 .s4-c-simple .s4-c-name { color: #5DA68C; }
-#sec-4 .s4-c-sono .s4-c-name { color: #88b3a3; }
-#sec-4 .s4-c-numur .s4-c-name { color: #b97a0e; }
-#sec-4 .s4-c-hipay .s4-c-name { color: #6b4a8e; }
-#sec-4 .s4-c-headline { font-size: 11.5px; color: var(--text-secondary); font-weight: 500; margin-top: 2px; padding-bottom: 12px; margin-bottom: 12px; border-bottom: 1px solid var(--border); }
-#sec-4 .s4-c-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
-#sec-4 .s4-stat { background: var(--bg-elevated); border-radius: 6px; padding: 8px 10px; }
-#sec-4 .s4-stat-v { font-size: 13px; font-weight: 700; line-height: 1.2; }
-#sec-4 .s4-stat-l { font-size: 9.5px; color: var(--text-tertiary); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.4px; font-weight: 600; }
-#sec-4 .s4-c-moves { display: flex; flex-direction: column; gap: 7px; flex: 1; }
-#sec-4 .s4-move { display: grid; grid-template-columns: 56px 1fr; gap: 10px; font-size: 11px; line-height: 1.5; }
-#sec-4 .s4-move-d { font-size: 9.5px; font-weight: 700; color: var(--text-tertiary); padding-top: 1px; text-transform: uppercase; letter-spacing: 0.4px; }
-#sec-4 .s4-move-t { color: var(--text-primary); }
-#sec-4 .s4-move-t strong { font-weight: 600; }
-
-#sec-4 .s4-impact { background: var(--bg-secondary); border-radius: 10px; padding: 16px 20px; font-size: 13px; line-height: 1.65; }
-#sec-4 .s4-impact strong { color: var(--text-primary); font-weight: 600; }
-#sec-4 .s4-impact-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent); margin-bottom: 8px; }
-
-
-#sec-5 .s5-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 18px; }
-@media (max-width: 900px) { #sec-5 .s5-grid { grid-template-columns: 1fr; } }
-#sec-5 .s5-card { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; border-left: 3px solid var(--text-tertiary); }
-#sec-5 .s5-high-threat { border-left-color: var(--bad); background: var(--bad-soft); }
-#sec-5 .s5-medium-threat { border-left-color: var(--warn); }
-#sec-5 .s5-lendmn { border-left-color: var(--accent); background: var(--accent-soft); }
-#sec-5 .s5-card-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
-#sec-5 .s5-card-name { font-size: 14px; font-weight: 700; }
-#sec-5 .s5-high-threat .s5-card-name { color: var(--bad); }
-#sec-5 .s5-medium-threat .s5-card-name { color: var(--warn); }
-#sec-5 .s5-lendmn .s5-card-name { color: var(--accent); }
-#sec-5 .s5-card-flag { font-size: 9.5px; font-weight: 700; padding: 3px 8px; border-radius: 999px; background: var(--text-tertiary); color: #fff; letter-spacing: 0.4px; }
-#sec-5 .s5-high-threat .s5-card-flag { background: var(--bad); }
-#sec-5 .s5-medium-threat .s5-card-flag { background: var(--warn); }
-#sec-5 .s5-flag-self { background: var(--accent) !important; }
-#sec-5 .s5-card-tag { font-size: 11px; color: var(--text-secondary); font-weight: 500; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
-#sec-5 .s5-stack { display: flex; flex-direction: column; gap: 8px; }
-#sec-5 .s5-layer { display: grid; grid-template-columns: 80px 1fr; gap: 10px; font-size: 11.5px; line-height: 1.5; align-items: baseline; }
-#sec-5 .s5-l-label { font-size: 10px; font-weight: 700; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.4px; padding-top: 1px; }
-#sec-5 .s5-l-tech { color: var(--text-primary); }
-#sec-5 .s5-l-tech strong { font-weight: 600; }
-
-#sec-5 .s5-impact { background: var(--bg-secondary); border-radius: 10px; padding: 16px 20px; font-size: 13px; line-height: 1.65; }
-#sec-5 .s5-impact strong { color: var(--text-primary); font-weight: 600; }
-#sec-5 .s5-impact-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent); margin-bottom: 8px; }
-
-
-/* === SLIDE 5 (NEW) — Significant tactical moves === */
-#sec-4b .s4b-major { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 14px; }
-#sec-4b .s4b-minor { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 18px; }
-@media (max-width: 1100px) { #sec-4b .s4b-major, #sec-4b .s4b-minor { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 700px) { #sec-4b .s4b-major, #sec-4b .s4b-minor { grid-template-columns: 1fr; } }
-
-/* Major (top row) cards — bigger */
-#sec-4b .s4b-card-major { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; border-top: 3px solid; display: flex; flex-direction: column; }
-#sec-4b .s4b-mbank { border-top-color: var(--bad); background: var(--bad-soft); position: relative; }
-#sec-4b .s4b-mbank::after { content: '⚠ Critical'; position: absolute; top: 14px; right: 14px; font-size: 9.5px; font-weight: 700; padding: 3px 8px; border-radius: 999px; background: var(--bad); color: #fff; letter-spacing: 0.4px; }
-#sec-4b .s4b-simple { border-top-color: #5DA68C; }
-#sec-4b .s4b-pocket { border-top-color: var(--pocket); }
-#sec-4b .s4b-major-name { font-size: 15px; font-weight: 700; }
-#sec-4b .s4b-mbank .s4b-major-name { color: var(--bad); }
-#sec-4b .s4b-simple .s4b-major-name { color: #5DA68C; }
-#sec-4b .s4b-pocket .s4b-major-name { color: var(--pocket); }
-#sec-4b .s4b-major-tag { font-size: 11.5px; color: var(--text-secondary); font-weight: 500; margin-top: 3px; padding-bottom: 12px; margin-bottom: 12px; border-bottom: 1px solid var(--border); }
-#sec-4b .s4b-layers { display: flex; flex-direction: column; gap: 8px; flex: 1; }
-#sec-4b .s4b-layer { display: grid; grid-template-columns: 70px 1fr; gap: 10px; font-size: 11.5px; line-height: 1.5; }
-#sec-4b .s4b-l-label { font-size: 9.5px; font-weight: 700; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.4px; padding-top: 2px; }
-#sec-4b .s4b-l-text { color: var(--text-primary); }
-#sec-4b .s4b-l-text strong { font-weight: 600; }
-#sec-4b .s4b-implication { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 11px; color: var(--text-secondary); line-height: 1.55; }
-#sec-4b .s4b-implication strong { color: var(--text-primary); font-weight: 600; }
-
-/* Minor (bottom row) cards — smaller */
-#sec-4b .s4b-card-minor { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; border-left: 3px solid var(--text-tertiary); display: flex; flex-direction: column; }
-#sec-4b .s4b-bonum { border-left-color: var(--ashid); background: var(--ashid-soft); }
-#sec-4b .s4b-khan { border-left-color: var(--bank); }
-#sec-4b .s4b-numur { border-left-color: #b97a0e; }
-#sec-4b .s4b-minor-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 2px; }
-#sec-4b .s4b-minor-name { font-size: 13px; font-weight: 700; }
-#sec-4b .s4b-bonum .s4b-minor-name { color: var(--ashid); }
-#sec-4b .s4b-khan .s4b-minor-name { color: var(--bank); }
-#sec-4b .s4b-numur .s4b-minor-name { color: #b97a0e; }
-#sec-4b .s4b-minor-name .unofficial { font-size: 10px; font-weight: 500; color: var(--text-tertiary); font-style: italic; }
-#sec-4b .s4b-minor-flag { font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 999px; background: var(--text-tertiary); color: #fff; letter-spacing: 0.4px; flex-shrink: 0; }
-#sec-4b .s4b-bonum .s4b-minor-flag { background: var(--ashid); }
-#sec-4b .s4b-khan .s4b-minor-flag { background: var(--bank); }
-#sec-4b .s4b-numur .s4b-minor-flag { background: #b97a0e; }
-#sec-4b .s4b-minor-tag { font-size: 11px; color: var(--text-secondary); margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
-#sec-4b .s4b-minor-body { font-size: 11px; line-height: 1.55; color: var(--text-primary); }
-#sec-4b .s4b-minor-body p { margin-bottom: 6px; }
-#sec-4b .s4b-minor-body strong { font-weight: 600; }
-#sec-4b .s4b-minor-body ul { margin: 4px 0 8px 16px; padding: 0; }
-#sec-4b .s4b-minor-body li { margin-bottom: 3px; }
-#sec-4b .s4b-minor-impl { margin-top: auto; padding-top: 8px; border-top: 1px dashed var(--border); font-size: 10.5px; color: var(--text-secondary); line-height: 1.55; }
-#sec-4b .s4b-minor-impl strong { color: var(--text-primary); font-weight: 600; }
-
-/* Pattern read strip */
-#sec-4b .s4b-pattern { background: var(--bg-secondary); border-radius: 10px; padding: 16px 20px; font-size: 13px; line-height: 1.7; }
-#sec-4b .s4b-pattern strong { color: var(--text-primary); font-weight: 600; }
-#sec-4b .s4b-pattern-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent); margin-bottom: 10px; }
-#sec-4b .s4b-pattern-list { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
-#sec-4b .s4b-pattern-item { display: grid; grid-template-columns: 28px 1fr; gap: 8px; align-items: baseline; }
-#sec-4b .s4b-pattern-num { font-size: 11px; font-weight: 700; color: var(--accent); }
-#sec-4b .s4b-pattern-takeaway { padding-top: 10px; border-top: 1px solid var(--border-strong); font-size: 12.5px; }
-
-
-#sec-6 .s6-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 24px; }
-@media (max-width: 760px) { #sec-6 .s6-grid { grid-template-columns: 1fr; } }
-#sec-6 .s6-box { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; }
-#sec-6 .s6-accent { border-left: 3px solid var(--accent); }
-#sec-6 .s6-warn { border-left: 3px solid var(--ashid); }
-#sec-6 .s6-num { font-size: 11px; font-weight: 700; color: var(--text-tertiary); letter-spacing: 0.5px; margin-bottom: 6px; }
-#sec-6 .s6-title { font-size: 14px; font-weight: 700; margin-bottom: 8px; line-height: 1.35; }
-#sec-6 .s6-text { font-size: 12px; color: var(--text-secondary); line-height: 1.65; }
-#sec-6 .s6-text strong { color: var(--text-primary); font-weight: 600; }
-
-#sec-6 .s6-bridge { background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 10px; padding: 16px 20px; }
-#sec-6 .s6-bridge-label { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--accent); margin-bottom: 6px; }
-#sec-6 .s6-bridge-text { font-size: 13px; line-height: 1.65; color: var(--text-primary); }
-#sec-6 .s6-bridge-text strong { font-weight: 600; }
-
-
-/* === SLIDE 6 — Customer segmentation === */
-#sec-6a .s6a-chart-wrap { background: var(--bg-muted); border: 1px solid var(--border); border-radius: 14px; padding: 20px 18px 16px; overflow-x: auto; }
-#sec-6a .s6a-chart { min-width: 860px; display: flex; flex-direction: column; gap: 13px; }
-#sec-6a .s6a-row { display: grid; grid-template-columns: 170px 1fr; gap: 14px; align-items: center; }
-#sec-6a .s6a-name { font-size: 12px; font-weight: 600; color: var(--text-primary); text-align: right; line-height: 1.2; }
-#sec-6a .s6a-track { height: 30px; display: flex; overflow: hidden; border-radius: 3px; background: var(--bg-secondary); box-shadow: inset 0 0 0 1px rgba(32,32,30,0.04); }
-#sec-6a .s6a-retail, #sec-6a .s6a-corp { height: 100%; display: flex; align-items: center; justify-content: center; min-width: 0; }
-#sec-6a .s6a-retail { background: #2f70b0; color: #fff; font-size: 11px; font-weight: 700; }
-#sec-6a .s6a-corp { background: #bd7f1d; color: #fff; font-size: 11px; font-weight: 700; }
-#sec-6a .s6a-retail span, #sec-6a .s6a-corp span { white-space: nowrap; padding: 0 6px; }
-#sec-6a .s6a-legend { display: flex; justify-content: center; gap: 26px; margin-top: 18px; font-size: 11px; color: var(--text-primary); flex-wrap: wrap; }
-#sec-6a .s6a-legend span { display: inline-flex; align-items: center; gap: 7px; }
-#sec-6a .s6a-legend i { width: 13px; height: 13px; border-radius: 3px; display: inline-block; }
-#sec-6a .s6a-lg-retail { background: #2f70b0; }
-#sec-6a .s6a-lg-corp { background: #bd7f1d; }
-#sec-6a .s6a-note { margin-top: 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 10px; padding: 14px 18px; font-size: 13px; color: var(--text-primary); line-height: 1.65; }
-#sec-6a .s6a-note strong { font-weight: 600; }
-@media (max-width: 760px) {
-  #sec-6a .s6a-row { grid-template-columns: 125px 1fr; }
-  #sec-6a .s6a-name { font-size: 11px; }
+html, body {
+  width: 100%; height: 100%;
+  background: var(--bg); color: var(--text);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden; cursor: none;
 }
 
+/* ── Cursor ── */
+.cursor { position:fixed; width:9px; height:9px; background:var(--orange); border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); }
+.cursor-ring { position:fixed; width:34px; height:34px; border:1.5px solid var(--orange-mid); border-radius:50%; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); }
+
+/* ── Chrome ── */
+.progress { position:fixed; top:0; left:0; height:2px; background:var(--orange); transition:width .55s cubic-bezier(.4,0,.2,1); z-index:200; box-shadow:0 0 8px var(--orange); }
+.overlay { position:fixed; inset:0; background:var(--bg); opacity:0; pointer-events:none; z-index:500; transition:opacity .28s ease; }
+.overlay.flash { opacity:.3; }
+.noise { position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.02; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:180px; }
+
+.logo-mark { position:fixed; top:1.8rem; left:2.5rem; font-family:'Space Grotesk',sans-serif; font-size:.8rem; font-weight:600; letter-spacing:.18em; color:var(--dimmer); z-index:100; }
+.logo-mark span { color:var(--orange); }
+.slide-counter { position:fixed; top:1.8rem; right:2.5rem; font-family:'Space Grotesk',sans-serif; font-size:.7rem; color:var(--dimmer); letter-spacing:.12em; z-index:100; }
+.key-hint { position:fixed; bottom:2rem; left:2.5rem; font-size:.6rem; color:var(--dimmer); letter-spacing:.1em; z-index:100; }
+
+.nav { position:fixed; bottom:1.9rem; left:50%; transform:translateX(-50%); display:flex; align-items:center; gap:.5rem; z-index:100; }
+.nav-dot { width:6px; height:6px; border-radius:50%; background:var(--dimmer); transition:all .3s; cursor:pointer; }
+.nav-dot.active { width:22px; border-radius:3px; background:var(--orange); }
+
+.nav-arrows { position:fixed; bottom:1.75rem; right:2.5rem; display:flex; gap:.6rem; z-index:100; }
+.nav-btn { background:var(--surface2); border:1px solid #282828; color:var(--muted); width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:.9rem; transition:all .2s; }
+.nav-btn:hover { background:var(--orange-dim); border-color:var(--orange-mid); color:var(--orange); }
+
+/* ── Deck ── */
+.deck { width:100vw; height:100vh; position:relative; overflow:hidden; }
+.slide { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .65s cubic-bezier(.4,0,.2,1); padding:4.5rem 6vw 4rem; }
+.slide.active { opacity:1; pointer-events:all; }
+
+/* ── Type ── */
+.eyebrow { font-family:'Space Grotesk',sans-serif; font-size:clamp(.7rem, 1vw, .85rem); font-weight:500; letter-spacing:.28em; text-transform:uppercase; color:var(--orange); }
+.big-statement { font-family:'Space Grotesk',sans-serif; font-size:clamp(2.2rem, 4.8vw, 4.2rem); font-weight:700; line-height:1.1; letter-spacing:-.024em; }
+.big-statement em { font-style:normal; color:var(--orange); }
+.body-text { font-size:clamp(.95rem, 1.4vw, 1.15rem); font-weight:300; color:var(--muted); line-height:1.88; }
+
+@keyframes spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+
+/* ══════════════════════════════════
+   S1 — INTRO (Төвжилт зассан)
+══════════════════════════════════ */
+#s1 { flex-direction:column; align-items:center; text-align:center; }
+
+.orbit-wrap { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none; }
+.orbit-ring { position:absolute; border-radius:50%; border:1px solid; animation:spin linear infinite; }
+.orbit-ring:nth-child(1){ width:74vmin;height:74vmin;border-color:rgba(255,115,0,.05);animation-duration:68s; }
+.orbit-ring:nth-child(2){ width:55vmin;height:55vmin;border-color:rgba(255,115,0,.08);animation-duration:44s;animation-direction:reverse; }
+.orbit-ring:nth-child(3){ width:38vmin;height:38vmin;border-color:rgba(255,115,0,.12);animation-duration:28s; }
+.orbit-dot { position:absolute; top:0; left:50%; width:6px; height:6px; background:var(--orange); border-radius:50%; transform:translateX(-50%) translateY(-3px); box-shadow:0 0 10px var(--orange); }
+
+.s1-inner {
+  position:relative; z-index:2;
+  display:flex; flex-direction:column; align-items:center;
+  width:100%;
+  gap:1.5rem;
+}
+.s1-eyebrow { opacity:0; animation:fadeUp .8s .2s forwards; }
+.s1-title { font-family:'Space Grotesk',sans-serif; font-size:clamp(4rem, 9vw, 7.5rem); font-weight:700; line-height:1.0; letter-spacing:-.04em; color:var(--text); opacity:0; animation:fadeUp .9s .45s forwards; }
+.s1-title .accent { color:var(--orange); }
+.s1-sub { font-size:clamp(1rem,1.5vw,1.25rem); font-weight:300; color:var(--muted); max-width:500px; line-height:1.82; opacity:0; animation:fadeUp .9s .78s forwards; }
+.s1-tag { font-family:'Space Grotesk',sans-serif; font-size:.75rem; letter-spacing:.3em; color:var(--dimmer); opacity:0; animation:fadeUp .9s 1.08s forwards; }
+
+/* ══════════════════════════════════
+   S2 — ONE + DEPARTMENTS
+══════════════════════════════════ */
+#s2 { flex-direction:column; align-items:center; }
+.s2-inner { display:flex; flex-direction:column; align-items:center; gap:2rem; max-width:1000px; width:100%; }
+
+.s2-top { display:flex; flex-direction:column; align-items:center; gap:1.1rem; text-align:center; }
+.s2-title { font-family:'Space Grotesk',sans-serif; font-size:clamp(2.2rem, 4.8vw, 4.2rem); font-weight:700; line-height:1.1; letter-spacing:-.025em; }
+.s2-title em { font-style:normal; color:var(--orange); }
+.s2-sub { font-size:clamp(.9rem, 1.3vw, 1.1rem); font-weight:300; color:var(--muted); max-width:650px; line-height:1.85; }
+
+.dept-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:.55rem; width:100%; }
+.dept-card {
+  background:var(--surface); border:1px solid var(--line);
+  border-radius:9px; padding:.75rem 1.2rem;
+  font-family:'Space Grotesk',sans-serif; font-size:.85rem; font-weight:500; color:var(--muted);
+  opacity:0; transform:translateY(7px);
+  transition:opacity .35s ease, transform .35s ease, background .4s, border-color .4s, color .4s;
+}
+.dept-card.revealed { opacity:1; transform:translateY(0); }
+.dept-card.merged { background:var(--orange-dim); border-color:var(--orange-mid); color:var(--text); }
+
+.converge-row { display:flex; align-items:center; gap:.9rem; width:100%; opacity:0; transition:opacity .5s ease; }
+.converge-row.show { opacity:1; }
+.cline { flex:1; height:1px; }
+.cline-l { background:linear-gradient(to right, transparent, var(--orange)); }
+.cline-r { background:linear-gradient(to left, transparent, var(--orange)); }
+.ctip { font-family:'Space Grotesk',sans-serif; font-size:.68rem; letter-spacing:.22em; color:var(--orange); text-transform:uppercase; white-space:nowrap; }
+
+.one-goal { font-family:'Space Grotesk',sans-serif; font-size:clamp(1.4rem,2.8vw,2.4rem); font-weight:700; text-align:center; opacity:0; transition:opacity .6s ease; letter-spacing:-.02em; }
+.one-goal.show { opacity:1; }
+.one-goal span { color:var(--orange); }
+
+/* ══════════════════════════════════
+   S3 — MILESTONES
+══════════════════════════════════ */
+#s3 { flex-direction:column; align-items:center; }
+.s3-inner { display:flex; flex-direction:column; align-items:center; gap:2.2rem; max-width:1080px; width:100%; }
+.s3-header { text-align:center; display:flex; flex-direction:column; gap:.6rem; }
+
+.milestone-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:.8rem; width:100%;
+}
+.ms-card {
+  background:var(--surface); border:1px solid var(--line);
+  border-radius:12px; padding:1.2rem 1.2rem 1.1rem;
+  display:flex; flex-direction:column; gap:.45rem;
+  position:relative; overflow:hidden;
+  transition:border-color .3s, background .3s;
+}
+.ms-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--dimmer); transition:background .3s; }
+.ms-card.first-card::before { background:var(--orange); }
+.ms-card.now-card { background:rgba(255,115,0,.07); border-color:var(--orange-mid); }
+.ms-card.now-card::before { background:var(--orange); }
+
+.ms-year { font-family:'Space Grotesk',sans-serif; font-size:.7rem; font-weight:600; letter-spacing:.18em; color:var(--muted); }
+.ms-year.glow { color:var(--orange); }
+.ms-title { font-family:'Space Grotesk',sans-serif; font-size:.95rem; font-weight:600; color:var(--text); line-height:1.35; }
+.ms-title.orange { color:var(--orange); }
+.ms-desc { font-size:.78rem; color:var(--muted); line-height:1.55; }
+.ms-badge { display:inline-block; margin-top:.2rem; background:var(--orange); color:#000; font-family:'Space Grotesk',sans-serif; font-size:.55rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:.15rem .55rem; border-radius:4px; width:fit-content; }
+.ms-badge.outline { background:transparent; border:1px solid var(--orange-mid); color:var(--orange); }
+
+/* ══════════════════════════════════
+   S4 — WHAT'S NEXT
+══════════════════════════════════ */
+#s4 { flex-direction:column; align-items:center; }
+.s4-inner { display:flex; flex-direction:column; align-items:center; gap:2.2rem; max-width:880px; width:100%; }
+.s4-header { text-align:center; display:flex; flex-direction:column; gap:.6rem; }
+
+.journey-wrap {
+  width:100%; display:flex; flex-direction:column; align-items:center; gap:0;
+}
+.journey-step {
+  display:flex; align-items:stretch; width:100%; max-width:680px;
+  opacity:0; transform:translateY(8px);
+  transition:opacity .4s ease, transform .4s ease;
+}
+.journey-step.show { opacity:1; transform:translateY(0); }
+
+.js-spine { display:flex; flex-direction:column; align-items:center; width:36px; flex-shrink:0; }
+.js-dot { width:10px; height:10px; border-radius:50%; background:var(--orange); border:2px solid var(--orange); flex-shrink:0; margin-top:.95rem; position:relative; z-index:2; }
+.js-line { width:1px; flex:1; background:var(--orange-mid); min-height:14px; }
+.js-line.hidden { background:transparent; }
+
+.js-body { flex:1; padding:.7rem .8rem .7rem 1rem; }
+.js-label { font-family:'Space Grotesk',sans-serif; font-size:.88rem; font-weight:600; color:var(--muted); line-height:1.4; }
+.js-label.bright { color:var(--text); }
+
+.journey-apex {
+  width:100%; max-width:680px; margin-top:.5rem;
+  background:rgba(255,115,0,.1); border:1px solid var(--orange-mid); border-radius:14px;
+  padding:1.3rem 1.6rem; display:flex; align-items:center; gap:1.2rem;
+  opacity:0; transform:translateY(8px);
+  transition:opacity .4s ease, transform .4s ease;
+}
+.journey-apex.show { opacity:1; transform:translateY(0); }
+.apex-icon { font-size:1.8rem; flex-shrink:0; }
+.apex-title { font-family:'Space Grotesk',sans-serif; font-size:1.25rem; font-weight:700; color:var(--orange); letter-spacing:-.01em; }
+.apex-sub { font-size:.82rem; color:var(--muted); margin-top:.2rem; line-height:1.55; }
+
+/* ══════════════════════════════════
+   S5 — ICEBERG
+══════════════════════════════════ */
+#s5 { flex-direction:column; align-items:center; }
+.s5-inner { display:flex; flex-direction:column; align-items:center; gap:1.8rem; max-width:960px; width:100%; }
+.s5-header { text-align:center; display:flex; flex-direction:column; gap:.6rem; }
+
+.iceberg-wrap {
+  width:100%; display:flex; gap:2.5rem; align-items:stretch; max-width:920px;
+}
+
+.iceberg-svg-col { flex-shrink:0; display:flex; align-items:center; justify-content:center; width:220px; }
+.iceberg-panels { flex:1; display:flex; flex-direction:column; gap:.6rem; }
+
+.ice-panel {
+  border-radius:12px; padding:1.1rem 1.3rem;
+  display:flex; flex-direction:column; gap:.5rem;
+}
+.ice-panel.above {
+  background:rgba(255,115,0,.1); border:1px solid var(--orange-mid);
+}
+.ice-panel.below {
+  background:var(--surface); border:1px solid var(--line); flex:1;
+}
+.ice-panel-label { font-family:'Space Grotesk',sans-serif; font-size:.65rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; }
+.ice-panel.above .ice-panel-label { color:var(--orange); }
+.ice-panel.below .ice-panel-label { color:var(--muted); }
+.ice-panel-title { font-family:'Space Grotesk',sans-serif; font-size:1rem; font-weight:700; color:var(--text); line-height:1.3; }
+.ice-tags { display:flex; flex-wrap:wrap; gap:.35rem; margin-top:.2rem; }
+.ice-tag { font-size:.72rem; padding:.25rem .65rem; border-radius:5px; font-family:'Space Grotesk',sans-serif; font-weight:500; }
+.ice-tag.bright { background:rgba(255,115,0,.15); color:var(--orange); border:1px solid rgba(255,115,0,.25); }
+.ice-tag.dim { background:var(--surface2); color:var(--muted); border:1px solid var(--line); }
+.ice-desc { font-size:.76rem; color:var(--muted); line-height:1.6; }
+
+/* ══════════════════════════════════
+   S6 — CLOSING (Төвжилт зассан)
+══════════════════════════════════ */
+#s6 { flex-direction:column; align-items:center; text-align:center; }
+.close-orbit { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none; }
+.co-ring { position:absolute; border-radius:50%; border:1px solid; animation:spin linear infinite; }
+.co-ring:nth-child(1){ width:84vmin;height:84vmin;border-color:rgba(255,115,0,.04);animation-duration:88s; }
+.co-ring:nth-child(2){ width:63vmin;height:63vmin;border-color:rgba(255,115,0,.07);animation-duration:62s;animation-direction:reverse; }
+.co-ring:nth-child(3){ width:44vmin;height:44vmin;border-color:rgba(255,115,0,.11);animation-duration:38s; }
+.co-dot { position:absolute; top:0; left:50%; width:5px; height:5px; background:var(--orange); border-radius:50%; transform:translateX(-50%) translateY(-2.5px); box-shadow:0 0 8px var(--orange); }
+
+.s6-inner {
+  position:relative; z-index:2;
+  display:flex; flex-direction:column; align-items:center;
+  width:100%;
+  gap:1.5rem;
+}
+.close-title { font-family:'Space Grotesk',sans-serif; font-size:clamp(2.6rem, 6vw, 5.2rem); font-weight:700; line-height:1.1; letter-spacing:-.035em; }
+.close-title .dim { color:var(--dimmer); }
+.close-title .white { color:var(--text); }
+.close-title .orange { color:var(--orange); }
+.close-divider { width:36px; height:2px; background:var(--orange); border-radius:2px; }
+.close-sub { font-size:clamp(.95rem, 1.3vw, 1.15rem); font-weight:300; color:var(--muted); max-width:520px; line-height:1.9; }
 </style>
 </head>
 <body>
 
-<nav class="topnav">
-  <div class="topnav-inner">
-    <div class="topnav-brand">Section 2 — Competitor moves over the last 18 months</div>
-    <div class="topnav-links">
-      <a href="#sec-1" class="topnav-link active" data-target="sec-1">1. Capital landscape</a>
-      <a href="#sec-2" class="topnav-link" data-target="sec-2">2. NBFI funding</a>
-      <a href="#sec-3" class="topnav-link" data-target="sec-3">3. Banks SME push</a>
-      <a href="#sec-4" class="topnav-link" data-target="sec-4">4. NBFI products</a>
-      <a href="#sec-4b" class="topnav-link" data-target="sec-4b">5. Tactical moves</a>
-      <a href="#sec-5" class="topnav-link" data-target="sec-5">6. Tech stack</a>
-      <a href="#sec-6a" class="topnav-link" data-target="sec-6a">7. Segmentation</a>
-      <a href="#sec-6" class="topnav-link" data-target="sec-6">8. Implications</a>
-    </div>
-  </div>
-</nav>
-
-<div class="page">
-
-<!-- ============ SLIDE 1 — Capital landscape ============ -->
-<section id="sec-1" class="section">
-  <div class="section-pad">
-    <div class="section-num">Slide 1</div>
-    <div class="s-title">Capital deployment landscape — banks vs NBFIs vs LendMN</div>
-    <div class="s-sub">2024 Q4 – 2026 Q1 хооронд босгосон капитал. Зах зээлийн хүчний харьцааг ха рүүлах зураглал.</div>
-
-    <div class="s1-hero">
-      <div class="s1-hcard banks">
-        <div class="s1-h-label">5 банк</div>
-        <div class="s1-h-amount">$2,541M</div>
-        <div class="s1-h-cap">SME + green debt deals (Khan Bank, Golomt, TDB, XacBank, M Bank багтсан)</div>
-        <div class="s1-h-detail">Хан Банк <strong>$200M</strong> бонд (2025), TDB Bpifrance trade finance, Golomt WaterEquity <strong>$13M</strong>, M Bank IFC <strong>$30M</strong> SME/women</div>
-      </div>
-      <div class="s1-hcard nbfi">
-        <div class="s1-h-label">5 NBFI / fintech (LendMN-ээс бусад)</div>
-        <div class="s1-h-amount">$98M</div>
-        <div class="s1-h-cap">Pocket, Simple, Sono, HiPay болон бусад</div>
-        <div class="s1-h-detail">Pocket дангаараа <strong>$71.5M</strong> (Helicap, FMO, Triple Jump, EMF), Simple <strong>$16.5M</strong>, Sono <strong>$10M</strong>. 7 NBFI сүүлийн 18 сард capital round хаагаагүй.</div>
-      </div>
-      <div class="s1-hcard lendmn">
-        <div class="s1-h-label">LendMN</div>
-        <div class="s1-h-amount">$27M</div>
-        <div class="s1-h-cap">Direct debt + parent equity — бүтэц нь ялгаатай</div>
-        <div class="s1-h-detail"><strong>$20M</strong> debt facility Lendable-аас (Apr 2025, first offshore close) + <strong>$7M</strong> equity IFC-ээс AND Global parent company  рүү (Aug 2025, IFC-ийн Монголд 10 жилийн дараах анхны equity investment investment)</div>
-      </div>
-    </div>
-
-    <div class="s1-gap">
-      <div class="s1-gap-num">26×</div>
-      <div class="s1-gap-text">Банкууд NBFI-уудаас <strong>26 дахин</strong> их капитал татсан нь зах зээлийн санхүүжилтийн тэнцвэр алдагдсаныг ха рүүлж байна. $2.5B-ийн дийлэнх нь SME + green finance ангилалтай — өөрөөр хэлбэл <strong>банкууд уламжлалт NBFI-ийн “SME finance gap” сегмент рүү аль хэдийн орсон.</strong> Ийм нөхцөлд LendMN нийт зах зээл дээр бус, <strong>нарийн тодорхойлсон стратегийн байршуулалт</strong>-аар ялгарах шаардлагатай.</div>
-    </div>
-
-    <div class="s1-split-grid">
-      <div class="s1-split-card">
-        <div class="s1-split-title">Банкны $2,541M-ийн ангиллын задаргаа</div>
-        <div class="s1-split-sub">SME / Environmental / Other — санхүүжилтийн чиглэлүүд</div>
-        <div class="s1-stack">
-          <div class="s1-seg sme" style="width:67%">$1,699M · SME</div>
-          <div class="s1-seg green" style="width:33%">$842M · Green</div>
-        </div>
-        <div class="s1-stack-meta">
-          <span><strong>67%</strong> SME зориулалттай</span>
-          <span><strong>33%</strong> environmental / blue / water finance</span>
-        </div>
-      </div>
-
-      <div class="s1-split-card">
-        <div class="s1-split-title">NBFI-ийн $98M санхүүжилтийн шинж</div>
-        <div class="s1-split-sub">Үндсэндээ business expansion зориулалттай</div>
-        <div class="s1-stack">
-          <div class="s1-seg sme" style="width:98%">$96M · SME</div>
-          <div class="s1-seg green" style="width:2%"></div>
-        </div>
-        <div class="s1-stack-meta">
-          <span><strong>98%</strong> SME зориулалттай</span>
-          <span><strong>2%</strong> environmental (Pocket $2M EBRD)</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SLIDE 2 — NBFI fundraising heatmap (HERO) ============ -->
-<section id="sec-2" class="section">
-  <div class="section-pad">
-    <div class="section-num">Slide 2 · HERO</div>
-    <div class="s-title">NBFI funding — хэн татаж чадсан, хэн татаж чадаагүй вэ?</div>
-    <div class="s-sub">Топ 12 NBFI / fintech-ийн сүүлийн 18 сарын fundraising activity-г сараар ха рүүлсан. Зөвхөн 4 тоглогч шинэ капитал татаж чадсан.</div>
-
-    <div class="s2-callout">
-      <div class="s2-cal-card s2-cal-1">
-        <div class="s2-cal-num">$71.5M</div>
-        <div class="s2-cal-lbl"><strong>Pocket</strong> — sector leader, multiple deals (Triple Jump, EMF, FMO, Helicap)</div>
-      </div>
-      <div class="s2-cal-card s2-cal-2">
-        <div class="s2-cal-num">$27M</div>
-        <div class="s2-cal-lbl"><strong>LendMN</strong> — debt $20M + equity $7M, sector цорын ганц hybrid stack</div>
-      </div>
-      <div class="s2-cal-card s2-cal-3">
-        <div class="s2-cal-num">$26.5M</div>
-        <div class="s2-cal-lbl"><strong>Simple + Sono</strong> хосолж — $16.5M + $10M, mid-tier deals</div>
-      </div>
-      <div class="s2-cal-card s2-cal-4">
-        <div class="s2-cal-num">8 / 12</div>
-        <div class="s2-cal-lbl"><strong>NBFI capital татаагүй</strong> — Toki, Numur, HiPay болон бусад</div>
-      </div>
-    </div>
-
-    <div class="s2-grid-wrap">
-      <div class="s2-grid-title">12 NBFI × 18 months — fundraising deals heatmap</div>
-      <div class="s2-grid" id="s2-grid"></div>
-      <div class="s2-legend">
-        <span><span class="s2-lg-sw" style="background:var(--pocket)"></span>Pocket deal (debt)</span>
-        <span><span class="s2-lg-sw" style="background:var(--accent)"></span>LendMN deal</span>
-        <span><span class="s2-lg-sw" style="background:#d4a04a"></span>Equity round</span>
-        <span><span class="s2-lg-sw" style="background:#5DA68C"></span>Simple deal</span>
-        <span><span class="s2-lg-sw" style="background:#88b3a3"></span>Sono deal</span>
-        <span><span class="s2-lg-sw" style="background:var(--bg-secondary)"></span>No activity</span>
-      </div>
-    </div>
-
-    <div class="s2-conclusion">
-      <strong>Стратегийн утга:</strong> NBFI sector-ийн fundraising маш төвлөрсөн байна — Top 4 issuer нийт татсан капиталыг бүрдүүлсэн. LendMN-ийн байр суурь нэг талаас <strong>defensive</strong> (single deal, Pocket-оос бага), нөгөө талаас <strong>structurally valuable</strong> — IFC-ийн Монголд 10 жилийн дараах анхны equity investment ($7M Series B, parent company  рүү) нь Pocket-ийн debt-only stack-аас илүү гүн стратегийн anchor. Гэхдээ Pocket-ийн multi-source debt diversification нь LendMN-ийн single-rail funding-аас илүү resilient. <strong>Funding diversification дараагийн раундны гол priority байх ёстой.</strong>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SLIDE 3 — Banks SME push ============ -->
-<section id="sec-3" class="section">
-  <div class="section-pad">
-    <div class="section-num">Slide 3</div>
-    <div class="s-title">Банкуудын SME / digital push — сүүлийн алхамууд</div>
-    <div class="s-sub">6 банкны сүүлийн 18 сарын гол хөдөлгөөнүүд. Хэн ямар сегмент рүү орж, хэн hardware-enabled distribution model ашиглаж байгааг ха рүүлна. M Bank нь LendMN-д хамгийн өндөр strategic threat үүсгэж байна.</div>
-
-    <div class="s3-banks">
-
-      <div class="s3-bank-card high-threat">
-        <div class="s3-bank-name">M Bank</div>
-        <div class="s3-bank-tag">MCS Group · neobank · KakaoBank scoring partnership</div>
-        <div class="s3-bank-moves">
-          <div class="s3-move"><span class="s3-move-date">May'24</span><span class="s3-move-text"><strong>IFC $30M facility</strong> SME/women borrowers, supply chain finance (25% women-owned SME-д тусгайлан)</span></div>
-          <div class="s3-move"><span class="s3-move-date">Apr'26</span><span class="s3-move-text"><strong>KakaoBank Score</strong> alternative scoring model partnership — non-financial data based ($11B proven model in Korea). Equity investment + Central Asia JV plan.</span></div>
-          <div class="s3-move"><span class="s3-move-date">2026</span><span class="s3-move-text"><strong>SoftPOS rollout (planned)</strong> — tablet hardware + commercial center placement + employee activation campaign дээр суурилсан merchant ecosystem play</span></div>
-          <div class="s3-move"><span class="s3-move-date">2024</span><span class="s3-move-text">Apple Pay, Visa/Mastercard digital wallet integration</span></div>
-        </div>
-        <div class="s3-bank-funding">Funding stack: <strong>$30M IFC</strong> + KakaoBank equity (size TBD)</div>
-      </div>
-
-      <div class="s3-bank-card high-threat">
-        <div class="s3-bank-name">XacBank</div>
-        <div class="s3-bank-tag">Tier-1 commercial bank · digital + SME focus</div>
-        <div class="s3-bank-moves">
-          <div class="s3-move"><span class="s3-move-date">Sep'25</span><span class="s3-move-text"><strong>Youth Entrepreneur Loan</strong> tiered rates from <strong>1.8%</strong> — LendMN-ийн customer attrition risk-ийг шууд нэмэгдүүлж байна (дотоод survey-д XacBank  рүү шилжсэн pattern ажиглагдсан)</span></div>
-          <div class="s3-move"><span class="s3-move-date">Jul'25</span><span class="s3-move-text">FRC permission to form <strong>Tenger Financial Group</strong> — banking + non-bank cross-product capability</span></div>
-          <div class="s3-move"><span class="s3-move-date">Jan'26</span><span class="s3-move-text">XacM centralization — housing + leasing operations-ыг нэгтгэсэн</span></div>
-          <div class="s3-move"><span class="s3-move-date">Mar'26</span><span class="s3-move-text">Senior Entrepreneur Loan — шинэ sub-segment рүү орж эхэлсэн</span></div>
-          <div class="s3-move"><span class="s3-move-date">Apr'26</span><span class="s3-move-text">Google Pay launch</span></div>
-        </div>
-        <div class="s3-bank-funding">Pricing edge: <strong>1.8% rate</strong>, ₮500M–₮1B size — collateral-free option available</div>
-      </div>
-
-      <div class="s3-bank-card threat">
-        <div class="s3-bank-name">Khan Bank</div>
-        <div class="s3-bank-tag">Largest bank · TCS BaNCS overhaul</div>
-        <div class="s3-bank-moves">
-          <div class="s3-move"><span class="s3-move-date">Apr'25</span><span class="s3-move-text">AI chatbot <strong>"Digi"</strong> scaled across customer base</span></div>
-          <div class="s3-move"><span class="s3-move-date">May'25</span><span class="s3-move-text">Strategic alliance with <strong>Tata Consultancy Services</strong> — TCS BaNCS core banking transformation</span></div>
-          <div class="s3-move"><span class="s3-move-date">Jun'25</span><span class="s3-move-text">Loan portfolio shifted — <strong>53% business loans</strong> (consumer/retail focus-оос business lending рүү шилжсэн)</span></div>
-          <div class="s3-move"><span class="s3-move-date">Mar'26</span><span class="s3-move-text">IFC FX hedge derivatives package — currency risk management capability upgraded</span></div>
-          <div class="s3-move"><span class="s3-move-date">Apr'26</span><span class="s3-move-text">UNICEF green schools partnership</span></div>
-        </div>
-        <div class="s3-bank-funding">Funding stack: <strong>$200M+</strong> recent debt + IFC FX derivatives</div>
-      </div>
-
-      <div class="s3-bank-card">
-        <div class="s3-bank-name">TDB</div>
-        <div class="s3-bank-tag">Premium digital + AI focus</div>
-        <div class="s3-bank-moves">
-          <div class="s3-move"><span class="s3-move-date">Nov'25</span><span class="s3-move-text"><strong>"6-Minute Digital Car Loan"</strong> — Pocket-ийн car loan-той зэрэгцэн speed advantage  рүү шахаж байна</span></div>
-          <div class="s3-move"><span class="s3-move-date">2024</span><span class="s3-move-text">First-mover position in <strong>Apple Pay</strong> + <strong>Google Pay</strong> launches in Mongolia (Dec 2024 + Nov 2025)</span></div>
-          <div class="s3-move"><span class="s3-move-date">Jul'25</span><span class="s3-move-text"><strong>Bpifrance trade finance</strong> agreement, followed by a specific financing mandate in Feb'26</span></div>
-          <div class="s3-move"><span class="s3-move-date">Dec'25</span><span class="s3-move-text"><strong>"TDB Skill Lab"</strong> — proprietary AI internal training — talent moat building</span></div>
-          <div class="s3-move"><span class="s3-move-date">2024+</span><span class="s3-move-text">Temenos T24 core banking</span></div>
-        </div>
-        <div class="s3-bank-funding">Funding stack: Bpifrance trade + bond market access</div>
-      </div>
-
-      <div class="s3-bank-card">
-        <div class="s3-bank-name">Golomt</div>
-        <div class="s3-bank-tag">Wallet + green finance leader</div>
-        <div class="s3-bank-moves">
-          <div class="s3-move"><span class="s3-move-date">Apr'25</span><span class="s3-move-text">First-ever <strong>SME bill discounting</strong> service launched — factoring-type SME finance segment рүү орсон</span></div>
-          <div class="s3-move"><span class="s3-move-date">Sep'25</span><span class="s3-move-text"><strong>$13M WaterEquity</strong> water finance facility</span></div>
-          <div class="s3-move"><span class="s3-move-date">Sep'25</span><span class="s3-move-text"><strong>WeChat Pay partnership</strong> — Mongolia's first cross-border wallet</span></div>
-          <div class="s3-move"><span class="s3-move-date">Jan'26</span><span class="s3-move-text"><strong>Google Pay</strong> launch in Mongolia + AliPay+ partnership</span></div>
-          <div class="s3-move"><span class="s3-move-date">Mar'26</span><span class="s3-move-text">3 new <strong>blue finance</strong> products — water-related lending segment</span></div>
-        </div>
-        <div class="s3-bank-funding">Funding stack: WaterEquity $13M + green pipeline</div>
-      </div>
-
-      <div class="s3-bank-card">
-        <div class="s3-bank-name">Төрийн Банк</div>
-        <div class="s3-bank-tag">Public sector · rural & senior segments</div>
-        <div class="s3-bank-moves">
-          <div class="s3-move"><span class="s3-move-date">Feb'25</span><span class="s3-move-text"><strong>"Digital Loan for Herders"</strong> — official livestock certificate ашиглан loan eligibility check хийдэг model</span></div>
-          <div class="s3-move"><span class="s3-move-date">Jun'25</span><span class="s3-move-text">Corporate Credit Cards + Platinum Credit Cards</span></div>
-          <div class="s3-move"><span class="s3-move-date">Mar'26</span><span class="s3-move-text"><strong>"Senior Entrepreneur Loan"</strong> — XacBank-той зэрэгцэн шинэ sub-segment</span></div>
-        </div>
-        <div class="s3-bank-funding">Funding stack: government/sovereign access</div>
-      </div>
-
-    </div>
-
-    <div class="s3-impact">
-      <div class="s3-impact-title">LendMN-д хамаатай impact</div>
-      <strong>Direct threat shortlist (top 2):</strong> M Bank-ийн KakaoBank Score partnership + IFC $30M facility нь structural threat — neobank model, alternative scoring, SME finance гурвуулаа LendMN-ийн positioning-той давхцаж байна. XacBank-ийн 1.8% rate бүхий Youth Business Loan нь LendMN-ийн existing SME customers-д шууд attrition pressure үүсгэнэ. <strong>Indirect:</strong> Khan Bank-ийн loan portfolio business lending рүү shift хийсэн нь, Golomt-ийн bill discounting, State Bank-ийн Senior/Herder segment expansion бүгд SME finance space-ийг улам шахаж байна. Гол message: <strong>“уламжлалт SME finance” сегментээс зай барьж, embedded finance / data productization  рүү шилжих стратегийн логик улам тодорхой боллоо.</strong>
-    </div>
-  </div>
-</section>
-
-
-<section id="sec-4" class="section">
-  <div class="section-pad">
-    <div class="section-num">Slide 4</div>
-    <div class="s-title">NBFI бүтээгдэхүүний хувьсал — хэн ямар шинэ product гаргасан бэ</div>
-    <div class="s-sub">5 идэвхтэй NBFI / fintech-ийн сүүлийн 18 сарын product launches. Зорилго: ямар сегментүүд эзлэгдэж байгаа, LendMN аль категорид competitive threat-тэй тулж байгааг ха рүүлах.</div>
-
-    <div class="s4-grid" id="s4-grid"></div>
-
-    <div class="s4-impact">
-      <div class="s4-impact-title">Key pattern</div>
-      <strong>Гурван тодорхой category ажиглагдаж байна:</strong> (1) <strong>Trust products</strong> — Pocket, Simple бараг ижил timeline-аар (May–Dec 2025) launch — bank-like deposit / trust product  рүү шилжих pattern. (2) <strong>Digital car loan</strong> — Pocket (Feb 2026) + TDB (Nov 2025, 6 минут) хоёулаа — vehicle collateral хамгийн scalable collateral segment. (3) <strong>Specialty / niche segment</strong> — Numur (tuition), Simple (debt consolidation), Sono (Mastercard credit card via Bonum). <strong>LendMN-ийн Flexi Business Loan</strong> ($70M+ disbursed, 3,800 SME, 630 daily applications) нь “100% digital + collateral-free” positioning-аар цорын ганц тоглогч хэвээр байна — гэхдээ Pocket car-collateralized digital + M Bank SME finance рүү шилжсэн нь threat pathway.
-    </div>
-  </div>
-</section>
-<script>
-(function(){
-  const cards = [
-    {n:'LendMN', cls:'lendmn', headline:'Flexi Business Loan', sub:'Mongolia\'s first 100% digital, collateral-free business loan',
-     stats:[
-       {l:'Total disbursed', v:'$70M+'},
-       {l:'Active SME borrowers', v:'3,800+'},
-       {l:'Daily applications', v:'630'},
-       {l:'Rural reach', v:'35%'}
-     ],
-     moves:[
-       {d:'2024', t:'Flexi Business Loan launch — мини бизнесийн эзэдэд хувь хүний нэрээр өгдөг (RegTech artifact)'},
-       {d:'2025', t:'Жинхэнэ 90% non-salaried + 56% women borrowers segment'},
-       {d:'Apr\'25', t:'<strong>$20M Lendable</strong> debt facility-аар scale-up funding'},
-       {d:'Aug\'25', t:'<strong>$7M IFC equity</strong> AND Global parent company  рүү — productization arm enabled'}
-     ]
-    },
-    {n:'Pocket', cls:'pocket', headline:'Premium digital + trust products',
-     stats:[
-       {l:'Total raised', v:'$71.5M'},
-       {l:'NIM', v:'10.3% · sector best'},
-       {l:'ROE', v:'14.3% · sector best'},
-       {l:'Distinct moves', v:'7+ products'}
-     ],
-     moves:[
-       {d:'Apr\'25', t:'<strong>"My Ponji" gamification</strong> — mascot-based engagement layer'},
-       {d:'May\'25', t:'<strong>Trust-backed loan</strong> + trust certificate product'},
-       {d:'Aug\'25', t:'Long-term trust product launch'},
-       {d:'Oct\'25', t:'Behavior-based interest rate reduction (good payer pricing)'},
-       {d:'Nov\'25', t:'BNPL postponement product'},
-       {d:'Jan\'26', t:'Auto-link bank card to trust account'},
-       {d:'Feb\'26', t:'<strong>Car-collateralized 100% digital loan</strong> — АТҮТ + G-Sign integration, 8 hours (vs 2-3 days previously)'}
-     ]
-    },
-    {n:'Simple', cls:'simple', headline:'Trust + consolidation focus',
-     stats:[
-       {l:'Total raised', v:'$16.5M'},
-       {l:'Bond issuance', v:'MNT 75B+'},
-       {l:'Tech vendor', v:'Simform (India)'},
-       {l:'Sub-segments', v:'5 product lines'}
-     ],
-     moves:[
-       {d:'Aug\'25', t:'<strong>Trust product</strong> + bank statement-based business loan eligibility'},
-       {d:'Sep\'25', t:'<strong>12-month herder loan</strong> — official livestock certificate-аар (Төр банкны pattern-той ижил)'},
-       {d:'Dec\'25', t:'Trust-backed loan layer extension'},
-       {d:'Feb\'26', t:'Micro loan eligibility through bank statement analysis (LendMN-тэй ижил underwriting model)'},
-       {d:'Apr\'26', t:'<strong>"Төлөлт буу рүүлах зээл"</strong> — debt consolidation product (Mongolia first)'}
-     ]
-    },
-    {n:'Sono финтек', cls:'sono', headline:'Premium card + payment rail',
-     stats:[
-       {l:'Total raised', v:'$10M'},
-       {l:'Net spread', v:'4.4% (cof 3.5%)'},
-       {l:'NPL', v:'3.5% · #2 cleanest'},
-       {l:'Strategy', v:'Card-led ecosystem'}
-     ],
-     moves:[
-       {d:'2025', t:'<strong>Mastercard credit card issuance</strong> via Bonum partnership — payment rail vertical entry'},
-       {d:'2025', t:'<strong>Apple Pay</strong> integration — fintech-ийн fastest cross-border payment'},
-       {d:'Ongoing', t:'10% travel cashback program — premium positioning'},
-       {d:'2026', t:'Cross-border payment infrastructure deepening'}
-     ]
-    },
-    {n:'Numur', cls:'numur', headline:'Education / tuition specialty',
-     stats:[
-       {l:'Total raised', v:'No funds'},
-       {l:'Segment', v:'Student loans'},
-       {l:'Differentiation', v:'B2B education FI'},
-       {l:'Market position', v:'Specialty player'}
-     ],
-     moves:[
-       {d:'Feb\'26', t:'<strong>Annual student/parent event</strong> — tuition product introduction'},
-       {d:'Ongoing', t:'Position as specialized tuition-focused lender'},
-       {d:'Ongoing', t:'Differentiated from mass-market — partner with universities'},
-       {d:'2025+', t:'Niche but undercapitalized — funding-аас гадуур'}
-     ]
-    },
-    {n:'HiPay', cls:'hipay', headline:'Cross-border payment rail',
-     stats:[
-       {l:'Total raised', v:'No funds'},
-       {l:'WeChat Pay', v:'Live'},
-       {l:'AliPay+ reach', v:'14 countries'},
-       {l:'Position', v:'Inbound tourism payment'}
-     ],
-     moves:[
-       {d:'Sep\'25', t:'<strong>WeChat Pay partnership</strong> — Mongolia first (Golomt-той зэрэгцэн)'},
-       {d:'Nov\'25', t:'<strong>AliPay+ integration</strong> — 14 country reach (16 e-wallets)'},
-       {d:'Ongoing', t:'Inbound tourism payment dominance positioning'}
-     ]
-    }
-  ];
-
-  document.getElementById('s4-grid').innerHTML = cards.map(c => `
-    <div class="s4-card s4-c-${c.cls}">
-      <div class="s4-c-head">
-        <div class="s4-c-name">${c.n}</div>
-        <div class="s4-c-headline">${c.headline}</div>
-      </div>
-      <div class="s4-c-stats">
-        ${c.stats.map(s => `<div class="s4-stat"><div class="s4-stat-v">${s.v}</div><div class="s4-stat-l">${s.l}</div></div>`).join('')}
-      </div>
-      <div class="s4-c-moves">
-        ${c.moves.map(m => `<div class="s4-move"><span class="s4-move-d">${m.d}</span><span class="s4-move-t">${m.t}</span></div>`).join('')}
-      </div>
-    </div>
-  `).join('');
-})();
-</script>
-
-
-<!-- ============ SLIDE 5 (NEW) — Significant tactical moves ============ -->
-<section id="sec-4b" class="section">
-  <div class="section-pad">
-    <div class="section-num">Slide 5</div>
-    <div class="s-title">Significant tactical moves — bank + NBFI-уудын real-time plays</div>
-    </div>
-
-    <!-- Top row: 3 BIG cards (highest-weight moves) -->
-    <div class="s4b-major">
-
-      <div class="s4b-card-major s4b-mbank">
-        <div class="s4b-major-name">M Bank</div>
-        <div class="s4b-major-tag">Hardware + Software = Real-time payment visibility · merchant infrastructure play</div>
-        <div class="s4b-layers">
-          <div class="s4b-layer">
-            <div class="s4b-l-label">Hardware</div>
-            <div class="s4b-l-text"><strong>Pad device</strong> — томоохон хэмжээний захиалга өгсөн, хүрч ирэхтэй зэрэгцэн campaign эхлэнэ</div>
-          </div>
-          <div class="s4b-layer">
-            <div class="s4b-l-label">Software</div>
-            <div class="s4b-l-text"><strong>Ontime Cashier system</strong>-ыг whitelabel хийж merchant-уудад өгөх</div>
-          </div>
-          <div class="s4b-layer">
-            <div class="s4b-l-label">Acquiring</div>
-            <div class="s4b-l-text"><strong>SoftPOS</strong> — Bonum-той partnering хийж rollout</div>
-          </div>
-          <div class="s4b-layer">
-            <div class="s4b-l-label">GTM</div>
-            <div class="s4b-l-text">"Худалдааны төв"-тэй хамтран бүх merchant-д нэгдсэн distribution</div>
-          </div>
-          <div class="s4b-layer">
-            <div class="s4b-l-label">Internal</div>
-            <div class="s4b-l-text">Ажилтнууд дотроо борлуулалтын campaign — push идэвхжил</div>
-          </div>
-        </div>
-        <div class="s4b-implication"><strong>Strategic read:</strong> Merchant-ийн real-time payment flow дээр data layer бариад, KakaoBank Score-той хослуулан <strong>SME credit scoring data moat</strong> үүсгэх замтай. LendMN-ийн "100% digital + collateral-free" positioning-той хамгийн direct давхцал.</div>
-      </div>
-
-      <div class="s4b-card-major s4b-simple">
-        <div class="s4b-major-name">Simple</div>
-        <div class="s4b-major-tag">Customer acquisition flow · Mongolia-first product</div>
-        <div class="s4b-layers">
-          <div class="s4b-layer">
-            <div class="s4b-l-label">Product</div>
-            <div class="s4b-l-text"><strong>Debt consolidation loan</strong> — Mongolia-ын анхдагч "төлөлт буу рүүлах зээл" бүтээгдэхүүн</div>
-          </div>
-          <div class="s4b-layer">
-            <div class="s4b-l-label">Step 1</div>
-            <div class="s4b-l-text">Хэрэглэгчийг салбар руу татах (acquisition trigger)</div>
-          </div>
-          <div class="s4b-layer">
-            <div class="s4b-l-label">Step 2</div>
-            <div class="s4b-l-text">Тооцоолол хийж шинэ нөхцөлөөр гэрээ байгуулна</div>
-          </div>
-          <div class="s4b-layer">
-            <div class="s4b-l-label">Step 3</div>
-            <div class="s4b-l-text">Дансанд мөнгө хийж <strong>бусад FI-уудын зээлүүдийг хаана</strong></div>
-          </div>
-          <div class="s4b-layer">
-            <div class="s4b-l-label">Step 4</div>
-            <div class="s4b-l-text">Шинэ тохирсон нөхцөлөөр consolidated зээлийг олгоно</div>
-          </div>
-        </div>
-        <div class="s4b-implication"><strong>Strategic read:</strong> Competitor-ийн existing customer-уудад шууд target — <strong>бусад NBFI / банкуудаас зээлтнийг шилжүүлэн авах</strong> customer acquisition channel. Switching cost-ыг бүтээгдэхүүн дотроо шингээсэн, LendMN-ийн customer base-д шууд аюул.</div>
-      </div>
-
-      <div class="s4b-card-major s4b-pocket">
-        <div class="s4b-major-name">Pocket</div>
-        <div class="s4b-major-tag">АТҮТ system integration · vehicle vertical lock-in</div>
-        <div class="s4b-layers">
-          <div class="s4b-layer">
-            <div class="s4b-l-label">Integration</div>
-            <div class="s4b-l-text">Авто тээврийн үндэсний төв (АТҮТ)-тэй <strong>system integration</strong> хийсэн</div>
-          </div>
-          <div class="s4b-layer">
-            <div class="s4b-l-label">Use case 1</div>
-            <div class="s4b-l-text">Автомашин <strong>худалдан авах</strong> — олон процесс алгасч instant decision</div>
-          </div>
-          <div class="s4b-layer">
-            <div class="s4b-l-label">Use case 2</div>
-            <div class="s4b-l-text">Автомашин <strong>барьцаалан зээл</strong> — vehicle data API-аар шуурхай verification</div>
-          </div>
-          <div class="s4b-layer">
-            <div class="s4b-l-label">UX</div>
-            <div class="s4b-l-text">Олон гар ажиллагаатай процессийг алгасаж <strong>маш хурдан үйлчилгээ</strong> авах боломжтой болсон</div>
-          </div>
-        </div>
-        <div class="s4b-implication"><strong>Strategic read:</strong> Vehicle-collateralized segment-д Pocket дангаараа speed + UX давуу талтай болж буй. LendMN-ийн "digital flexible business loan"-ийг vehicle collateral сегмент рүү тэлэх замыг хааж байна.</div>
-      </div>
-
-    </div>
-
-    <!-- Bottom row: 3 SMALLER cards (additional plays) -->
-    <div class="s4b-minor">
-
-      <div class="s4b-card-minor s4b-bonum">
-        <div class="s4b-minor-head">
-          <div class="s4b-minor-name">Bonum × NBFI cluster</div>
-          <div class="s4b-minor-flag">Ecosystem</div>
-        </div>
-        <div class="s4b-minor-tag">Payment rail orchestration · multi-issuer card model</div>
-        <div class="s4b-minor-body">
-          <p><strong>Bonum (PSP)</strong> нь NBFI-уудтай хамтарч <strong>Mastercard credit card</strong> гаргаж байна. Issuer-ууд:</p>
-          <ul>
-            <li><strong>Sono Финтек</strong> — flagship issuer, Apple Pay live</li>
-            <li><strong>M-Credit</strong> — шинэ issuer</li>
-            <li><strong>Finco Capital</strong> — шинэ issuer</li>
-            <li><strong>Tus Solutions</strong> — шинэ issuer</li>
-          </ul>
-        </div>
-        <div class="s4b-minor-impl"><strong>Implication:</strong> Bonum нь "card issuing rail"-ийн de facto orchestrator болж буй. LendMN-д payment rail байхгүй gap-ийг улам тодруулж байна — <strong>Bonum partnership decision</strong> яаралтай шийдэх ёстой strategic question.</div>
-      </div>
-
-      <div class="s4b-card-minor s4b-khan">
-        <div class="s4b-minor-head">
-          <div class="s4b-minor-name">Khan Bank <span class="unofficial">· албан бус</span></div>
-          <div class="s4b-minor-flag">Mid</div>
-        </div>
-        <div class="s4b-minor-tag">AI chatbot loan disbursement · existing book activation</div>
-        <div class="s4b-minor-body">
-          <p>AI chatbot-аар <strong>зээл олгох үйл ажиллагааг эхлүүлэх гэж буй</strong> гэх мэдээлэл бий.</p>
-          <ul>
-            <li>Customer base дээрээ scoring аль хэдийн хийсэн, зээлийн эрхийг тодорхойлсон</li>
-            <li>Хэрэглэгч chat-аар хүсэлт өгөхөд AI chatbot scoring үр дүнд тулгуурлан <strong>зээлийг цахимаар шууд олгоно</strong></li>
-          </ul>
-        </div>
-        <div class="s4b-minor-impl"><strong>Implication:</strong> Mongolia-ын хамгийн том customer base + pre-computed scoring + AI chatbot = шинэ "instant lending at scale" rail. TDB-ийн "6-Minute Digital Car Loan"-той хослон <strong>speed-аар шахаж буй</strong>.</div>
-      </div>
-
-      <div class="s4b-card-minor s4b-numur">
-        <div class="s4b-minor-head">
-          <div class="s4b-minor-name">Numur</div>
-          <div class="s4b-minor-flag">Niche</div>
-        </div>
-        <div class="s4b-minor-tag">Vertical embedded finance · school system integration</div>
-        <div class="s4b-minor-body">
-          <ul>
-            <li>Сургуулиудтай <strong>system integration</strong> хийсэн — оюутны төлбөрийн тэтгэлгийг санхүүжүүлдэг vertical</li>
-            <li>Малчдын зээлийг бас олгодог (Simple-ийн herder loan, Төр банкны pattern-той ижил)</li>
-          </ul>
-        </div>
-        <div class="s4b-minor-impl"><strong>Implication:</strong> Embedded vertical finance pattern — <strong>үндсэн зах зээл дээр compete хийхгүй, segment-аа сонгоод эзэнтэй болж буй</strong>. LendMN-ийн "open ecosystem orchestration" model-той ижил логик дээр явж байна, гэвч жижиг хэмжээгээр.</div>
-      </div>
-
-    </div>
-
-    <!-- Pattern read strip -->
-    <div class="s4b-pattern">
-      <div class="s4b-pattern-title">Pattern read · 3 vector ажиглагдаж байна</div>
-      <div class="s4b-pattern-list">
-        <div class="s4b-pattern-item">
-          <div class="s4b-pattern-num">01</div>
-          <div><strong>Merchant infrastructure layer</strong> — M Bank-ын hardware + software stack, Bonum cluster-ын payment rail нь real-time payment + merchant data моат барьж байна.</div>
-        </div>
-        <div class="s4b-pattern-item">
-          <div class="s4b-pattern-num">02</div>
-          <div><strong>Customer acquisition flow innovation</strong> — Simple-ын debt consolidation, Khan Bank-ын AI chatbot хоёулаа existing customer-уудыг шууд activate хийх замтай. Бусдын зээлдэгчдийг шилжүүлэн авах vector.</div>
-        </div>
-        <div class="s4b-pattern-item">
-          <div class="s4b-pattern-num">03</div>
-          <div><strong>Vertical lock-in</strong> — Pocket-ын АТҮТ integration, Numur-ын школ integration нь segment-specific data + process integration-аар lock-in үүсгэж байна.</div>
-        </div>
-      </div>
-      <div class="s4b-pattern-takeaway">
-        <strong>LendMN-д хамаатай:</strong> Эдгээр 3 vector тус бүр дээр хариу алхам шаардлагатай — <strong>payment rail (Bonum decision)</strong>, <strong>embedded distribution (худалдааны түнш)</strong>, <strong>vertical data (АТҮТ-тэй ижил төрлийн integration)</strong>. Энэ slide-ын 6 хөдөлгөөн нь дараагийн раундны priority decision-уудыг тодорхойлж байна.
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<section id="sec-5" class="section">
-  <div class="section-pad">
-    <div class="section-num">Slide 6</div>
-    <div class="s-title">Tech stack & partnerships (engines)</div>
-    <div class="s-sub">Хэн ямар capability барьж, хэн global vendor-той ажиллаж байгааг харуулна. M Bank-ийн KakaoBank Scoring нь хамгийн том structural challenge.</div>
-
-    <div class="s5-grid">
-
-      <div class="s5-card s5-high-threat">
-        <div class="s5-card-head">
-          <div class="s5-card-name">M Bank</div>
-          <div class="s5-card-flag">⚠ Critical</div>
-        </div>
-        <div class="s5-card-tag">MCS Group · neobank-аас merchant digital infrastructure руу шилжиж байна</div>
-        <div class="s5-stack">
-          <div class="s5-layer">
-            <div class="s5-l-label">Scoring</div>
-            <div class="s5-l-tech"><strong>KakaoBank Score</strong> — non-financial data, $11B proven model in Korea, thin-file segment</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">Acquiring</div>
-            <div class="s5-l-tech"><strong>SoftPOS rollout</strong> — tablet hardware + commercial center placement + employee activation campaign</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">Wallets</div>
-            <div class="s5-l-tech">Apple Pay, Visa/Mastercard digital wallet integration</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">Funding</div>
-            <div class="s5-l-tech">$30M IFC SME/women + KakaoBank equity (TBD)</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="s5-card s5-lendmn">
-        <div class="s5-card-head">
-          <div class="s5-card-name">LendMN</div>
-          <div class="s5-card-flag s5-flag-self">Бид</div>
-        </div>
-        <div class="s5-card-tag">AND Global parent · 11-country tech reach</div>
-        <div class="s5-stack">
-          <div class="s5-layer">
-            <div class="s5-l-label">Scoring</div>
-            <div class="s5-l-tech"><strong>AI-driven credit scoring</strong> + bank statement analysis + LLM-based risk model</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">Tech arm</div>
-            <div class="s5-l-tech"><strong>AND Solutions</strong> — document processing + credit scoring + lending systems · active in <strong>11 countries</strong></div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">Wallets</div>
-            <div class="s5-l-tech">Payment rail — currently absent (gap)</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">Funding</div>
-            <div class="s5-l-tech">$20M Lendable (debt) + $7M IFC equity · IFC-ийн Монголд 10 жилийн дараах анхны equity investment</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="s5-card s5-medium-threat">
-        <div class="s5-card-head">
-          <div class="s5-card-name">Pocket</div>
-          <div class="s5-card-flag">High</div>
-        </div>
-        <div class="s5-card-tag">Invescore parent · in-house AILab</div>
-        <div class="s5-stack">
-          <div class="s5-layer">
-            <div class="s5-l-label">Scoring</div>
-            <div class="s5-l-tech"><strong>AILab in-house dev team</strong> — proprietary scoring</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">Verification</div>
-            <div class="s5-l-tech"><strong>АТҮТ + G-Sign integration</strong> — government identity / vehicle data direct API</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">Trust products</div>
-            <div class="s5-l-tech">Bank card auto-link to trust account, gamification engine ("My Ponji")</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">Funding</div>
-            <div class="s5-l-tech">$71.5M multi-source (Helicap, FMO, Triple Jump, EMF, Enabling Qapital)</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="s5-card">
-        <div class="s5-card-head">
-          <div class="s5-card-name">Khan Bank</div>
-          <div class="s5-card-flag">Mid</div>
-        </div>
-        <div class="s5-card-tag">Tier-1 commercial · TCS BaNCS overhaul</div>
-        <div class="s5-stack">
-          <div class="s5-layer">
-            <div class="s5-l-label">Core</div>
-            <div class="s5-l-tech"><strong>TCS BaNCS</strong> — Tata Consultancy Services strategic alliance (May 2025)</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">AI</div>
-            <div class="s5-l-tech"><strong>"Digi" chatbot</strong> scaled across customer base</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">Risk</div>
-            <div class="s5-l-tech">IFC FX hedge derivatives package — upgraded currency risk management capability</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">Funding</div>
-            <div class="s5-l-tech">$200M+ recent debt + IFC FX</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="s5-card">
-        <div class="s5-card-head">
-          <div class="s5-card-name">TDB</div>
-          <div class="s5-card-flag">Mid</div>
-        </div>
-        <div class="s5-card-tag">Premium digital · Temenos T24</div>
-        <div class="s5-stack">
-          <div class="s5-layer">
-            <div class="s5-l-label">Core</div>
-            <div class="s5-l-tech"><strong>Temenos T24</strong> — international standard core banking</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">Wallets</div>
-            <div class="s5-l-tech">First Apple Pay (Dec 2024) + first Google Pay (Nov 2025) launches</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">Trade</div>
-            <div class="s5-l-tech"><strong>Bpifrance trade finance</strong> agreement — France SME export support</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">AI</div>
-            <div class="s5-l-tech">"TDB Skill Lab" — proprietary AI internal training program</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="s5-card">
-        <div class="s5-card-head">
-          <div class="s5-card-name">Golomt</div>
-          <div class="s5-card-flag">Mid</div>
-        </div>
-        <div class="s5-card-tag">Wallet aggregator · cross-border first</div>
-        <div class="s5-stack">
-          <div class="s5-layer">
-            <div class="s5-l-label">Wallets</div>
-            <div class="s5-l-tech">Apple Pay (Dec 2024) · <strong>WeChat Pay</strong> (Sep 2025, Mongolia first) · AliPay+ partnership</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">SME</div>
-            <div class="s5-l-tech">First-ever bill discounting service (Apr 2025)</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">Green</div>
-            <div class="s5-l-tech">3 blue finance products + $13M WaterEquity facility (Sep 2025)</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">Funding</div>
-            <div class="s5-l-tech">WaterEquity $13M + green pipeline expanding</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="s5-card">
-        <div class="s5-card-head">
-          <div class="s5-card-name">Sono финтек</div>
-          <div class="s5-card-flag">Mid</div>
-        </div>
-        <div class="s5-card-tag">Card-led · payment rail vertical entry</div>
-        <div class="s5-stack">
-          <div class="s5-layer">
-            <div class="s5-l-label">Card</div>
-            <div class="s5-l-tech"><strong>Mastercard issuance</strong> via Bonum partnership — Mongolia's first NBFI Mastercard</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">Wallet</div>
-            <div class="s5-l-tech">Apple Pay live · 10% travel cashback engine</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">Funding</div>
-            <div class="s5-l-tech">$10M aggregate (multiple smaller IFI/local lines)</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">Position</div>
-            <div class="s5-l-tech">Pure equity model · NPL 3.5% sector's 2nd cleanest</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="s5-card">
-        <div class="s5-card-head">
-          <div class="s5-card-name">Simple</div>
-          <div class="s5-card-flag">Low</div>
-        </div>
-        <div class="s5-card-tag">Indian vendor-led · debt consolidation specialty</div>
-        <div class="s5-stack">
-          <div class="s5-layer">
-            <div class="s5-l-label">Tech vendor</div>
-            <div class="s5-l-tech"><strong>Simform partnership</strong> — Indian outsource development</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">Underwriting</div>
-            <div class="s5-l-tech">Bank statement analysis (LendMN-тэй ижил)</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">Specialty</div>
-            <div class="s5-l-tech">Mongolia’s first debt consolidation product (Apr 2026)</div>
-          </div>
-          <div class="s5-layer">
-            <div class="s5-l-label">Funding</div>
-            <div class="s5-l-tech">$16.5M (EBRD $2.3M + Enabling Qapital $3M + bond issuances)</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="s5-impact">
-      <div class="s5-impact-title">LendMN-ийн strategic standing</div>
-      <strong>Tech moat assessment:</strong> AND Solutions-ийн 11-country reach + AI scoring stack нь sector дотор advanced capability. Энэ нь Pocket-ийн in-house AILab болон Simple-ийн outsourced vendor model-оос илүү scalable бүтэцтэй. Гэхдээ 2 critical gap бий: (1) <strong>Payment rail байхгүй</strong> — Sono Mastercard, Pocket АТҮТ + G-Sign, M Bank SoftPOS бүгд distribution rail-ыг эзэлж байна. LendMN-ийн merchant ecosystem reach одоогоор сул. (2) <strong>M Bank-ийн KakaoBank Score threat</strong> — credit scoring бол LendMN-ийн core moat. Korea-д proven KakaoBank model нь parity / superiority threat үүсгэж болно. <strong>Аль аль нь дараагийн раундны priority байх ёстой.</strong>
-    </div>
-  </div>
-</section>
-
-
-
-
-<section id="sec-6a" class="section">
-  <div class="section-pad">
-    <div class="section-num">Slide 7</div>
-    <div class="s-title">Customer segmentation: Interest income structure</div>
-    <div class="s-sub">NBFI-үүдийн хүүгийн орлогын хэдэн хувийг Retail буюу иргэд, хэдэн хувийг Corporate буюу ААН сегмент бүрдүүлж байна вэ?</div>
-
-    <div class="s6a-chart-wrap">
-      <div class="s6a-chart">
-        <div class="s6a-row">
-          <div class="s6a-name">Tavan Bogd Finance</div>
-          <div class="s6a-track">
-            <div class="s6a-retail" style="width:97.2%"><span>97.2%</span></div>
-            <div class="s6a-corp" style="width:2.8%"></div>
-          </div>
-        </div>
-
-        <div class="s6a-row">
-          <div class="s6a-name">Invescore</div>
-          <div class="s6a-track">
-            <div class="s6a-retail" style="width:83.9%"><span>83.9%</span></div>
-            <div class="s6a-corp" style="width:16.1%"><span>16.1%</span></div>
-          </div>
-        </div>
-
-        <div class="s6a-row">
-          <div class="s6a-name">Pocket</div>
-          <div class="s6a-track">
-            <div class="s6a-retail" style="width:100%"><span>100%</span></div>
-          </div>
-        </div>
-
-        <div class="s6a-row">
-          <div class="s6a-name">LendMN</div>
-          <div class="s6a-track">
-            <div class="s6a-retail" style="width:99.8%"><span>99.8%</span></div>
-            <div class="s6a-corp" style="width:0.2%"></div>
-          </div>
-        </div>
-
-        <div class="s6a-row">
-          <div class="s6a-name">Ashid Capital</div>
-          <div class="s6a-track">
-            <div class="s6a-retail" style="width:97.4%"><span>97.4%</span></div>
-            <div class="s6a-corp" style="width:2.6%"></div>
-          </div>
-        </div>
-
-        <div class="s6a-row">
-          <div class="s6a-name">Numur Credit</div>
-          <div class="s6a-track">
-            <div class="s6a-retail" style="width:96.6%"><span>96.6%</span></div>
-            <div class="s6a-corp" style="width:3.4%"></div>
-          </div>
-        </div>
-
-        <div class="s6a-row">
-          <div class="s6a-name">Net Capital</div>
-          <div class="s6a-track">
-            <div class="s6a-retail" style="width:89%"><span>89%</span></div>
-            <div class="s6a-corp" style="width:11%"><span>11%</span></div>
-          </div>
-        </div>
-
-        <div class="s6a-row">
-          <div class="s6a-name">GSB Capital</div>
-          <div class="s6a-track">
-            <div class="s6a-retail" style="width:85.4%"><span>85.4%</span></div>
-            <div class="s6a-corp" style="width:14.6%"><span>14.6%</span></div>
-          </div>
-        </div>
-
-        <div class="s6a-row">
-          <div class="s6a-name">Sono Fintech</div>
-          <div class="s6a-track">
-            <div class="s6a-retail" style="width:100%"><span>100%</span></div>
-          </div>
-        </div>
-
-        <div class="s6a-row">
-          <div class="s6a-name">Transcapital</div>
-          <div class="s6a-track">
-            <div class="s6a-retail" style="width:99.8%"><span>99.8%</span></div>
-            <div class="s6a-corp" style="width:0.2%"></div>
-          </div>
-        </div>
-
-        <div class="s6a-row">
-          <div class="s6a-name">Mobifinance</div>
-          <div class="s6a-track">
-            <div class="s6a-retail" style="width:100%"><span>100%</span></div>
-          </div>
-        </div>
-
-        <div class="s6a-row">
-          <div class="s6a-name">Toki</div>
-          <div class="s6a-track">
-            <div class="s6a-retail" style="width:100%"><span>100%</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="s6a-legend">
-        <span><i class="s6a-lg-retail"></i>Retail (% interest income)</span>
-        <span><i class="s6a-lg-corp"></i>Corporate (%)</span>
-      </div>
-    </div>
-
-    <div class="s6a-note">
-      <strong>Key read:</strong> Most NBFIs remain retail-heavy. Only Invescore, GSB Capital and Net Capital show meaningful corporate contribution, while Pocket, Sono Fintech, Mobifinance and Toki are effectively 100% retail. LendMN is also still retail-dominant at <strong>99.8%</strong>, which means the business-lending opportunity is not yet reflected in interest income structure.
-    </div>
-  </div>
-</section>
-
-
-<section id="sec-6" class="section">
-  <div class="section-pad">
-    <div class="section-num">Slide 8</div>
-    <div class="s-title">LendMN-д хамаатай 5 strategic implications</div>
-    <div class="s-sub">Section 2-ийн analysis-аас гарсан 5 гол conclusion. LendMN-д хамаарах хамгийн чухал стратегийн үр дагавруудыг нэгтгэн харуулав.</div>
-
-    <div class="s6-grid">
-
-      <div class="s6-box s6-accent">
-        <div class="s6-num">01</div>
-        <div class="s6-title">Capital structure is our edge — but not yet scale</div>
-        <div class="s6-text">LendMN нь NBFI sector дотор debt + equity хосолсон funding stack-той цорын ганц fintech ($20M Lendable + $7M IFC equity, IFC-ийн Монголд 10 жилийн дараах анхны equity investment). Бүтцийн чанарын хувьд Pocket-ийн debt-only $71.5M-аас илүү гүн anchor-той. Гэхдээ <strong>scale-ээр Pocket 2.6x их</strong> — бид funding diversification + multi-source funding-аар scale gap-ийг хаах ёстой.</div>
-      </div>
-
-      <div class="s6-box s6-warn">
-        <div class="s6-num">02</div>
-        <div class="s6-title">M Bank — sector-ийн хамгийн critical structural threat</div>
-        <div class="s6-text">M Bank нь IFC $30M facility (May 2024, 25% women-owned SME focus), KakaoBank Score partnership (Apr 2026, Korea-д proven $11B model), SoftPOS rollout plan гурвыг нэгтгэж байна. Энэ нь SME finance, alternative scoring, payment rail гэсэн 3 vector-аар LendMN-ийн positioning рүү зэрэг шахалт үүсгэнэ. Бидэнд <strong>“бид илүү digital”</strong> гэх ерөнхий message-ээс давсан structural differentiator хэрэгтэй.</div>
-      </div>
-
-      <div class="s6-box s6-warn">
-        <div class="s6-num">03</div>
-        <div class="s6-title">XacBank-ийн 1.8% rate — direct customer attrition risk</div>
-        <div class="s6-text">XacBank-ийн Sep 2025-нээс эхэлсэн Youth Entrepreneur Loan нь 1.8% rate, ₮500M–₮1B size, collateral-free option-той тул LendMN-ийн existing SME customers-ийг шууд target хийж байна. Дотоод survey-д “LendMN-аас XacBank  рүү шилжсэн” pattern ажиглагдсан. Pricing-аар шууд compete хийх боломж хязгаарлагдмал (1.8% rate нь subsidized шинжтэй) — тиймээс <strong>speed, automation, embedded distribution-аар differentiate хийх</strong> ёстой.</div>
-      </div>
-
-      <div class="s6-box s6-warn">
-        <div class="s6-num">04</div>
-        <div class="s6-title">Payment rail gap нь structural opportunity бөгөөд risk</div>
-        <div class="s6-text">Sono Mastercard via Bonum, Pocket АТҮТ + G-Sign, Golomt WeChat Pay, M Bank SoftPOS rollout — бүгд distribution / payment rail эзэлж байна. LendMN-д payment rail байхгүй байгаа нь <strong>scale болон embedded SME finance хийхэд critical pre-condition</strong>. Bonum partnership эсвэл wallet rail strategy нь дараагийн 6 сарын priority decision байх ёстой.</div>
-      </div>
-
-      <div class="s6-box s6-accent">
-        <div class="s6-num">05</div>
-        <div class="s6-title">Tech moat бий — гэхдээ productize хийх шаардлагатай</div>
-        <div class="s6-text">AND Solutions-ийн 11-country reach + AI scoring stack нь sector дотор өндөр түвшний capability. Pocket AILab болон Simple-ийн outsourced vendor model-оос илүү scalable бүтэцтэй. Энэ tech-ийг зөвхөн LendMN дотор ашиглах бус, <strong>SaaS / data productization</strong>-аар monetization хийх нь Section 3-ын Project Aegis story-ын суурь. M Bank-ийн KakaoBank Score-той parity level дээр үлдэхгүй, бид SaaS layer  рүү шилжих ёстой.</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="noise"></div>
+<div class="progress" id="progress"></div>
+<div class="overlay" id="overlay"></div>
+
+<div class="logo-mark">LEND<span>MN</span></div>
+<div class="slide-counter" id="counter">01 / 06</div>
+<div class="key-hint">← → navigate</div>
+<div class="nav" id="navDots"></div>
+<div class="nav-arrows">
+  <button class="nav-btn" id="btnPrev" onclick="changeSlide(-1)">←</button>
+  <button class="nav-btn" id="btnNext" onclick="changeSlide(1)">→</button>
 </div>
 
-<script>
-// ============ Slide 2 grid build ============
-(function(){
-  const months = ['Oct\'24','Nov\'24','Dec\'24','Jan\'25','Feb\'25','Mar\'25','Apr\'25','May\'25','Jun\'25','Jul\'25','Aug\'25','Sep\'25','Oct\'25','Nov\'25','Dec\'25','Jan\'26','Feb\'26','Mar\'26'];
-  // Each company: deals = list of {month_idx, type, label}
-  const companies = [
-    {name:'Pocket', cls:'', deals:[
-      {m:2, t:'pocket', label:'$4.5M Global Gender Smart Fund (Invescore)'},
-      {m:8, t:'pocket', label:'$5M Triple Jump (Invescore parent)'},
-      {m:9, t:'pocket', label:'$3M EMF Microfinance + $2.3M EBRD SME'},
-      {m:10, t:'pocket', label:'$20M FMO Netherlands MSME (Invescore)'},
-      {m:11, t:'pocket', label:'$3M Enabling Qapital MSME'},
-      {m:12, t:'pocket', label:'$25M Helicap mid-term (Pocket direct)'},
-      {m:15, t:'pocket', label:'MNT 50B / $14M ХБҮЦ bond (Invescore)'}
-    ], total:'$71.5M'},
-    {name:'LendMN', cls:'lendmn-row', deals:[
-      {m:6, t:'lendmn', label:'$20M senior debt facility — Lendable (3-yr tenor, first offshore close)'},
-      {m:10, t:'equity', label:'$7M IFC equity Series B (AND Global parent) — IFC\'s first MN equity in 10+ yrs'}
-    ], total:'$27M'},
-    {name:'Simple', cls:'', deals:[
-      {m:5, t:'simple', label:'MNT 35B bond issuance'},
-      {m:9, t:'simple', label:'MNT 40B ХБҮЦ (20-month duration)'},
-      {m:11, t:'simple', label:'$3M Enabling Qapital MSME'}
-    ], total:'$16.5M'},
-    {name:'Sono финтек', cls:'', deals:[
-      {m:12, t:'sono', label:'~$10M aggregate (multiple smaller IFI/local lines)'}
-    ], total:'$10M'},
-    {name:'HiPay', cls:'no-fund', deals:[], total:'No funds'},
-    {name:'Toki', cls:'no-fund', deals:[], total:'No funds'},
-    {name:'Numur', cls:'no-fund', deals:[], total:'No funds'},
-    {name:'Mobifinance', cls:'no-fund', deals:[], total:'No funds'},
-    {name:'Таван богд', cls:'no-fund', deals:[], total:'No funds'},
-    {name:'Жи Эс Би', cls:'no-fund', deals:[], total:'No funds'},
-    {name:'Транскапитал', cls:'no-fund', deals:[], total:'No funds'},
-    {name:'Нэт капитал', cls:'no-fund', deals:[], total:'No funds'}
-  ];
+<div class="deck">
 
-  const grid = document.getElementById('s2-grid');
-  let html = '<div></div>'; // top-left blank cell
-  // Month headers
-  months.forEach((m, i) => {
-    const isQtrEnd = (i === 2 || i === 5 || i === 8 || i === 11 || i === 14 || i === 17);
-    html += `<div class="s2-month ${isQtrEnd ? 'qtr-end' : ''}">${m}</div>`;
-  });
-  html += '<div class="s2-month qtr-end" style="text-align:right;padding-right:8px;">Total</div>';
+<div class="slide" id="s1">
+  <div class="orbit-wrap">
+    <div class="orbit-ring"><div class="orbit-dot"></div></div>
+    <div class="orbit-ring"><div class="orbit-dot"></div></div>
+    <div class="orbit-ring"><div class="orbit-dot"></div></div>
+  </div>
+  <div class="s1-inner">
+    <div class="eyebrow s1-eyebrow">All-Hands · 2026</div>
+    <div class="s1-title">One<br><span class="accent">LendMN</span></div>
+    <div class="s1-sub">Wherever we sit, whatever we build — we move as one.</div>
+    <div class="s1-tag">Annual All-Hands · Team Retreat</div>
+  </div>
+</div>
 
-  // Rows
-  companies.forEach(co => {
-    html += `<div class="s2-co-name ${co.cls}">${co.name}</div>`;
-    for (let i = 0; i < 18; i++) {
-      const deal = co.deals.find(d => d.m === i);
-      if (deal) {
-        html += `<div class="s2-cell deal deal-${deal.t}" title="${months[i]}: ${deal.label}"></div>`;
-      } else {
-        html += `<div class="s2-cell"></div>`;
-      }
-    }
-    const totalCls = co.cls === 'no-fund' ? 'no-fund' : 'has-fund';
-    html += `<div class="s2-row-total ${totalCls}">${co.total}</div>`;
-  });
+<div class="slide" id="s2">
+  <div class="s2-inner">
+    <div class="s2-top">
+      <div class="eyebrow">Chapter I — One LendMN</div>
+      <div class="s2-title">
+        Different roles.<br>
+        Different desks.<br>
+        <em>One mission.</em>
+      </div>
+      <div class="s2-sub">
+        Every division runs its own lane — but the finish line is shared. The strength of LendMN isn't any single team. It's what happens when all of them move in the same direction.
+      </div>
+    </div>
 
-  grid.innerHTML = html;
+    <div class="dept-grid" id="deptGrid">
+      <div class="dept-card">Business Development</div>
+      <div class="dept-card">Sales &amp; Cooperation</div>
+      <div class="dept-card">Treasury &amp; Funding</div>
+      <div class="dept-card">Finance Management</div>
+      <div class="dept-card">Operations</div>
+      <div class="dept-card">Customer Care</div>
+      <div class="dept-card">Marketing</div>
+      <div class="dept-card">Special Assets</div>
+      <div class="dept-card">Risk Management</div>
+      <div class="dept-card">HR &amp; Culture</div>
+      <div class="dept-card">Internal Audit</div>
+      <div class="dept-card">Legal &amp; Compliance</div>
+    </div>
+
+    <div class="converge-row" id="convergeRow">
+      <div class="cline cline-l"></div>
+      <div class="ctip">one direction</div>
+      <div class="cline cline-r"></div>
+    </div>
+    <div class="one-goal" id="oneGoal">Empowering Mongolia's <span>SMEs.</span></div>
+  </div>
+</div>
+
+<div class="slide" id="s3">
+  <div class="s3-inner">
+    <div class="s3-header">
+      <div class="eyebrow">Chapter II — Where We Came From</div>
+      <div class="big-statement">Built from nothing.<br>Mongolia's <em>first, again and again.</em></div>
+    </div>
+
+    <div class="milestone-grid">
+      <div class="ms-card first-card">
+        <div class="ms-year">2018</div>
+        <div class="ms-title">LendMN Founded</div>
+        <div class="ms-desc">Mongolia's first fintech company</div>
+        <div class="ms-badge">FIRST</div>
+      </div>
+      <div class="ms-card first-card">
+        <div class="ms-year">2019</div>
+        <div class="ms-title">First Digital NBFI</div>
+        <div class="ms-desc">Mongolia's first fully digital non-bank lender</div>
+        <div class="ms-badge">FIRST</div>
+      </div>
+      <div class="ms-card">
+        <div class="ms-year">2020</div>
+        <div class="ms-title">Largest Fintech</div>
+        <div class="ms-desc">Mongolia's largest fintech company by scale</div>
+      </div>
+      <div class="ms-card first-card">
+        <div class="ms-year">2023</div>
+        <div class="ms-title">Flexibusiness</div>
+        <div class="ms-desc">Mongolia's first digital SME loan platform</div>
+        <div class="ms-badge">FIRST</div>
+      </div>
+      <div class="ms-card">
+        <div class="ms-year">2024</div>
+        <div class="ms-title">12,000+ Merchants</div>
+        <div class="ms-desc">439B MNT portfolio · 133K loans issued · 7.8M avg loan size</div>
+      </div>
+      <div class="ms-card first-card">
+        <div class="ms-year">2025</div>
+        <div class="ms-title">LendDy Launched</div>
+        <div class="ms-desc">Mongolia's first instant BNPL product</div>
+        <div class="ms-badge">FIRST</div>
+      </div>
+      <div class="ms-card now-card">
+        <div class="ms-year glow">2026 →</div>
+        <div class="ms-title orange">SME Operating System</div>
+        <div class="ms-desc">The next chapter begins here</div>
+        <div class="ms-badge outline">NEXT</div>
+      </div>
+      <div class="ms-card" style="background:transparent;border-color:transparent;display:flex;align-items:center;justify-content:center;">
+        <div style="font-size:1.8rem;opacity:.15;">→</div>
+      </div>
+    </div>
+
+    <div class="body-text" style="text-align:center;max-width:520px;">
+      We didn't just enter the market — we created it. Every "first" on this list is a problem no one else had solved yet.
+    </div>
+  </div>
+</div>
+
+<div class="slide" id="s4">
+  <div class="s4-inner">
+    <div class="s4-header">
+      <div class="eyebrow">What We're Building Next</div>
+      <div class="big-statement">Everything we've built<br>points to <em>one destination.</em></div>
+    </div>
+
+    <div class="journey-wrap" id="journeyWrap">
+
+      <div class="journey-step" id="js0">
+        <div class="js-spine"><div class="js-dot"></div><div class="js-line"></div></div>
+        <div class="js-body">
+          <div class="js-label bright">8 years of real SME data</div>
+        </div>
+      </div>
+
+      <div class="journey-step" id="js1">
+        <div class="js-spine"><div class="js-dot"></div><div class="js-line"></div></div>
+        <div class="js-body">
+          <div class="js-label bright">Credit intelligence engine — built in-house</div>
+        </div>
+      </div>
+
+      <div class="journey-step" id="js2">
+        <div class="js-spine"><div class="js-dot"></div><div class="js-line"></div></div>
+        <div class="js-body">
+          <div class="js-label bright">Financial insights delivered directly to merchants</div>
+        </div>
+      </div>
+
+      <div class="journey-step" id="js3">
+        <div class="js-spine"><div class="js-dot"></div><div class="js-line hidden"></div></div>
+        <div class="js-body">
+          <div class="js-label bright">Embedded lending across the SME ecosystem</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="journey-apex" id="journeyApex">
+      <div class="apex-icon">⚡</div>
+      <div class="apex-text">
+        <div class="apex-title">SME Operating System</div>
+        <div class="apex-sub">Credit · Insights · Tools — the financial backbone for every SME in Mongolia.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="slide" id="s5">
+  <div class="s5-inner">
+    <div class="s5-header">
+      <div class="eyebrow">Why SME OS Must Exist</div>
+      <div class="big-statement">What we see is only<br>the <em>tip of the iceberg.</em></div>
+    </div>
+
+    <div class="iceberg-wrap">
+      <div class="iceberg-svg-col">
+        <svg viewBox="0 0 200 340" width="190" height="320" xmlns="http://www.w3.org/2000/svg">
+          <line x1="0" y1="132" x2="200" y2="132" stroke="#1e2a3a" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <text x="4" y="127" fill="#3a4a5a" font-size="8" font-family="Space Grotesk, sans-serif" letter-spacing="1">SURFACE</text>
+
+          <polygon points="100,8 148,128 52,128" fill="rgba(255,115,0,0.22)" stroke="#FF7300" stroke-width="1.2"/>
+          <polygon points="100,8 118,65 100,55" fill="rgba(255,255,255,0.06)"/>
+
+          <rect x="0" y="130" width="200" height="4" fill="rgba(30,42,58,0.7)"/>
+
+          <polygon points="52,136 148,136 176,260 158,320 42,320 24,260" fill="rgba(255,115,0,0.06)" stroke="rgba(255,115,0,0.25)" stroke-width="1"/>
+          <polygon points="72,136 128,136 148,200 52,200" fill="rgba(255,115,0,0.05)" stroke="rgba(255,115,0,0.12)" stroke-width="0.8"/>
+          <polygon points="82,136 118,136 130,168 70,168" fill="rgba(255,115,0,0.04)" stroke="rgba(255,115,0,0.1)" stroke-width="0.6"/>
+
+          <text x="100" y="234" text-anchor="middle" fill="rgba(255,115,0,0.35)" font-size="7" font-family="Space Grotesk, sans-serif" letter-spacing="1.5">HIDDEN</text>
+          <text x="100" y="246" text-anchor="middle" fill="rgba(255,115,0,0.2)" font-size="6" font-family="Space Grotesk, sans-serif">90% of SME reality</text>
+
+          <line x1="155" y1="8" x2="155" y2="128" stroke="#2a2a2a" stroke-width="1"/>
+          <text x="160" y="72" fill="#444" font-size="7" font-family="Inter, sans-serif">10%</text>
+          <line x1="155" y1="136" x2="155" y2="320" stroke="#2a2a2a" stroke-width="1"/>
+          <text x="160" y="232" fill="#444" font-size="7" font-family="Inter, sans-serif">90%</text>
+        </svg>
+      </div>
+
+      <div class="iceberg-panels">
+        <div class="ice-panel above">
+          <div class="ice-panel-label">What lenders can see</div>
+          <div class="ice-panel-title">Credit score · Loan application · Repayment history</div>
+          <div class="ice-tags">
+            <span class="ice-tag bright">Declared income</span>
+            <span class="ice-tag bright">Collateral</span>
+            <span class="ice-tag bright">Past loans</span>
+          </div>
+        </div>
+
+        <div class="ice-panel below">
+          <div class="ice-panel-label">What remains invisible — without SME OS</div>
+          <div class="ice-panel-title">The full picture of an SME's financial life</div>
+          <div class="ice-tags">
+            <span class="ice-tag dim">Daily cash flow</span>
+            <span class="ice-tag dim">Seasonal patterns</span>
+            <span class="ice-tag dim">Supplier dependencies</span>
+            <span class="ice-tag dim">Actual revenue</span>
+            <span class="ice-tag dim">Working capital cycles</span>
+            <span class="ice-tag dim">Growth trajectory</span>
+            <span class="ice-tag dim">Stress points</span>
+            <span class="ice-tag dim">True creditworthiness</span>
+          </div>
+          <div class="ice-desc" style="margin-top:.5rem;">
+            SME OS surfaces this hidden layer — turning invisible signals into credit decisions, business insights, and real financial tools for Mongolia's 12,000+ merchants.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="slide" id="s6">
+  <div class="close-orbit">
+    <div class="co-ring"><div class="co-dot"></div></div>
+    <div class="co-ring"><div class="co-dot"></div></div>
+    <div class="co-ring"><div class="co-dot"></div></div>
+  </div>
+  <div class="s6-inner">
+    <div class="eyebrow">Thank You</div>
+    <div class="close-title">
+      <div class="dim">Different roles.</div>
+      <div class="white">Shared mission.</div>
+      <div class="orange">One LendMN.</div>
+    </div>
+    <div class="close-divider"></div>
+    <div class="close-sub">
+      We didn't build Mongolia's fintech industry by accident. We built it together — and the next chapter will be no different.
+    </div>
+  </div>
+</div>
+
+</div><script>
+// ── Cursor
+const cursor = document.getElementById('cursor');
+const ring   = document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove', e=>{ mx=e.clientX; my=e.clientY; });
+(function animCursor(){
+  rx+=(mx-rx)*.12; ry+=(my-ry)*.12;
+  cursor.style.left=mx+'px'; cursor.style.top=my+'px';
+  ring.style.left=rx+'px'; ring.style.top=ry+'px';
+  requestAnimationFrame(animCursor);
 })();
 
-// Top nav active state
-const navLinks = document.querySelectorAll('.topnav-link');
-const sections = document.querySelectorAll('.section');
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      const id = e.target.id;
-      navLinks.forEach(l => l.classList.toggle('active', l.dataset.target === id));
-    }
-  });
-}, { rootMargin: '-30% 0px -55% 0px' });
-sections.forEach(s => obs.observe(s));
-</script>
+// ── Engine
+const slides  = document.querySelectorAll('.slide');
+const total   = slides.length;
+let   current = 0, busy = false;
+const counter  = document.getElementById('counter');
+const progress = document.getElementById('progress');
+const overlay  = document.getElementById('overlay');
+const navDots  = document.getElementById('navDots');
 
+slides.forEach((_,i)=>{
+  const d=document.createElement('div');
+  d.className='nav-dot'+(i===0?' active':'');
+  d.onclick=()=>goTo(i);
+  navDots.appendChild(d);
+});
+
+function updateUI(){
+  counter.textContent=String(current+1).padStart(2,'0')+' / '+String(total).padStart(2,'0');
+  progress.style.width=((current+1)/total*100)+'%';
+  document.querySelectorAll('.nav-dot').forEach((d,i)=>d.classList.toggle('active',i===current));
+  document.getElementById('btnPrev').style.opacity=current===0?'0.3':'1';
+  document.getElementById('btnNext').style.opacity=current===total-1?'0.3':'1';
+}
+
+function goTo(idx){
+  if(busy||idx===current||idx<0||idx>=total) return;
+  busy=true;
+  overlay.classList.add('flash');
+  setTimeout(()=>{
+    slides[current].classList.remove('active');
+    current=idx;
+    slides[current].classList.add('active');
+    updateUI(); runEntrance(current);
+    overlay.classList.remove('flash');
+    setTimeout(()=>{ busy=false; },500);
+  },145);
+}
+function changeSlide(dir){ goTo(current+dir); }
+document.addEventListener('keydown',e=>{
+  if(['ArrowRight','ArrowDown',' '].includes(e.key)){e.preventDefault();changeSlide(1);}
+  if(['ArrowLeft','ArrowUp'].includes(e.key)){e.preventDefault();changeSlide(-1);}
+});
+let tx=0;
+document.addEventListener('touchstart',e=>{ tx=e.touches[0].clientX; });
+document.addEventListener('touchend',e=>{ const dx=e.changedTouches[0].clientX-tx; if(Math.abs(dx)>50) changeSlide(dx<0?1:-1); });
+
+// ── Entrances
+function runEntrance(idx){
+  if(idx===1) entranceS2();
+  if(idx===3) entranceS4();
+}
+
+function entranceS2(){
+  const cards=document.querySelectorAll('.dept-card');
+  cards.forEach(c=>{ c.classList.remove('revealed','merged'); });
+  document.getElementById('convergeRow').classList.remove('show');
+  document.getElementById('oneGoal').classList.remove('show');
+  cards.forEach((c,i)=>{
+    setTimeout(()=>{
+      c.classList.add('revealed');
+      setTimeout(()=>c.classList.add('merged'),500);
+    },i*80);
+  });
+  setTimeout(()=>document.getElementById('convergeRow').classList.add('show'),1100);
+  setTimeout(()=>document.getElementById('oneGoal').classList.add('show'),1650);
+}
+
+function entranceS4(){
+  const steps=document.querySelectorAll('.journey-step');
+  const apex=document.getElementById('journeyApex');
+  steps.forEach(s=>s.classList.remove('show'));
+  apex.classList.remove('show');
+  steps.forEach((s,i)=>{ setTimeout(()=>s.classList.add('show'),i*240+100); });
+  setTimeout(()=>apex.classList.add('show'), steps.length*240+300);
+}
+
+// ── Init
+slides[0].classList.add('active');
+updateUI();
+</script>
 </body>
 </html>
