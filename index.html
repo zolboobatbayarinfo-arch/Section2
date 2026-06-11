@@ -69,7 +69,7 @@ html, body {
 @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
 
 /* ══════════════════════════════════
-   S1 — INTRO (Төвжилт зассан)
+   S1 — INTRO
 ══════════════════════════════════ */
 #s1 { flex-direction:column; align-items:center; text-align:center; }
 
@@ -83,8 +83,10 @@ html, body {
 .s1-inner {
   position:relative; z-index:2;
   display:flex; flex-direction:column; align-items:center;
-  width:100%;
+  justify-content:center;
+  width:100%; height:100%;
   gap:1.5rem;
+  transform: translateY(-2vh);
 }
 .s1-eyebrow { opacity:0; animation:fadeUp .8s .2s forwards; }
 .s1-title { font-family:'Space Grotesk',sans-serif; font-size:clamp(4rem, 9vw, 7.5rem); font-weight:700; line-height:1.0; letter-spacing:-.04em; color:var(--text); opacity:0; animation:fadeUp .9s .45s forwards; }
@@ -154,7 +156,7 @@ html, body {
 .ms-title { font-family:'Space Grotesk',sans-serif; font-size:.95rem; font-weight:600; color:var(--text); line-height:1.35; }
 .ms-title.orange { color:var(--orange); }
 .ms-desc { font-size:.78rem; color:var(--muted); line-height:1.55; }
-.ms-badge { display:inline-block; margin-top:.2rem; background:var(--orange); color:#000; font-family:'Space Grotesk',sans-serif; font-size:.55rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:.15rem .55rem; border-radius:4px; width:fit-content; }
+.ms-badge { inline-block; margin-top:.2rem; background:var(--orange); color:#000; font-family:'Space Grotesk',sans-serif; font-size:.55rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; padding:.15rem .55rem; border-radius:4px; width:fit-content; }
 .ms-badge.outline { background:transparent; border:1px solid var(--orange-mid); color:var(--orange); }
 
 /* ══════════════════════════════════
@@ -230,9 +232,147 @@ html, body {
 .ice-desc { font-size:.76rem; color:var(--muted); line-height:1.6; }
 
 /* ══════════════════════════════════
-   S6 — CLOSING (Төвжилт зассан)
+   S6 — ECOSYSTEM (Merchant's Day Story — Төв цэг болон зай зассан)
 ══════════════════════════════════ */
-#s6 { flex-direction:column; align-items:center; text-align:center; }
+#s6 { flex-direction:column; align-items:center; }
+.s6-inner { display:flex; flex-direction:column; align-items:center; gap:2.2rem; max-width:1000px; width:100%; }
+
+.ecosystem-container {
+  position: relative;
+  width: 100%;
+  max-width: 920px;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Зүүн тал руу тэнцвэржүүлсэн мерчантын бодит зураг */
+.eco-center-img {
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+  border: 3px solid var(--orange);
+  box-shadow: 0 0 35px rgba(255,115,0,0.35);
+  background-image: url('9bfad616-fa75-4a9a-b98b-5a46f199bc27.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 5;
+  position: absolute;
+  left: 320px;
+  top: 210px;
+  transform: translate(-50%, -50%);
+}
+
+/* Баруун талын LendMN Engine Hub */
+.eco-engine-hub {
+  position: absolute;
+  left: 810px;
+  top: 210px;
+  transform: translate(-50%, -50%);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 2px dashed var(--orange);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 40px rgba(255,115,0,0.15);
+  z-index: 5;
+  text-align: center;
+}
+.engine-title { font-family: 'Space Grotesk', sans-serif; font-size: .88rem; font-weight: 700; color: var(--text); letter-spacing: 0.05em; }
+.engine-sub { font-family: 'Space Grotesk', sans-serif; font-size: .62rem; color: var(--orange); text-transform: uppercase; margin-top: .2rem; letter-spacing: 0.1em; }
+
+/* Дата дамжуулах урсгал анимейшн бүхий SVG */
+.eco-svg-link {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes dataStream {
+  to { stroke-dashoffset: -20; }
+}
+.data-stream-path {
+  stroke: var(--orange);
+  stroke-width: 1.2;
+  stroke-dasharray: 4 4;
+  animation: dataStream 0.8s linear infinite;
+}
+
+/* Хэмжээг нь томруулж зассан картууд */
+.eco-node {
+  position: absolute;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: .85rem 1.25rem;
+  text-align: left;
+  width: 235px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+  opacity: 0;
+  transform: scale(0.9) translateY(10px);
+  transition: opacity 0.4s cubic-bezier(.4,0,.2,1), transform 0.4s cubic-bezier(.4,0,.2,1), border-color 0.3s, background 0.3s;
+  z-index: 3;
+}
+.eco-node.revealed {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+.eco-node:hover {
+  border-color: var(--orange);
+  background: rgba(255,115,0,0.02);
+}
+.eco-node-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  color: #aaa;
+  margin-bottom: .2rem;
+}
+.eco-node-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: .88rem;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+/* Гарны товчлуур хэлбэртэй бүтээгдэхүүний таг (Keyboard style) */
+.kbd-tag {
+  display: inline-block;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-bottom: 2.5px solid #444;
+  color: var(--orange);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: .65rem;
+  font-weight: 600;
+  padding: .12rem .4rem;
+  border-radius: 4px;
+  margin-top: .45rem;
+  margin-right: .25rem;
+  letter-spacing: 0.02em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* 320px гол цэгийг тойрсон байршлууд */
+.node-1 { top: 2%; left: 320px; transform: translateX(-50%); }
+.node-2 { top: 20%; left: 510px; }
+.node-3 { bottom: 2%; left: 450px; }
+.node-4 { bottom: 2%; left: 100px; }
+.node-5 { top: 20%; left: 10px; }
+
+/* ══════════════════════════════════
+   S7 — CLOSING (Зураг шиг төгс голлосон)
+══════════════════════════════════ */
+#s7 { flex-direction:column; align-items:center; text-align:center; }
 .close-orbit { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none; }
 .co-ring { position:absolute; border-radius:50%; border:1px solid; animation:spin linear infinite; }
 .co-ring:nth-child(1){ width:84vmin;height:84vmin;border-color:rgba(255,115,0,.04);animation-duration:88s; }
@@ -240,18 +380,20 @@ html, body {
 .co-ring:nth-child(3){ width:44vmin;height:44vmin;border-color:rgba(255,115,0,.11);animation-duration:38s; }
 .co-dot { position:absolute; top:0; left:50%; width:5px; height:5px; background:var(--orange); border-radius:50%; transform:translateX(-50%) translateY(-2.5px); box-shadow:0 0 8px var(--orange); }
 
-.s6-inner {
+.s7-inner {
   position:relative; z-index:2;
   display:flex; flex-direction:column; align-items:center;
-  width:100%;
-  gap:1.5rem;
+  justify-content:center;
+  width:100%; height:100%;
+  gap:1.8rem;
+  transform: translateY(-2vh); /* Visual balance against bottom nav */
 }
-.close-title { font-family:'Space Grotesk',sans-serif; font-size:clamp(2.6rem, 6vw, 5.2rem); font-weight:700; line-height:1.1; letter-spacing:-.035em; }
+.close-title { font-family:'Space Grotesk',sans-serif; font-size:clamp(3.5rem, 8.5vw, 7.5rem); font-weight:700; line-height:1.0; letter-spacing:-.035em; }
 .close-title .dim { color:var(--dimmer); }
 .close-title .white { color:var(--text); }
 .close-title .orange { color:var(--orange); }
 .close-divider { width:36px; height:2px; background:var(--orange); border-radius:2px; }
-.close-sub { font-size:clamp(.95rem, 1.3vw, 1.15rem); font-weight:300; color:var(--muted); max-width:520px; line-height:1.9; }
+.close-sub { font-size:clamp(1rem,1.5vw,1.2rem); font-weight:300; color:var(--muted); max-width:500px; line-height:1.9; }
 </style>
 </head>
 <body>
@@ -263,7 +405,7 @@ html, body {
 <div class="overlay" id="overlay"></div>
 
 <div class="logo-mark">LEND<span>MN</span></div>
-<div class="slide-counter" id="counter">01 / 06</div>
+<div class="slide-counter" id="counter">01 / 07</div>
 <div class="key-hint">← → navigate</div>
 <div class="nav" id="navDots"></div>
 <div class="nav-arrows">
@@ -396,7 +538,7 @@ html, body {
       <div class="journey-step" id="js0">
         <div class="js-spine"><div class="js-dot"></div><div class="js-line"></div></div>
         <div class="js-body">
-          <div class="js-label bright">8 years of real SME data</div>
+          <div class="js-label bright">2 years, 12,000+ SMEs</div>
         </div>
       </div>
 
@@ -499,12 +641,72 @@ html, body {
 </div>
 
 <div class="slide" id="s6">
+  <div class="s6-inner">
+    <div class="s3-header" style="text-align:center; display:flex; flex-direction:column; gap:.6rem;">
+      <div class="big-statement" style="font-size: clamp(1.8rem, 3.8vw, 3.2rem);">A Day in a <em>Merchant's Life with SME OS</em></div>
+    </div>
+
+    <div class="ecosystem-container">
+      <svg class="eco-svg-link" viewBox="0 0 920 420" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow-glow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#FF7300" />
+          </marker>
+        </defs>
+        <path d="M 320 65 Q 460 70 510 115" fill="none" stroke="rgba(255,115,0,0.2)" stroke-width="1.2" stroke-dasharray="4 4" marker-end="url(#arrow-glow)"/>
+        <path d="M 540 180 Q 560 270 490 325" fill="none" stroke="rgba(255,115,0,0.2)" stroke-width="1.2" stroke-dasharray="4 4" marker-end="url(#arrow-glow)"/>
+        <path d="M 430 360 Q 265 370 200 360" fill="none" stroke="rgba(255,115,0,0.2)" stroke-width="1.2" stroke-dasharray="4 4" marker-end="url(#arrow-glow)"/>
+        <path d="M 120 325 Q 90 240 100 180" fill="none" stroke="rgba(255,115,0,0.2)" stroke-width="1.2" stroke-dasharray="4 4" marker-end="url(#arrow-glow)"/>
+        <path d="M 110 115 Q 160 70 320 65" fill="none" stroke="rgba(255,115,0,0.2)" stroke-width="1.2" stroke-dasharray="4 4" marker-end="url(#arrow-glow)"/>
+        
+        <path class="data-stream-path" d="M 420 150 Q 600 130 710 170" fill="none" />
+        <path class="data-stream-path" d="M 400 270 Q 580 290 710 250" fill="none" />
+      </svg>
+      
+      <div class="eco-center-img"></div>
+      
+      <div class="eco-engine-hub">
+        <div class="engine-title">LendMN</div>
+        <div class="engine-title" style="color:var(--orange);">ENGINE</div>
+        <div class="engine-sub">Real-time Data</div>
+      </div>
+      
+      <div class="eco-node node-1" id="en0">
+        <div class="eco-node-title">09:00 AM · Morning</div>
+        <div class="eco-node-text">Accepts customer shop payments instantly.</div>
+        <span class="kbd-tag">QR Link</span><span class="kbd-tag">Smart POS</span>
+      </div>
+      <div class="eco-node node-2" id="en1">
+        <div class="eco-node-title">12:00 PM · Noon</div>
+        <div class="eco-node-text">Settles supply debts with an instant limit.</div>
+        <span class="kbd-tag">Credit Line</span>
+      </div>
+      <div class="eco-node node-3" id="en2">
+        <div class="eco-node-title">03:00 PM · Afternoon</div>
+        <div class="eco-node-text">Monitors profits and daily cash flow health.</div>
+        <span class="kbd-tag">CFO Dashboard</span>
+      </div>
+      <div class="eco-node node-4" id="en3">
+        <div class="eco-node-title">06:00 PM · Evening</div>
+        <div class="eco-node-text">Restocks items via smart low-stock alerts.</div>
+        <span class="kbd-tag">Inventory OS</span>
+      </div>
+      <div class="eco-node node-5" id="en4">
+        <div class="eco-node-title">09:00 PM · Closing</div>
+        <div class="eco-node-text">Launches point rewards for repeat buyers.</div>
+        <span class="kbd-tag">Loyalty Program</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="slide" id="s7">
   <div class="close-orbit">
     <div class="co-ring"><div class="co-dot"></div></div>
     <div class="co-ring"><div class="co-dot"></div></div>
     <div class="co-ring"><div class="co-dot"></div></div>
   </div>
-  <div class="s6-inner">
+  <div class="s7-inner">
     <div class="eyebrow">Thank You</div>
     <div class="close-title">
       <div class="dim">Different roles.</div>
@@ -581,8 +783,10 @@ document.addEventListener('touchend',e=>{ const dx=e.changedTouches[0].clientX-t
 function runEntrance(idx){
   if(idx===1) entranceS2();
   if(idx===3) entranceS4();
+  if(idx===5) entranceS6();
 }
 
+// S2 Animation
 function entranceS2(){
   const cards=document.querySelectorAll('.dept-card');
   cards.forEach(c=>{ c.classList.remove('revealed','merged'); });
@@ -598,6 +802,7 @@ function entranceS2(){
   setTimeout(()=>document.getElementById('oneGoal').classList.add('show'),1650);
 }
 
+// S4 Animation
 function entranceS4(){
   const steps=document.querySelectorAll('.journey-step');
   const apex=document.getElementById('journeyApex');
@@ -605,6 +810,15 @@ function entranceS4(){
   apex.classList.remove('show');
   steps.forEach((s,i)=>{ setTimeout(()=>s.classList.add('show'),i*240+100); });
   setTimeout(()=>apex.classList.add('show'), steps.length*240+300);
+}
+
+// S6 Animation (Sequential flow)
+function entranceS6(){
+  const nodes = document.querySelectorAll('.eco-node');
+  nodes.forEach(n => n.classList.remove('revealed'));
+  nodes.forEach((n, i) => {
+    setTimeout(() => n.classList.add('revealed'), i * 220);
+  });
 }
 
 // ── Init
